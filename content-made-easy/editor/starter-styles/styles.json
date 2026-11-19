@@ -1,0 +1,1123 @@
+[
+ {
+  "id": "style-glass-meter",
+  "name": "Glass Meter",
+  "post": "glass-meter",
+  "hook_style": "two-tone",
+  "uses": [
+   "A two-tone headline, one big word at a time, fast zooms and a glass meter in your color.",
+   "Looks like the edits blowing up right now.",
+   "Tips and hot takes."
+  ],
+  "settings": {
+   "headline": true,
+   "headline_top": 0.1,
+   "captions": true,
+   "caption_y": 0.59,
+   "caption_h": 0.042,
+   "caps": false,
+   "words_per_line": 1,
+   "font": "Bold Caps",
+   "hook_font": "Bold Caps",
+   "accent": "#FFFFFF",
+   "face": 0.21,
+   "cut_every": 1.8,
+   "headline_until": 5.0
+  },
+  "moves": {
+   "seconds": 40.0,
+   "cuts": [
+    {
+     "t": 5.0,
+     "kind": "cut"
+    },
+    {
+     "t": 6.6,
+     "kind": "cut"
+    },
+    {
+     "t": 8.2,
+     "kind": "cut"
+    },
+    {
+     "t": 9.8,
+     "kind": "cut"
+    },
+    {
+     "t": 11.4,
+     "kind": "cut"
+    },
+    {
+     "t": 13.0,
+     "kind": "cut"
+    },
+    {
+     "t": 14.6,
+     "kind": "cut"
+    },
+    {
+     "t": 16.2,
+     "kind": "cut"
+    },
+    {
+     "t": 17.8,
+     "kind": "cut"
+    },
+    {
+     "t": 19.4,
+     "kind": "cut"
+    },
+    {
+     "t": 21.0,
+     "kind": "cut"
+    },
+    {
+     "t": 22.6,
+     "kind": "cut"
+    },
+    {
+     "t": 24.2,
+     "kind": "cut"
+    },
+    {
+     "t": 25.8,
+     "kind": "cut"
+    },
+    {
+     "t": 27.4,
+     "kind": "cut"
+    },
+    {
+     "t": 29.0,
+     "kind": "cut"
+    },
+    {
+     "t": 30.6,
+     "kind": "cut"
+    },
+    {
+     "t": 32.2,
+     "kind": "cut"
+    },
+    {
+     "t": 33.8,
+     "kind": "cut"
+    },
+    {
+     "t": 35.4,
+     "kind": "cut"
+    },
+    {
+     "t": 37.0,
+     "kind": "cut"
+    },
+    {
+     "t": 38.6,
+     "kind": "cut"
+    }
+   ],
+   "text": [
+    {
+     "kind": "headline",
+     "start": 0,
+     "end": 5.0,
+     "y": 0.1,
+     "lines": [],
+     "theirs": false,
+     "follow": false
+    }
+   ],
+   "two_people": false,
+   "zoom": 1.18
+  },
+  "saved": "built in"
+ },
+ {
+  "id": "style-fast-cuts",
+  "name": "Fast Cuts",
+  "uses": [
+   "Close on your face, cuts every few seconds, 2 words at a time.",
+   "Keeps people watching.",
+   "Any talking video."
+  ],
+  "settings": {
+   "headline": false,
+   "headline_top": null,
+   "captions": true,
+   "caption_y": 0.46,
+   "caption_h": 0.038,
+   "caps": false,
+   "words_per_line": 2,
+   "font": "Bold Caps",
+   "hook_font": "Bold Caps",
+   "accent": "#FFFFFF",
+   "face": 0.24,
+   "cut_every": 3.5,
+   "headline_until": null
+  },
+  "moves": {
+   "seconds": 73.5,
+   "cuts": [
+    {
+     "t": 3.5,
+     "kind": "cut"
+    },
+    {
+     "t": 7.0,
+     "kind": "cut"
+    },
+    {
+     "t": 10.5,
+     "kind": "cut"
+    },
+    {
+     "t": 14.0,
+     "kind": "cut"
+    },
+    {
+     "t": 17.5,
+     "kind": "cut"
+    },
+    {
+     "t": 21.0,
+     "kind": "cut"
+    },
+    {
+     "t": 24.5,
+     "kind": "cut"
+    },
+    {
+     "t": 28.0,
+     "kind": "cut"
+    },
+    {
+     "t": 31.5,
+     "kind": "cut"
+    },
+    {
+     "t": 35.0,
+     "kind": "cut"
+    },
+    {
+     "t": 38.5,
+     "kind": "cut"
+    },
+    {
+     "t": 42.0,
+     "kind": "cut"
+    },
+    {
+     "t": 45.5,
+     "kind": "cut"
+    },
+    {
+     "t": 49.0,
+     "kind": "cut"
+    },
+    {
+     "t": 52.5,
+     "kind": "cut"
+    },
+    {
+     "t": 56.0,
+     "kind": "cut"
+    },
+    {
+     "t": 59.5,
+     "kind": "cut"
+    },
+    {
+     "t": 63.0,
+     "kind": "cut"
+    },
+    {
+     "t": 66.5,
+     "kind": "cut"
+    },
+    {
+     "t": 70.0,
+     "kind": "cut"
+    }
+   ],
+   "text": [],
+   "two_people": false,
+   "zoom": 1.18
+  },
+  "saved": "built in"
+ },
+ {
+  "id": "style-loud-caps",
+  "name": "CAPS LOCK",
+  "uses": [
+   "BIG capital words low on the screen, quick zooms.",
+   "High energy.",
+   "Tips and hot takes."
+  ],
+  "settings": {
+   "headline": false,
+   "headline_top": null,
+   "captions": true,
+   "caption_y": 0.68,
+   "caption_h": 0.042,
+   "caps": true,
+   "words_per_line": 2,
+   "font": "Bold Caps",
+   "hook_font": "Bold Caps",
+   "accent": "#FFFFFF",
+   "face": 0.1,
+   "cut_every": 2.5,
+   "headline_until": null
+  },
+  "moves": {
+   "seconds": 52.5,
+   "cuts": [
+    {
+     "t": 2.5,
+     "kind": "cut"
+    },
+    {
+     "t": 5.0,
+     "kind": "cut"
+    },
+    {
+     "t": 7.5,
+     "kind": "cut"
+    },
+    {
+     "t": 10.0,
+     "kind": "cut"
+    },
+    {
+     "t": 12.5,
+     "kind": "cut"
+    },
+    {
+     "t": 15.0,
+     "kind": "cut"
+    },
+    {
+     "t": 17.5,
+     "kind": "cut"
+    },
+    {
+     "t": 20.0,
+     "kind": "cut"
+    },
+    {
+     "t": 22.5,
+     "kind": "cut"
+    },
+    {
+     "t": 25.0,
+     "kind": "cut"
+    },
+    {
+     "t": 27.5,
+     "kind": "cut"
+    },
+    {
+     "t": 30.0,
+     "kind": "cut"
+    },
+    {
+     "t": 32.5,
+     "kind": "cut"
+    },
+    {
+     "t": 35.0,
+     "kind": "cut"
+    },
+    {
+     "t": 37.5,
+     "kind": "cut"
+    },
+    {
+     "t": 40.0,
+     "kind": "cut"
+    },
+    {
+     "t": 42.5,
+     "kind": "cut"
+    },
+    {
+     "t": 45.0,
+     "kind": "cut"
+    },
+    {
+     "t": 47.5,
+     "kind": "cut"
+    },
+    {
+     "t": 50.0,
+     "kind": "cut"
+    }
+   ],
+   "text": [],
+   "two_people": false,
+   "zoom": 1.18
+  },
+  "saved": "built in"
+ },
+ {
+  "id": "style-headline-hook",
+  "name": "Headline Hook",
+  "uses": [
+   "A headline up top for the first 5 seconds, then calm words.",
+   "Stops the scroll, then lets you teach.",
+   "Longer thoughts."
+  ],
+  "settings": {
+   "headline": true,
+   "headline_top": 0.125,
+   "captions": true,
+   "caption_y": 0.5,
+   "caption_h": 0.038,
+   "caps": false,
+   "words_per_line": 3,
+   "font": "Bold Caps",
+   "hook_font": "Bold Caps",
+   "accent": "#FFFFFF",
+   "face": 0.1,
+   "cut_every": 8,
+   "headline_until": 5.0
+  },
+  "moves": {
+   "seconds": 168,
+   "cuts": [
+    {
+     "t": 8,
+     "kind": "cut"
+    },
+    {
+     "t": 16,
+     "kind": "cut"
+    },
+    {
+     "t": 24,
+     "kind": "cut"
+    },
+    {
+     "t": 32,
+     "kind": "cut"
+    },
+    {
+     "t": 40,
+     "kind": "cut"
+    },
+    {
+     "t": 48,
+     "kind": "cut"
+    },
+    {
+     "t": 56,
+     "kind": "cut"
+    },
+    {
+     "t": 64,
+     "kind": "cut"
+    },
+    {
+     "t": 72,
+     "kind": "cut"
+    },
+    {
+     "t": 80,
+     "kind": "cut"
+    },
+    {
+     "t": 88,
+     "kind": "cut"
+    },
+    {
+     "t": 96,
+     "kind": "cut"
+    },
+    {
+     "t": 104,
+     "kind": "cut"
+    },
+    {
+     "t": 112,
+     "kind": "cut"
+    },
+    {
+     "t": 120,
+     "kind": "cut"
+    },
+    {
+     "t": 128,
+     "kind": "cut"
+    },
+    {
+     "t": 136,
+     "kind": "cut"
+    },
+    {
+     "t": 144,
+     "kind": "cut"
+    },
+    {
+     "t": 152,
+     "kind": "cut"
+    },
+    {
+     "t": 160,
+     "kind": "cut"
+    }
+   ],
+   "text": [
+    {
+     "kind": "headline",
+     "start": 0,
+     "end": 5.0,
+     "y": 0.11,
+     "lines": [],
+     "theirs": false,
+     "follow": false
+    }
+   ],
+   "two_people": false,
+   "zoom": 1.12
+  },
+  "saved": "built in"
+ },
+ {
+  "id": "style-high-words",
+  "name": "High Words",
+  "uses": [
+   "Your words up high, away from your hands.",
+   "Great if you talk with your hands.",
+   "Any talking video."
+  ],
+  "settings": {
+   "headline": false,
+   "headline_top": null,
+   "captions": true,
+   "caption_y": 0.3,
+   "caption_h": 0.04,
+   "caps": false,
+   "words_per_line": 2,
+   "font": "Bold Caps",
+   "hook_font": "Bold Caps",
+   "accent": "#FFFFFF",
+   "face": 0.1,
+   "cut_every": 4,
+   "headline_until": null
+  },
+  "moves": {
+   "seconds": 84,
+   "cuts": [
+    {
+     "t": 4,
+     "kind": "cut"
+    },
+    {
+     "t": 8,
+     "kind": "cut"
+    },
+    {
+     "t": 12,
+     "kind": "cut"
+    },
+    {
+     "t": 16,
+     "kind": "cut"
+    },
+    {
+     "t": 20,
+     "kind": "cut"
+    },
+    {
+     "t": 24,
+     "kind": "cut"
+    },
+    {
+     "t": 28,
+     "kind": "cut"
+    },
+    {
+     "t": 32,
+     "kind": "cut"
+    },
+    {
+     "t": 36,
+     "kind": "cut"
+    },
+    {
+     "t": 40,
+     "kind": "cut"
+    },
+    {
+     "t": 44,
+     "kind": "cut"
+    },
+    {
+     "t": 48,
+     "kind": "cut"
+    },
+    {
+     "t": 52,
+     "kind": "cut"
+    },
+    {
+     "t": 56,
+     "kind": "cut"
+    },
+    {
+     "t": 60,
+     "kind": "cut"
+    },
+    {
+     "t": 64,
+     "kind": "cut"
+    },
+    {
+     "t": 68,
+     "kind": "cut"
+    },
+    {
+     "t": 72,
+     "kind": "cut"
+    },
+    {
+     "t": 76,
+     "kind": "cut"
+    },
+    {
+     "t": 80,
+     "kind": "cut"
+    }
+   ],
+   "text": [],
+   "two_people": false,
+   "zoom": 1.18
+  },
+  "saved": "built in"
+ },
+ {
+  "id": "style-one-word",
+  "name": "One Word",
+  "uses": [
+   "One word at a time, big and low, close on your face.",
+   "Fast and hard to look away from.",
+   "Short punchy videos."
+  ],
+  "settings": {
+   "headline": false,
+   "headline_top": null,
+   "captions": true,
+   "caption_y": 0.72,
+   "caption_h": 0.05,
+   "caps": false,
+   "words_per_line": 1,
+   "font": "Bold Caps",
+   "hook_font": "Bold Caps",
+   "accent": "#FFFFFF",
+   "face": 0.24,
+   "cut_every": 2.6,
+   "headline_until": null
+  },
+  "moves": {
+   "seconds": 54.6,
+   "cuts": [
+    {
+     "t": 2.6,
+     "kind": "cut"
+    },
+    {
+     "t": 5.2,
+     "kind": "cut"
+    },
+    {
+     "t": 7.8,
+     "kind": "cut"
+    },
+    {
+     "t": 10.4,
+     "kind": "cut"
+    },
+    {
+     "t": 13.0,
+     "kind": "cut"
+    },
+    {
+     "t": 15.6,
+     "kind": "cut"
+    },
+    {
+     "t": 18.2,
+     "kind": "cut"
+    },
+    {
+     "t": 20.8,
+     "kind": "cut"
+    },
+    {
+     "t": 23.4,
+     "kind": "cut"
+    },
+    {
+     "t": 26.0,
+     "kind": "cut"
+    },
+    {
+     "t": 28.6,
+     "kind": "cut"
+    },
+    {
+     "t": 31.2,
+     "kind": "cut"
+    },
+    {
+     "t": 33.8,
+     "kind": "cut"
+    },
+    {
+     "t": 36.4,
+     "kind": "cut"
+    },
+    {
+     "t": 39.0,
+     "kind": "cut"
+    },
+    {
+     "t": 41.6,
+     "kind": "cut"
+    },
+    {
+     "t": 44.2,
+     "kind": "cut"
+    },
+    {
+     "t": 46.8,
+     "kind": "cut"
+    },
+    {
+     "t": 49.4,
+     "kind": "cut"
+    },
+    {
+     "t": 52.0,
+     "kind": "cut"
+    }
+   ],
+   "text": [],
+   "two_people": false,
+   "zoom": 1.18
+  },
+  "saved": "built in"
+ },
+ {
+  "id": "style-easy-read",
+  "name": "Easy Read",
+  "uses": [
+   "4 words at a time, low on the screen, gentle zooms.",
+   "Easy to follow with the sound off.",
+   "Teaching and longer talks."
+  ],
+  "settings": {
+   "headline": false,
+   "headline_top": null,
+   "captions": true,
+   "caption_y": 0.72,
+   "caption_h": 0.034,
+   "caps": false,
+   "words_per_line": 4,
+   "font": "Bold Caps",
+   "hook_font": "Bold Caps",
+   "accent": "#FFFFFF",
+   "face": 0.24,
+   "cut_every": 3,
+   "headline_until": null
+  },
+  "moves": {
+   "seconds": 63,
+   "cuts": [
+    {
+     "t": 3,
+     "kind": "cut"
+    },
+    {
+     "t": 6,
+     "kind": "cut"
+    },
+    {
+     "t": 9,
+     "kind": "cut"
+    },
+    {
+     "t": 12,
+     "kind": "cut"
+    },
+    {
+     "t": 15,
+     "kind": "cut"
+    },
+    {
+     "t": 18,
+     "kind": "cut"
+    },
+    {
+     "t": 21,
+     "kind": "cut"
+    },
+    {
+     "t": 24,
+     "kind": "cut"
+    },
+    {
+     "t": 27,
+     "kind": "cut"
+    },
+    {
+     "t": 30,
+     "kind": "cut"
+    },
+    {
+     "t": 33,
+     "kind": "cut"
+    },
+    {
+     "t": 36,
+     "kind": "cut"
+    },
+    {
+     "t": 39,
+     "kind": "cut"
+    },
+    {
+     "t": 42,
+     "kind": "cut"
+    },
+    {
+     "t": 45,
+     "kind": "cut"
+    },
+    {
+     "t": 48,
+     "kind": "cut"
+    },
+    {
+     "t": 51,
+     "kind": "cut"
+    },
+    {
+     "t": 54,
+     "kind": "cut"
+    },
+    {
+     "t": 57,
+     "kind": "cut"
+    },
+    {
+     "t": 60,
+     "kind": "cut"
+    }
+   ],
+   "text": [],
+   "two_people": false,
+   "zoom": 1.18
+  },
+  "saved": "built in"
+ },
+ {
+  "id": "style-word-highlights",
+  "name": "Word Highlights",
+  "settings": {
+   "headline": false,
+   "headline_top": null,
+   "captions": true,
+   "caption_y": 0.801,
+   "caption_h": 0.0356,
+   "caps": false,
+   "words_per_line": 2,
+   "font": "Simple",
+   "hook_font": "Simple",
+   "accent": "#7089EC",
+   "face": 0.282,
+   "cut_every": 37.4,
+   "headline_until": null
+  },
+  "moves": {
+   "seconds": 224.1,
+   "cuts": [
+    {
+     "t": 0.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 7.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 8.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 9.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 21.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 25.0,
+     "kind": "punch out"
+    },
+    {
+     "t": 25.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 31.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 32.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 32.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 33.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 33.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 34.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 45.0,
+     "kind": "punch out"
+    },
+    {
+     "t": 45.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 52.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 56.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 58.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 65.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 69.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 74.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 74.97,
+     "kind": "cut"
+    },
+    {
+     "t": 86.57,
+     "kind": "cut"
+    },
+    {
+     "t": 106.27,
+     "kind": "punch in"
+    },
+    {
+     "t": 118.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 120.17,
+     "kind": "punch out"
+    },
+    {
+     "t": 123.17,
+     "kind": "punch in"
+    },
+    {
+     "t": 125.0,
+     "kind": "punch out"
+    },
+    {
+     "t": 127.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 135.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 147.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 161.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 161.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 163.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 168.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 182.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 187.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 190.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 191.0,
+     "kind": "punch out"
+    },
+    {
+     "t": 193.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 193.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 194.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 197.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 198.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 201.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 203.0,
+     "kind": "punch out"
+    },
+    {
+     "t": 207.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 212.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 214.0,
+     "kind": "punch in"
+    },
+    {
+     "t": 214.5,
+     "kind": "punch out"
+    },
+    {
+     "t": 216.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 217.0,
+     "kind": "punch out"
+    },
+    {
+     "t": 222.5,
+     "kind": "punch in"
+    },
+    {
+     "t": 223.5,
+     "kind": "punch out"
+    }
+   ],
+   "text": [],
+   "two_people": false,
+   "zoom": 1.18
+  },
+  "saved": "built in",
+  "uses": [
+   "Your key words light up in your color as you say them.",
+   "Fast zooms in time with your talking.",
+   "Tips and how-tos."
+  ]
+ },
+ {
+  "id": "style-fast-cut-talking-head",
+  "name": "Fast Cut Talking Head",
+  "settings": {
+   "headline": true,
+   "headline_top": 0.397,
+   "captions": true,
+   "caption_y": 0.382,
+   "caption_h": 0.0363,
+   "caps": false,
+   "words_per_line": 6,
+   "font": "Simple",
+   "hook_font": "Clean",
+   "accent": "#FFFFFF",
+   "face": 0.276,
+   "cut_every": 2.2,
+   "headline_until": 6.5
+  },
+  "moves": {
+   "seconds": 6.7,
+   "cuts": [
+    {
+     "t": 2.46,
+     "kind": "back to one person"
+    },
+    {
+     "t": 5.38,
+     "kind": "cut"
+    }
+   ],
+   "text": [
+    {
+     "kind": "headline",
+     "start": 0.0,
+     "end": 6.5,
+     "y": 0.363,
+     "lines": [],
+     "theirs": false,
+     "follow": false
+    }
+   ],
+   "two_people": false,
+   "zoom": 1.2
+  },
+  "saved": "built in",
+  "uses": [
+   "Quick cuts on a close shot, with your words on screen.",
+   "Keeps things moving.",
+   "Any talking video."
+  ]
+ }
+]

@@ -1,0 +1,11 @@
+# their videos and working files never go in the repo
+editor/jobs/
+editor/server.log
+editor/install.log
+__pycache__/
+*.mp4.part
+# keys stay on the machine
+brand/*.key
+brand/claude-*.json
+brand/claude-*.jsonl
+brand/claude-asks.*

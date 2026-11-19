@@ -1,0 +1,29 @@
+Content Made Easy
+by Tiff The AI Princess
+
+1. Move this whole folder into your home folder (the one with your name on it).
+   Not Documents, not Desktop.
+2. Double-click "Start Content Made Easy".
+   If your Mac says it can't be opened: open System Settings, then Privacy & Security,
+   scroll down and click Open Anyway. Then double-click it again.
+   The first time takes about 5 minutes. Leave the window open.
+3. Set your brand once. Then drop in a video.
+
+Using Claude Code? Drag this zip into Claude Code and say:
+"Unzip this into my home folder and run install-skill.sh, then run /contentmadeeasy."
+After that, type /contentmadeeasy in any Claude Code chat to open it.
+
+It cleans your video by itself. Then tap Digital Zoom or any effect.
+
+Got an update? Replace this folder with the new one and start it the same way.
+Your brand and your copied edits are saved separately, so they stay.
+
+Everything runs on your own computer. Nothing posts until YOU post it.
+Your finished videos land in a folder called "Content Made Easy Videos"
+in your Google Drive (or in Movies if you don't use Google Drive).
+
+To turn it off: close the little window that opened with it.
+To remove it: drag this folder to the Trash.
+
+Thanks!
+– Tiff The AI Princess 💙

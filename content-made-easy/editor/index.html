@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Made Easy</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icon.png">
+<meta name="theme-color" content="#0637d6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky"><span class="orb a"></span><span class="orb b"></span><span class="orb c"></span><span class="grid-lines"></span></div>
+<nav class="ez-top">
+  <b>Content Made Easy</b>
+  <span class="ez-dot" id="topDot"><i></i><span id="topDotText">Claude isn't connected</span></span>
+</nav>
+<header class="hero ez-hero">
+  <h1>Content Made Easy</h1>
+  <p class="lede">Drop your video in. We clean it up for you. <b>Tap one button to make it look good.</b></p>
+  <div class="ez-keep" id="keepBox" hidden>
+    <p><b>📌 Bookmark this page</b> so you can always get back to it. Press <kbd>⌘ D</kbd> on a Mac or <kbd>Ctrl D</kbd> on Windows. Your link: <b id="keepLink">127.0.0.1</b></p>
+    <button class="small" id="keepOk">Got it</button>
+  </div>
+  <script>
+  // 2026-11-09: the page told nobody how to get back to it. Hidden for good once they tap Got it, or when it was opened from the Dock icon.
+  (function () {
+    var box = document.getElementById("keepBox");
+    try {
+      if (new URLSearchParams(location.search).get("app") === "1") { localStorage.setItem("cme-keep-ok", "1"); return; }
+      if (localStorage.getItem("cme-keep-ok") === "1") return;
+    } catch (e) {}
+    document.getElementById("keepLink").textContent = location.host;
+    box.hidden = false;
+    document.getElementById("keepOk").onclick = function () {
+      box.hidden = true;
+      try { localStorage.setItem("cme-keep-ok", "1"); } catch (e) {}
+    };
+  })();
+  </script>
+</header>
+<main class="ez">
+
+  <p class="ez-said bad" id="soundWarn" hidden></p>
+  <section class="panel" id="brand">
+    <div class="ez-brandhead">
+      <div><h2>Your brand</h2><p class="note" id="brandSum">Set it once. It goes on every video.</p></div>
+      <button class="ghost small" id="brandToggle" hidden>Change</button>
+    </div>
+    <div id="bAsk" class="ez-ask">
+      <p class="ez-q">Do you already have a brand?</p>
+      <div class="ez-actions"><button id="bHave">Yes, I have one</button><button class="ghost" id="bNeed">No, help me make one</button></div>
+    </div>
+    <div id="bYes" hidden>
+      <p class="ez-q">Show us your brand. We'll grab what we can, and only ask for what's missing.</p>
+      <div class="ez-clone-row">
+        <input type="text" id="bLink" placeholder="Your website or Instagram link" aria-label="Your website or Instagram link">
+        <button id="bLinkGo">Grab my brand</button>
+      </div>
+      <div class="ez-drop ez-drop-small" id="bDrop" tabindex="0" role="button" aria-label="Add one of your videos">
+        <strong>Or drop in one of your videos</strong><span>One that has your colors and captions on it.</span>
+      </div>
+      <input type="file" id="bVid" accept="video/mp4,video/quicktime,.mp4,.mov,.m4v" hidden>
+      <button class="linkish" id="bSwitchNo">I don't have one, help me make one</button>
+    </div>
+    <div id="bNo" hidden>
+      <p class="ez-q">How should your brand feel? Tap one.</p>
+      <div class="ez-feel" id="bFeel"></div>
+      <div id="bPick" hidden><p class="ez-q">Tap the color you like best.</p><div class="ez-swatches" id="bSwatches"></div></div>
+    </div>
+    <p class="ez-said" id="bFound" hidden></p>
+    <div id="brandForm" hidden>
+      <div class="ez-row">
+        <label id="rowName">Your name or business<input type="text" id="bName" maxlength="60" placeholder="Your name"></label>
+        <label id="rowColor">Your color<input type="color" id="bAccent" value="#00A6FF"></label>
+        <label id="rowFont">Your font<select id="bFont"></select></label>
+      </div>
+      <div class="ez-row ez-row-one"><label>What do you want people to do at the end? <input type="text" id="bCta" maxlength="60" placeholder="Comment GUIDE and I'll send it to you"></label></div>
+      <p class="ez-sample" id="fontSample">YOUR WORDS LOOK <b>LIKE THIS</b></p>
+      <div class="ez-actions">
+        <button class="ghost" id="logoBtn">Add my logo</button>
+        <img id="logoImg" alt="Your logo" hidden>
+        <input type="file" id="logoFile" accept="image/png,image/jpeg,image/webp" hidden>
+        <button id="bSave">All set</button>
+        <span class="note" id="bNote"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+        <h2>Two ways to edit</h2>
+        <div class="ez-ways">
+          <div><h3>From the chat</h3><p class="note">Just tell Claude in the chat on the left. Drop your video here, then type the edit you want, like "put Digital Zoom on it." Best for a stack of videos.</p></div>
+          <div><h3>In the Content Made Easy studio</h3><p class="note">Drop your video on this page. It cleans up by itself, then you tap the edit you want. Best when you want to see your choices.</p></div>
+        </div>
+      </section>
+  <section class="panel" id="add">
+    <div class="ez-drop" id="drop" tabindex="0" role="button" aria-label="Add your video">
+      <strong>Drag and drop your video here</strong>
+      <span id="dropNote">Or tap to pick. Got a few clips? Drop them all and they get joined into one. Under 10 minutes in all. It cleans up by itself.</span>
+    </div>
+    <input type="file" id="file" accept="video/mp4,video/quicktime,.mp4,.mov,.m4v" multiple hidden>
+    <div class="ez-join" id="joinBox" hidden>
+      <p class="ez-q">These get joined into one video, in this order. Wrong order? Move them.</p>
+      <ol id="joinList"></ol>
+      <div class="ez-actions"><button id="joinGo">Join and clean up</button><button class="ghost" id="joinCancel">Cancel</button></div>
+    </div>
+    <p class="ez-said" id="said" hidden></p>
+  </section>
+  <section class="panel" hidden>
+        <h2>Transcription</h2>
+        <div class="ez-switch" role="group" aria-label="How your words get written down">
+          <button id="tEleven" type="button">ElevenLabs</button><button id="tHere" type="button">On this computer (free)</button>
+        </div>
+        <p class="note" id="tNote"></p>
+        <div class="ez-clone-row" id="tKeyRow" hidden>
+          <input type="password" id="tKey" autocomplete="off" placeholder="Paste your ElevenLabs key" aria-label="Your ElevenLabs key"><button id="tKeySave" type="button">Save</button>
+        </div>
+      </section>
+  <section class="panel">
+        <h2>Is Claude connected?</h2>
+        <p class="note" id="claudeNote"></p>
+        <div id="claudeTalk" class="ez-talk"></div>
+        <div class="ez-clone-row" id="claudeAsk" hidden>
+          <input type="text" id="claudeText" maxlength="2000" placeholder="Tell Claude what you want done" aria-label="Tell Claude what you want done"><button id="claudeSend" type="button">Send</button>
+        </div>
+        <p class="ez-said bad" id="claudeErr" hidden></p>
+      </section>
+
+  <section class="panel" id="fx">
+    <p class="ez-said" id="fxHint" style="display:none">Here's everything you can do. Drop your video in above and these turn on.</p>
+    <div class="ez-unlock" id="shortsLocked" hidden style="display:none">
+      <div><b>Got long videos?</b><span class="note">Unlock this and your long videos become short videos.</span></div>
+      <button id="shortsUnlock" type="button">Unlock</button>
+    </div>
+    <button class="ez-longcard" id="shortsCard" type="button" hidden>
+      <b>Your long videos turned into shorts</b>
+      <span>Anything that you were doing on YouTube or in landscape can now be taken over to a short video/reel.</span>
+    </button>
+    <div class="ez-tabs" role="tablist">
+      <button class="on" data-tab="tabPick" role="tab" type="button">Pick your edit</button>
+      <button data-tab="tabCopy" role="tab" type="button">Copy one you love</button>
+    </div>
+    <div id="tabPick">
+      <label class="ez-which">Which edit do you want to use?
+        <select id="fxWhich"><option value="">Pick one, or scroll to see them all</option></select>
+      </label>
+      <div id="fxGrid"></div>
+    </div>
+    <div class="ez-clone" id="tabCopy" hidden>
+      <h3>Copy an edit you love</h3>
+      <p class="note">Paste a link to one reel. We copy how it's cut, never their video, music or logo. Your brand stays yours.</p>
+      <div class="ez-clone-row"><input type="text" id="cloneCta" maxlength="60" placeholder="Your keyword or call to action, like: Comment GUIDE" aria-label="Your keyword or call to action"></div>
+      <div class="ez-clone-row" style="margin-top:10px">
+        <input type="url" id="cloneLink" placeholder="https://www.instagram.com/reel/..." aria-label="Link to the reel to copy">
+        <button id="cloneBtn">Copy this edit</button>
+      </div>
+      <div id="savedWrap" hidden><p class="note">Edits you copied. Tap one to use it again.</p><div class="ez-grid" id="savedGrid"></div></div>
+    </div>
+
+  </section>
+  <section class="panel" id="doneWrap">
+    <div id="done">
+      <h2>Your finished videos</h2>
+    <div id="work" hidden>
+      <p class="ez-state" id="state"></p>
+      <div class="ez-bar"><i id="bar"></i></div>
+      <p class="note" id="timeLeft"></p>
+    </div>
+      <p class="note" id="savedTo"></p>
+      <p class="note" id="noneYet">Nothing finished yet. Tap an edit and it lands here.</p>
+      <div id="results"></div>
+    </div>
+  </section>
+  <section class="panel" style="display:none">
+        <h2>Your videos</h2>
+        <div id="videoList"><p class="ez-q">No videos yet.</p><p class="note">Drop one in at the top and it shows up here.</p></div>
+      </section>
+
+  <dialog id="shortsAsk" class="ez-ask-box" aria-labelledby="askTitle">
+    <h2 id="askTitle">Unlock long videos</h2>
+    <p class="note" id="askLine"></p>
+    <label id="askWrap" hidden><span id="askQ"></span><textarea id="askA" rows="2"></textarea></label>
+    <label id="askKeyWrap" hidden>Your free Groq key<input type="password" id="askKey" autocomplete="off" aria-label="Your free Groq key">
+      <small><a href="https://console.groq.com/keys" target="_blank" rel="noopener">Get your free key here</a>. Sign in, tap Create API Key, then copy and paste it here. It stays on your computer.</small></label>
+    <p class="ez-said bad" id="askErr" hidden></p>
+    <div class="ez-actions"><button class="ghost" id="askBack" type="button">Not now</button><button id="askNext" type="button">Allow</button></div>
+  </dialog>
+
+  <dialog id="look" class="ez-look" aria-labelledby="lookName">
+    <button class="ghost small ez-close" id="lookClose" aria-label="Close">Close</button>
+    <video id="lookVid" muted loop playsinline controls></video>
+    <div class="ez-look-body">
+      <h2 id="lookName"></h2>
+      <ul id="lookUses"></ul>
+      <label id="lookWordsWrap" hidden><span id="lookWordsLabel"></span>
+        <textarea id="lookWords" rows="2"></textarea><small id="lookWordsHint"></small></label>
+      <label id="lookPicsWrap" hidden><span id="lookPicsLabel">Add your pictures</span>
+        <input type="file" id="lookPics" accept="image/jpeg,image/png,image/webp" multiple>
+        <small id="lookPicsHint"></small></label>
+      <button id="lookGo">Put this on my video</button>
+      <p class="note" id="lookNote"></p>
+    </div>
+  </dialog>
+
+  <p class="ez-foot">by Tiff The AI Princess 💙 &nbsp;·&nbsp; Your videos stay on your computer. Nothing posts until you post it.</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
