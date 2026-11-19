@@ -35,15 +35,15 @@ No headshot, phone, bio or website is asked for.
 
 | Form question | Answer |
 |---|---|
-| Email * | **NEEDED: which email?** |
+| Email * | thenailbawse@gmail.com |
 | First name * / Last name * | Anisia / Burroughs |
-| Session format * | **NEEDED: Workshop (50 min) recommended** (live build). Other choices: Lecture, Case Study, Panel |
+| Session format * | Workshop (50 min) |
 | Track * | Everyone's New (AI) Coworker |
 | Session title * | AI That Actually Works on Monday: From One Customer Question to a Usable System |
 | Abstract * | The approved abstract above, as written (≈100 words) |
 | Learning outcomes * | The 3 takeaways above, as a numbered list |
 | Panel discussion? * | No |
-| Spoken before? * | **NEEDED: Yes or No** |
+| Spoken before? * | Yes |
 | Details of your experience (only if Yes) * | **NEEDED: events + any video/web links** |
 
 Not sent anywhere: bio, website, Instagram (the form has no place for them).
