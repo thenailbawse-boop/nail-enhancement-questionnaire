@@ -119,38 +119,34 @@ One to 10 reels, one per line.
 curl -s -X POST -H "Origin: http://127.0.0.1:8790" -d '{"links":"LINK_OR_FILE_PATH"}' http://127.0.0.1:8790/api/study   # gives back "job"
 ```
 
-Check `/api/job/STUDY_JOB` until `state` is `pick a style` (or `stopped`). About a minute per reel. Its `styles` are
-the edits it found: tell them each one's `name` and its `traits` and `copies` in plain words, and ask which to copy.
-It copies how the reel is cut and laid out, never the creator's video, music, logo, handle or words.
+Check `/api/job/STUDY_JOB` until `state` is `pick a style` (or `stopped`). About a minute or two per reel. Its
+`styles` are the edits it found: tell them each one's `name` and its `traits` and `copies` in plain words, and ask
+which to copy (only one found? say what it is and go ahead). It copies how the reel is cut and laid out, never the
+creator's video, music, logo, handle or words.
 
 A style can have `ask` questions: things on the reel that are the creator's own (their handle, call to action, link,
-price). Ask the person what goes there instead, or whether to leave it out. Never put the creator's words on their video.
+price). Their own ending goes there instead: if their brand has no `cta` yet, ask "What should your ending say? Like:
+Comment GUIDE and I'll send it to you", and save it to the brand (step 2). Never put the creator's words on their video.
 
-Then put it on their video (a video job from step 3, cleaned). This step uses Groq's free AI to pick the video's best
-20 to 45 second part, so it needs their free Groq key saved on this cloud environment (for api.groq.com). If the job
-stops with "No Groq key", ask for it with the secure credential form, never in the chat. The video needs at least
-about 20 seconds of them teaching one idea.
-
-```bash
-curl -s -X POST -d '{"job":"JOB","template":"copycat","style_job":"STUDY_JOB","style":"STYLE_ID","answers":{"QUESTION_ID":"THEIR ANSWER"}}' http://127.0.0.1:8790/api/run
-```
-
-A question they want left out goes in `answers` as `"QUESTION_ID_skip": true`. Then steps 3 to 5 as usual.
-
-To keep the style for next time (it then shows up with the other edits):
+Save the style as one of their edits, then put it on their video like any other edit (a video job from step 3,
+cleaned). This is the same way the editor's own page does it, and it needs no extra key. Tested 2026-11-19.
 
 ```bash
 curl -s -X POST -H "Origin: http://127.0.0.1:8790" -d '{"style_job":"STUDY_JOB","styles":{"STYLE_ID":"NAME THEY LIKE"}}' http://127.0.0.1:8790/api/save-styles
+curl -s http://127.0.0.1:8790/fx.json      # the saved one has "saved": true; its edit id is its mp4 name without .mp4, like style-close-up-2-word-captions
+curl -s -X POST -d '{"job":"JOB","template":"effect","effect":"STYLE_EFFECT_ID"}' http://127.0.0.1:8790/api/run
 ```
 
-Then save it to the repo (step 7).
+Then steps 3 to 5 as usual: check the job, look at its frames picture, send the phone copy. The saved style stays in
+their list of edits, so next time they can just say its name. Save it to the repo (step 7).
 
 ## 7. Remember it for next time
 
-This machine is wiped when the session ends. Their brand lives in `content-made-easy/brand/`, the edits they
-copied in `content-made-easy/my-copied-edits/`. After either changes, ask once: "Want me to save this so next time remembers it?" On yes, commit
-only those two folders and push them to the repo's main branch (the owner allows that for these two folders).
-Never commit their videos.
+This machine is wiped when the session ends. Their brand and the edits they copied live in
+`content-made-easy/brand/` (copied edits under `brand/brand-assets/styles/`, listed in `brand.json`; older copies in
+`content-made-easy/my-copied-edits/`). After either changes, ask once: "Want me to save this so next time remembers
+it?" On yes, commit only those two folders and push them to the repo's main branch (the owner allows that for these
+two folders). Never commit their videos, and never commit keys.
 
 ## Rules
 

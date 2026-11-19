@@ -63,12 +63,5 @@ link() {   # link NAME TARGET: NAME becomes a link to TARGET, keeping anything a
 mkdir -p "$REPO/brand" "$REPO/my-copied-edits" "$ED/jobs"
 link "$HOME/Content Made Easy Brand" "$REPO/brand"
 link "$ED/jobs/_styles" "$REPO/my-copied-edits"
-# The Groq key itself is saved on the cloud environment and added to each request by the session's proxy,
-# so it never sits in a file. The editor only needs to see that a key is there.
-KEYS="$KITDIR/plugins/vibe-editing/config/keys.env"
-mkdir -p "$(dirname "$KEYS")"; touch "$KEYS"
-if ! grep -q "^GROQ_API_KEY=[^[:space:]]" "$KEYS"; then
-  sed -i '/^GROQ_API_KEY=/d' "$KEYS"; echo "GROQ_API_KEY=added-by-the-cloud-proxy" >> "$KEYS"
-fi
 echo "$ED" > "$HOME/.contentmadeeasy-folder"
 echo "SET UP"
