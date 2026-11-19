@@ -26,6 +26,16 @@
       "kind": "cloud_routine_test (fresh session)",
       "result": "ran in cloud, read state, Gmail unavailable handled; push refused 403; no state saved",
       "external_actions": "none"
+    },
+    {
+      "at": "2026-11-19T17:06:30Z",
+      "kind": "daily (manual verification fire, session-bound task trig_01BLdrK4D3HLGoYzDunqSY2A)",
+      "sources_read": [],
+      "sources_unavailable": [
+        "gmail: no tool in session"
+      ],
+      "external_actions": "none",
+      "result": "state read, blocker recorded, state pushed"
     }
   ],
   "sources": {
@@ -64,7 +74,7 @@
       "bound_to_session": "session_014duir3h5TYwiL5pKFvYcF9",
       "connectors": [],
       "verified_saved": "2026-11-19",
-      "verified_cloud_run": "pending"
+      "verified_cloud_run": "2026-11-19T17:05:40Z fired, ran, read state and pushed (no Gmail yet)"
     },
     "weekly": {
       "status": "saved",
@@ -183,7 +193,8 @@
       "what": "Gmail connector not connected, so scheduled runs cannot read Skool notification emails.",
       "fix": "Anisia: claude.ai/customize/connectors → Gmail → Connect (Google OAuth, read access). Then start a new Claude Code session on this repo and say: finish Skool setup.",
       "status": "open",
-      "asked_user": "2026-11-19"
+      "asked_user": "2026-11-19",
+      "last_checked": "2026-11-19"
     },
     {
       "id": "B-002",
