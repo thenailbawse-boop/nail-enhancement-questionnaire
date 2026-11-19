@@ -177,3 +177,5 @@ In a new session: confirm which tools loaded (ToolSearch). Read-only: audit Klav
 new `operations/AUDIT-<date>.md`, move resolved items on DASHBOARD.md, close B-004. Mirror DASHBOARD.md into a Drive
 "The Nail Bawse Ops" folder. Move the scheduled tasks to the new session the same way as "Finish Skool setup".
 Change nothing in Klaviyo/Zoom/Wix without Anisia's explicit OK.
+Also in that session: submit the Elevate RTP talk (approved), and open all 4 funnel design references in
+`operations/funnel/REFERENCES.md` BEFORE touching the funnel design (her rule: look at every link first).

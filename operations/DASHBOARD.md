@@ -26,6 +26,7 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
   "nail-enhancement-questionnaire" environment and say "finish ops setup"
 
 ## ⚠️ Unresolved issues
+- Funnel redesign on hold until all 4 reference links are viewed (`funnel/REFERENCES.md`); this session can't open them
 - Funnel not deployed yet (needs the Gmail app password, Netlify site and domain, all things only you can create)
 - Klaviyo paid plan + Auto-upgrade still on until you change them; next charge is likely around Nov 27
 - Old Klaviyo contacts: export them before downgrading, then send me the CSV and I'll add an import to the funnel
