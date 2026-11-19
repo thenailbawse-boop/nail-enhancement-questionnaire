@@ -6,7 +6,7 @@ It replaces chat memory: if something matters next time, it goes in this folder 
 ## Where everything lives (persistent state)
 
 - Repo: `thenailbawse-boop/nail-enhancement-questionnaire`, folder `skool-manager/`
-- **Canonical state branch: `claude/dazzling-cannon-o8eilb`.** Every run fetches this branch first,
+- **Canonical state branch: `claude/skool-setup-3dza76`.** Every run fetches this branch first,
   reads state from it, and pushes its updates back to it. Never start from a stale copy, never fork state
   onto another branch silently. If a push to it is refused, say so in the digest as a blocker.
 - `state/registry.json`: the ledger (sources, schedules, processed IDs, draft queue, publish log, feedback log, blockers).
@@ -129,13 +129,16 @@ Use `python3 -I skool-manager/tools/registry.py mark <ID> <status> [--edit TEXT]
 If there is nothing meaningful: "No high-priority activity found in connected notification sources." Never imply
 Skool itself is quiet. Scheduled runs with nothing important end with a one-line status only.
 
-## "Finish Skool setup" (run once, after Anisia connects Gmail)
+## "Finish Skool setup" (done 2026-11-19)
 
-When she says "finish Skool setup" in a new session on this repo:
-1. Confirm a Gmail tool is actually loaded (ToolSearch "gmail"). If not, tell her it still isn't connected and stop.
-2. Read both saved tasks with `get_trigger` (IDs in `SCHEDULED_ROUTINE.md`). Create replacements **bound to this
-   new session** (no `create_new_session_on_fire`: fresh routine sessions cannot push to the repo; verified 403 on
-   2026-11-19) with the same prompts and schedules. Confirm each was created, then delete the old two.
-   Update `SCHEDULED_ROUTINE.md` and `registry.json → schedules`.
-3. Run the first live read-only digest from Gmail (last 3 days), close blocker B-001, set `last_successful_run_utc`.
+Completed in session `session_014duir2ozQGSs9NdK6oLi3m` (Gmail connected). Both scheduled tasks now fire into that
+session; first live Gmail digest written; B-001 closed. See `SCHEDULED_ROUTINE.md`.
+
+If the tasks ever have to move to another session again (e.g. a connector is added later):
+1. Confirm the needed tool is loaded in the new session (ToolSearch).
+2. Create replacement tasks **bound to the new session** (never `create_new_session_on_fire`: fresh routine sessions
+   cannot push; verified 403 on 2026-11-19), same schedules. Confirm, then remove the old ones (ask Anisia if the
+   permission check blocks deleting them).
+3. A cloud session can push only to its own `claude/...` branch. Fast-forward that branch onto the canonical branch,
+   make it the new canonical branch here, in `README.md`, the skill and `registry.json`, and in the task prompts.
 4. Validate, commit, push, confirm on remote. Report only what was verified.

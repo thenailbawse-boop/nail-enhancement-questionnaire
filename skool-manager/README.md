@@ -15,4 +15,4 @@ Your persistent community-ops assistant. It prepares; **you** publish. Nothing h
 - `digests/`: every daily digest and Sunday review
 - `COMMUNITIES.yaml` · `examples/VOICE_GUIDE.md` · `SCHEDULED_ROUTINE.md`
 - `handoff/`: the original Nov 19 pack
-- State branch: `claude/dazzling-cannon-o8eilb`
+- State branch: `claude/skool-setup-3dza76`

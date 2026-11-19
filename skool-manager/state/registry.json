@@ -3,9 +3,9 @@
   "owner": "Anisia Burroughs",
   "timezone": "America/Los_Angeles",
   "created_at": "2026-11-19",
-  "canonical_state_branch": "claude/dazzling-cannon-o8eilb",
-  "last_successful_run_utc": null,
-  "last_successful_run_note": "No connected notification source has been read yet. Set this only after a run actually reads Gmail.",
+  "canonical_state_branch": "claude/skool-setup-3dza76",
+  "last_successful_run_utc": "2026-11-19T17:16:06Z",
+  "last_successful_run_note": "First live Gmail read (from:skool.com, last 3 days) in the finish-setup session.",
   "runs": [
     {
       "at": "2026-11-19T17:10:00Z",
@@ -36,15 +36,28 @@
       ],
       "external_actions": "none",
       "result": "state read, blocker recorded, state pushed"
+    },
+    {
+      "at": "2026-11-19T17:16:06Z",
+      "kind": "finish_setup + first live daily digest (read-only)",
+      "sources_read": [
+        "gmail from:skool.com newer_than:3d (3 emails, all AI Automation Club)"
+      ],
+      "sources_unavailable": [
+        "google_calendar: not checked (sign-in expired per B-002)",
+        "the social club / other groups: no notification emails in window"
+      ],
+      "external_actions": "none",
+      "result": "1 draft queued (D-005); 3 source IDs processed; schedules moved to Gmail-connected session"
     }
   ],
   "sources": {
     "gmail_skool_notifications": {
-      "status": "not_connected",
-      "checked_at": "2026-11-19",
-      "detail": "Gmail connector is installed in claude.ai but its connection is incomplete; not available to Claude Code sessions.",
+      "status": "connected",
+      "checked_at": "2026-11-19T17:16:06Z",
+      "detail": "Verified read access in session_014duir2ozQGSs9NdK6oLi3m. Only AI Automation Club sends notification emails in the last 3 days; other groups may have email notifications off.",
       "account": "thenailbawse@gmail.com",
-      "query": "from:skool.com newer_than:2d",
+      "query": "from:skool.com newer_than:3d (first run); afterwards since last_successful_run_utc minus 24h",
       "coverage": "email-notifications-only (partial: depends on her Skool email notification settings)"
     },
     "google_calendar": {
@@ -69,21 +82,25 @@
   "schedules": {
     "daily": {
       "status": "saved",
-      "trigger_id": "trig_01BLdrK4D3HLGoYzDunqSY2A",
+      "trigger_id": "trig_014tV2sLDsT79g1DEeNoAkmA",
       "cron": "CRON_TZ=America/Los_Angeles 41 8 * * *",
-      "bound_to_session": "session_014duir3h5TYwiL5pKFvYcF9",
-      "connectors": [],
-      "verified_saved": "2026-11-19",
-      "verified_cloud_run": "2026-11-19T17:05:40Z fired, ran, read state and pushed (no Gmail yet)"
+      "bound_to_session": "session_014duir2ozQGSs9NdK6oLi3m",
+      "connectors": [
+        "Gmail (via bound session)"
+      ],
+      "verified_saved": "2026-11-19T17:16:06Z",
+      "verified_cloud_run": "pending: first fire 2026-11-20 08:41 PT"
     },
     "weekly": {
       "status": "saved",
-      "trigger_id": "trig_01Emj5bb4qQWybFTotLiG3kJ",
+      "trigger_id": "trig_01AHfGHdLmKcfzHBEFqVLq8d",
       "cron": "CRON_TZ=America/Los_Angeles 42 16 * * 0",
-      "bound_to_session": "session_014duir3h5TYwiL5pKFvYcF9",
-      "connectors": [],
-      "verified_saved": "2026-11-19",
-      "verified_cloud_run": "pending"
+      "bound_to_session": "session_014duir2ozQGSs9NdK6oLi3m",
+      "connectors": [
+        "Gmail (via bound session)"
+      ],
+      "verified_saved": "2026-11-19T17:16:06Z",
+      "verified_cloud_run": "pending: first fire 2026-11-22 16:42 PT"
     },
     "retired": [
       {
@@ -92,11 +109,23 @@
           "trig_01U5D5Pm5u69tBSnBxFpmhGL"
         ],
         "reason": "fresh-session routines could not push state (403); deleted 2026-11-19"
+      },
+      {
+        "ids": [
+          "trig_01BLdrK4D3HLGoYzDunqSY2A",
+          "trig_01Emj5bb4qQWybFTotLiG3kJ"
+        ],
+        "reason": "bound to old setup session without Gmail; replaced 2026-11-19",
+        "status": "STILL ENABLED: delete/disable was blocked by a permission check; Anisia to remove (B-003)"
       }
     ],
-    "limitation": "No Gmail on these runs until 'Finish Skool setup' in a Gmail-connected session."
+    "limitation": "Old tasks still enabled until B-003 is resolved; they write only to the old branch."
   },
-  "processed_source_ids": [],
+  "processed_source_ids": [
+    "1a1ea5e2c04781a1",
+    "1a1ef934ae34d0e7",
+    "1a1efd1753b60a27"
+  ],
   "draft_queue": [
     {
       "id": "D-001",
@@ -173,6 +202,27 @@
       "user_edit": null,
       "publish_confirmation": null,
       "history": []
+    },
+    {
+      "id": "D-005",
+      "dedupe_key": "ai automation club|webinar: recalibration hour|felicia turner-muhammad|1a1ef934ae34d0e7",
+      "created_at": "2026-11-19T17:16:06Z",
+      "community": "AI Automation Club",
+      "source_type": "gmail_skool_notification",
+      "source_ref": "gmail 1a1ef934ae34d0e7 (Nov 18) + 1a1ea5e2c04781a1 (Nov 17)",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "gmail_url": "https://mail.google.com/mail/#all/1a1ef934ae34d0e7",
+      "author": "Felicia Turner-Muhammad",
+      "conversation": "Webinar: RECALIBRATION HOUR (comment thread; Felicia @mentioned Anisia twice)",
+      "snippet": "Nov 18: \"@Anisia Burroughs Nooooooo. No worries, it happens. Girl friend, I so happy that the feedback was soooo good. The in...\" (email cuts off). Nov 17: \"I'm excited to see you in the room ✨\"",
+      "priority": 1,
+      "reply_status": "needs_verification",
+      "status": "queued_for_user",
+      "draft_text": "Felicia, thank you for the grace and for cheering me on 💗 That feedback meant so much to me, and so does having you in my corner.",
+      "user_edit": null,
+      "publish_confirmation": null,
+      "history": [],
+      "note": "Email shows only the start of her comment. Read the full comment before replying and adjust if the rest asks a question."
     }
   ],
   "publish_log": [],
@@ -192,9 +242,11 @@
       "opened": "2026-11-19",
       "what": "Gmail connector not connected, so scheduled runs cannot read Skool notification emails.",
       "fix": "Anisia: claude.ai/customize/connectors → Gmail → Connect (Google OAuth, read access). Then start a new Claude Code session on this repo and say: finish Skool setup.",
-      "status": "open",
+      "status": "closed",
       "asked_user": "2026-11-19",
-      "last_checked": "2026-11-19"
+      "last_checked": "2026-11-19",
+      "closed": "2026-11-19T17:16:06Z",
+      "resolution": "Gmail connected; verified read in finish-setup session"
     },
     {
       "id": "B-002",
@@ -203,6 +255,21 @@
       "fix": "Reconnect Google Calendar on the same connectors page.",
       "status": "open",
       "asked_user": "2026-11-19"
+    },
+    {
+      "id": "B-003",
+      "opened": "2026-11-19",
+      "what": "Old scheduled tasks trig_01BLdrK4D3HLGoYzDunqSY2A and trig_01Emj5bb4qQWybFTotLiG3kJ are still enabled (removal blocked by permission check). They fire into the old session without Gmail and write to the old branch.",
+      "fix": "Anisia: delete both in the scheduled tasks list, or tell Claude it may delete them.",
+      "status": "open",
+      "asked_user": "2026-11-19"
+    }
+  ],
+  "previous_state_branches": [
+    {
+      "branch": "claude/dazzling-cannon-o8eilb",
+      "until": "2026-11-19T17:16:06Z",
+      "why": "moved so the Gmail-connected session (which can push only to its own branch) owns state"
     }
   ]
 }

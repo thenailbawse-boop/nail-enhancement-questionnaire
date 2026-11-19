@@ -5,8 +5,8 @@ description: Anisia's Skool Community Manager. Use when she asks for her Skool d
 
 # Skool Community Manager
 
-Everything lives in `skool-manager/` on branch `claude/dazzling-cannon-o8eilb` (the canonical state branch).
-Fetch it before reading state: `git fetch origin claude/dazzling-cannon-o8eilb` and work from that commit.
+Everything lives in `skool-manager/` on branch `claude/skool-setup-3dza76` (the canonical state branch).
+Fetch it before reading state: `git fetch origin claude/skool-setup-3dza76` and work from that commit.
 
 Read before operating, in this order:
 1. `skool-manager/CLAUDE.md`: rules, voice, statuses, dedupe, boundaries (authoritative)
