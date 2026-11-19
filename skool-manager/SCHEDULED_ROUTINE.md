@@ -17,7 +17,7 @@ Times are a few minutes before the hour on purpose: on-the-hour runs queue behin
 | ID | Why | Status |
 |---|---|---|
 | `trig_016VeEqLr3qRb4NtyJgcZkf1`, `trig_01U5D5Pm5u69tBSnBxFpmhGL` | fresh-session runs could not push (403) | deleted 2026-11-19 |
-| `trig_01BLdrK4D3HLGoYzDunqSY2A` (daily), `trig_01Emj5bb4qQWybFTotLiG3kJ` (weekly) | bound to the old setup session, which has no Gmail and pushes to the old branch `claude/dazzling-cannon-o8eilb` | **still enabled**: removing them was blocked by a permission check on 2026-11-19. Anisia to delete them (or allow Claude to). Until then they also fire daily into the old session; ignore anything they write to the old branch. |
+| `trig_01BLdrK4D3HLGoYzDunqSY2A` (daily), `trig_01Emj5bb4qQWybFTotLiG3kJ` (weekly) | bound to the old setup session, which had no Gmail | deleted 2026-11-19 with Anisia's permission |
 
 ## Verification history
 

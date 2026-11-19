@@ -116,10 +116,10 @@
           "trig_01Emj5bb4qQWybFTotLiG3kJ"
         ],
         "reason": "bound to old setup session without Gmail; replaced 2026-11-19",
-        "status": "STILL ENABLED: delete/disable was blocked by a permission check; Anisia to remove (B-003)"
+        "status": "deleted 2026-11-19 with Anisia's permission"
       }
     ],
-    "limitation": "Old tasks still enabled until B-003 is resolved; they write only to the old branch."
+    "limitation": "None known. Both tasks fire into the Gmail-connected session."
   },
   "processed_source_ids": [
     "1a1ea5e2c04781a1",
@@ -261,8 +261,10 @@
       "opened": "2026-11-19",
       "what": "Old scheduled tasks trig_01BLdrK4D3HLGoYzDunqSY2A and trig_01Emj5bb4qQWybFTotLiG3kJ are still enabled (removal blocked by permission check). They fire into the old session without Gmail and write to the old branch.",
       "fix": "Anisia: delete both in the scheduled tasks list, or tell Claude it may delete them.",
-      "status": "open",
-      "asked_user": "2026-11-19"
+      "status": "closed",
+      "asked_user": "2026-11-19",
+      "closed": "2026-11-19T17:21:43Z",
+      "resolution": "Anisia allowed it; both old tasks deleted"
     }
   ],
   "previous_state_branches": [
