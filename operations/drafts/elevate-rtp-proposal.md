@@ -47,3 +47,5 @@ No headshot, phone, bio or website is asked for.
 | Details of your experience * | I host my own free live webinars and classes for beauty professionals as The Nail Bawse, where I teach practical, step-by-step AI workflows. I have also worked as a teacher, so leading a room and turning ideas into something people can use the next day is what I do. More about my work: https://thenailbawse.com · https://www.instagram.com/thenailbawse/ |
 
 Not sent: bio (the form has no place for it). Website + Instagram go in the experience answer.
+
+**Nov 19:** Anisia said submit. The form's Submit button shows a Google "are you human" check, so Claude stopped and made a pre-filled link instead: `ELEVATE-SUBMIT-LINK.md`. Not submitted yet.
