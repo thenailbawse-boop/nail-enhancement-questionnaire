@@ -20,16 +20,16 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
 4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
 
-## 🔌 Connections (checked Nov 19, read-only)
+## 🔌 Connections (re-checked Nov 19 late, read-only)
 | Connector | Status |
 |---|---|
 | Gmail | ✅ Working |
-| Google Calendar | ❌ Needs you to sign in again |
-| Google Drive | ❌ Needs you to sign in again |
-| Zoom | ❌ Not connected |
-| Wix | ❌ Not connected |
+| Google Calendar | ✅ Working (thenailbawse@gmail.com) |
+| Google Drive | ✅ Working, but signed in as asburroughs26@gmail.com (sees files shared from thenailbawse) |
+| Zoom | ✅ Working (weekly "Booked, Burnt Out & Underpaid" meeting visible) |
+| Wix | ✅ Working (4 sites, incl. "The Nail Bawse") |
 
-Fix at claude.ai/customize/connectors, then start a new session on the "nail-enhancement-questionnaire" environment.
+All connected. Manage them at claude.ai/customize/connectors.
 
 ## ⚠️ Unresolved issues
 - Funnel redesign: links viewed Nov 19, waiting for your OK before changing the pages
