@@ -15,7 +15,7 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
 ## 👑 Pending your approval / decision (top first)
 1. **Funnel setup (`funnel-site/README.md`):** Gmail app password, free Netlify site, 5 settings, point your domain
 2. **Klaviyo (you're leaving it):** export your contacts, turn off Auto-upgrade, downgrade to free before the next bill (~Nov 27)
-3. **Elevate RTP: submit by Nov 30.** Form checked; 3 answers needed from you (email, Workshop or Lecture, spoken before?). Preview in `drafts/elevate-rtp-proposal.md`
+3. **Elevate RTP: submit by Nov 30.** All answers in; waiting for your "send". Preview in `drafts/elevate-rtp-proposal.md`
 3b. **Funnel redesign plan:** all 4 links viewed; your OK needed (`funnel/REFERENCES.md`)
 4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
