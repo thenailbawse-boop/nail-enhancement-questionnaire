@@ -44,6 +44,6 @@ No headshot, phone, bio or website is asked for.
 | Learning outcomes * | The 3 takeaways above, as a numbered list |
 | Panel discussion? * | No |
 | Spoken before? * | Yes |
-| Details of your experience (only if Yes) * | **NEEDED: events + any video/web links** |
+| Details of your experience * | I host my own free live webinars and classes for beauty professionals as The Nail Bawse, where I teach practical, step-by-step AI workflows. I have also worked as a teacher, so leading a room and turning ideas into something people can use the next day is what I do. More about my work: https://thenailbawse.com · https://www.instagram.com/thenailbawse/ |
 
-Not sent anywhere: bio, website, Instagram (the form has no place for them).
+Not sent: bio (the form has no place for it). Website + Instagram go in the experience answer.
