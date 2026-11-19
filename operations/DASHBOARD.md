@@ -2,6 +2,8 @@
 _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
+- Nov 19: funnel pages redesigned in her brand (countdown, date card, 3-step thank-you, story seat card); 16 tests pass, browser-checked
+- Nov 19: Elevate form filled and checked; pre-filled link ready for her to tap Submit
 - Public website set: **thenailbawse.com** (all docs and the Elevate proposal updated)
 - Nov 19: MUSE Hair Fest replied with fee $350 (sent) · A Place Called Home follow-up (sent)
 - New funnel built and tested end to end in a browser (`funnel-site/`, 16 automated tests pass); not deployed yet
@@ -16,7 +18,7 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
 1. **Funnel setup (`funnel-site/README.md`):** Gmail app password, free Netlify site, 5 settings, point your domain
 2. **Klaviyo (you're leaving it):** export your contacts, turn off Auto-upgrade, downgrade to free before the next bill (~Nov 27)
 3. **Elevate RTP: submit by Nov 30.** Approved. Google requires a human check, so YOU tap Submit: `drafts/ELEVATE-SUBMIT-LINK.md` (pre-filled, 2 min). Preview in `drafts/elevate-rtp-proposal.md`
-3b. **Funnel redesign plan:** all 4 links viewed; your OK needed (`funnel/REFERENCES.md`)
+3b. **Funnel redesign done** in your pink (approved Nov 19). Check the 4 "This is for you if…" lines; send a Skool link if you want one on the thank-you page
 4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
 
@@ -32,7 +34,6 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
 All connected. Manage them at claude.ai/customize/connectors.
 
 ## ⚠️ Unresolved issues
-- Funnel redesign: links viewed Nov 19, waiting for your OK before changing the pages
 - Funnel not deployed yet (needs the Gmail app password, Netlify site and domain, all things only you can create)
 - Klaviyo paid plan + Auto-upgrade still on until you change them; next charge is likely around Nov 27
 - Old Klaviyo contacts: export them before downgrading, then send me the CSV and I'll add an import to the funnel

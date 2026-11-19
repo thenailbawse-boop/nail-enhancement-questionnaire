@@ -2,35 +2,71 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>You're in | The Nail Bawse</title><meta name="robots" content="noindex">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;600&display=swap">
+<title>You're in | The Nail Bawse</title><meta name="robots" content="noindex"><meta name="theme-color" content="#F4A6C4">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <main class="wrap">
-  <div class="eyebrow">The Nail Bawse</div>
-  <h1 id="h">You're in 💅🏽</h1>
-  <p id="msg">Check your email for your Zoom link and calendar invite. If you don't see it in a few minutes, look in Promotions or Spam and move it to your inbox so the reminders reach you.</p>
-  <div class="when" id="whenbox" hidden><strong id="t"></strong><span id="w"></span></div>
-  <div class="links" id="cal" hidden><a id="gcal" target="_blank" rel="noopener">Add to Google Calendar</a><a id="ics">Add to Apple or Outlook calendar</a></div>
-  <p class="muted">See you there,<br>Anisia</p>
+  <header class="stack hero">
+    <div class="eyebrow">The Nail Bawse</div>
+    <h1 id="h" class="caps">You're in.</h1>
+    <p class="lead" id="msg">Your seat is saved. Three quick things before we go live:</p>
+  </header>
+
+  <div class="seat" id="seat" hidden>
+    <div class="seat-top"><span>Seat saved</span><span>Free live class</span></div>
+    <strong class="seat-title caps" id="t"></strong>
+    <dl>
+      <div><dt>Date</dt><dd id="sDate"></dd></div>
+      <div><dt>Time</dt><dd id="sTime"></dd></div>
+      <div id="sNameRow" hidden><dt>Guest</dt><dd id="sName"></dd></div>
+    </dl>
+    <div class="seat-foot"><span>Anisia the Nail Bawse</span><span>@thenailbawse</span></div>
+  </div>
+
+  <ol class="steps big" id="steps">
+    <li>
+      <strong class="caps">Check your inbox</strong>
+      <p id="inbox">Your Zoom link and calendar invite are on the way. Don't see it in a few minutes? Look in Promotions or Spam and move it to your inbox so the reminders reach you.</p>
+    </li>
+    <li id="calStep" hidden>
+      <strong class="caps">Add it to your calendar</strong>
+      <div class="btns"><a class="btn" id="gcal" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics">Apple / Outlook</a></div>
+    </li>
+    <li>
+      <strong class="caps">Post your seat</strong>
+      <p>Screenshot your seat card, post it to your story and tag <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a>. Bring one question you want answered live.</p>
+    </li>
+  </ol>
+
+  <p class="signoff">See you there,<br>Anisia</p>
+  <footer>Beyond the service. Beyond the title.<br>© The Nail Bawse</footer>
 </main>
 <script>
 (function () {
-  var p = new URLSearchParams(location.search), id = p.get("e");
-  if (p.get("m") === "0") document.getElementById("msg").textContent = "Your seat is saved. The confirmation email is running a little behind; it will reach you before the session. Save this page in the meantime.";
-  if (!id || id === "waitlist") { document.getElementById("h").textContent = "You're on the list 💅🏽"; document.getElementById("msg").textContent = "As soon as the next date is posted, you'll get the topic and a link to save your seat."; return; }
+  var $ = function (id) { return document.getElementById(id); };
+  var p = new URLSearchParams(location.search), id = p.get("e"), name = (p.get("n") || "").trim().slice(0, 30);
+  if (p.get("m") === "0") $("inbox").textContent = "Your confirmation email is running a little behind; it will reach you before the class. Save this page in the meantime.";
+  if (!id || id === "waitlist") {
+    $("h").textContent = "You're on the list.";
+    $("msg").textContent = "As soon as the next date is posted, you'll get the topic and a link to save your seat.";
+    $("steps").hidden = true; return;
+  }
   fetch("/api/events?id=" + encodeURIComponent(id)).then(function (r) { return r.json(); }).then(function (d) {
     var ev = d.event; if (!ev) return;
     var start = new Date(ev.startUtc), end = new Date(start.getTime() + (ev.durationMin || 45) * 60000);
-    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    document.getElementById("t").textContent = ev.title;
-    document.getElementById("w").textContent = new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(start);
-    document.getElementById("whenbox").hidden = false;
-    var f = function (d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); };
-    document.getElementById("gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates: f(start) + "/" + f(end), details: "Your Zoom link is in your confirmation email.", location: "Online (Zoom)" });
-    document.getElementById("ics").href = "/api/ics?id=" + encodeURIComponent(ev.id);
-    document.getElementById("cal").hidden = false;
+    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ev.tz;
+    var f = function (o) { return new Intl.DateTimeFormat("en-US", Object.assign({ timeZone: tz }, o)).format(start); };
+    $("t").textContent = ev.title;
+    $("sDate").textContent = f({ weekday: "long", month: "long", day: "numeric" });
+    $("sTime").textContent = f({ hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+    if (name) { $("sName").textContent = name; $("sNameRow").hidden = false; }
+    $("seat").hidden = false;
+    var z = function (d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); };
+    $("gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates: z(start) + "/" + z(end), details: "Your Zoom link is in your confirmation email.", location: "Online (Zoom)" });
+    $("ics").href = "/api/ics?id=" + encodeURIComponent(ev.id);
+    $("calStep").hidden = false;
   }).catch(function () {});
 })();
 </script>

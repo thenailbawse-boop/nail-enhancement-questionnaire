@@ -11,7 +11,8 @@ Take from both "in my own branding": the structure and what makes each page work
 | 4 | https://thelacelocker.store/webinar/confirmed | The Lace Locker webinar confirmation page |
 
 Status: **all 4 viewed Nov 19, 2026** at desktop (1366px) and phone (390px) width. ✅ 1 ✅ 2 ✅ 3 ✅ 4
-Phone screenshots: `screenshots/key-*.png`. **Waiting for Anisia's OK before any change to `funnel-site/`.**
+Phone screenshots: `screenshots/key-*.png`. **Anisia approved Nov 19. Redesign done in `funnel-site/public/`** (16 tests pass, browser-checked phone/desktop/dark). Preview: `screenshots/new/`.
+Not done: Skool button (her Skool groups are marked do-not-promote; send a link to add one). "This is for you if…" lines are placeholder copy for her to edit.
 
 ## What each page does
 | | Tiff: sign-up (1) | Tiff: confirmation (2) | Lace Locker: sign-up (3) | Lace Locker: confirmation (4) |
