@@ -138,6 +138,8 @@ stronger relationships, systems that demonstrably work. Report completed work on
 - Operations files live in `operations/` (same branch): `DASHBOARD.md` (completed / pending approvals / unresolved),
   `WEBINAR_WORKFLOW.md` (reusable runbook + test protocol), `opportunities.json` (speaking/collab contacts, dedupe
   before any outreach), `drafts/` (approval-ready text), `AUDIT-*.md`.
+- **Public website: https://thenailbawse.com** (Anisia, Nov 19). Use it everywhere (pitches, bios, proposals) instead of
+  the base44 app or wixsite addresses. It will host the free-session funnel (`funnel-site/`) once she connects it to Netlify.
 - **Webinars (updated Nov 19):** free weekly sessions on whatever topic/day/time Anisia chooses; no fixed name. Funnel =
   `funnel-site/` (Netlify + Gmail, her own domain). **Klaviyo is retired**: she is leaving it and does not want to pay for it.
   Never suggest Klaviyo again. Old IDs for reference only: USy42h, lists WhYD4m/XNCWWa, flow RqqwPF.

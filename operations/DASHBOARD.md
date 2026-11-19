@@ -2,6 +2,7 @@
 _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
+- Public website set: **thenailbawse.com** (all docs and the Elevate proposal updated)
 - Nov 19: MUSE Hair Fest replied with fee $350 (sent) · A Place Called Home follow-up (sent)
 - New funnel built and tested end to end in a browser (`funnel-site/`, 16 automated tests pass); not deployed yet
 - Skool manager live: Gmail connected, daily + Sunday scheduled tasks bound to the Gmail session, first live digest done
@@ -15,7 +16,7 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
 1. **Funnel setup (`funnel-site/README.md`):** Gmail app password, free Netlify site, 5 settings, point your domain
 2. **Klaviyo (you're leaving it):** export your contacts, turn off Auto-upgrade, downgrade to free before the next bill (~Nov 27)
 3. **Elevate RTP: submit by Nov 30.** Approved by Anisia; needs a session on the "nail-enhancement-questionnaire" environment
-4. **Your public website address** (Anisia is sending it)
+4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
 
 ## 🔌 Connections only you can make (claude.ai/customize/connectors)

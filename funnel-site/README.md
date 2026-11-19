@@ -12,7 +12,7 @@ No Klaviyo, no monthly fees.
 - **Your email list:** everyone who opts in. One button announces a new session to them (with unsubscribe link).
 - **Admin page (`/admin.html`)**, works on your phone: post/edit/delete sessions, see registration counts, copy a
   share link, download registrants or your whole list as CSV.
-- **Share links:** `yourdomain.com/?src=instagram` records where people came from. `?s=<session id>` opens a specific date.
+- **Share links:** `thenailbawse.com/?src=instagram` records where people came from. `?s=<session id>` opens a specific date.
 
 ## One-time setup (≈20 minutes, free)
 1. **Gmail app password** (so the site can send email as you):
@@ -26,7 +26,7 @@ No Klaviyo, no monthly fees.
    | `GMAIL_USER` | thenailbawse@gmail.com |
    | `GMAIL_APP_PASSWORD` | the 16-letter app password |
    | `ADMIN_KEY` | a long passphrase only you know (you type it once on the admin page) |
-   | `SITE_URL` | https://yourdomain.com |
+   | `SITE_URL` | https://thenailbawse.com |
    | `MAILING_ADDRESS` | a postal address or PO box. Required by US law in announcement emails, so the "email my list" button stays off without it |
    | `FROM_NAME` (optional) | how your name shows in inboxes; default "Anisia \| The Nail Bawse" |
    Then **Deploys → Trigger deploy**.

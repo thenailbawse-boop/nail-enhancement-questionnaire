@@ -24,4 +24,6 @@ Anisia Burroughs is a Los Angeles licensed cosmetologist and nail technician and
 education and AI-systems business for beauty professionals. After years behind the chair, she now teaches service
 professionals to turn the knowledge they already share with clients into practical, verified AI workflows.
 
-_Check before submitting: years of experience (CLAUDE.md says eight; the draft leaves the number out), which website URL to list (see audit #12)._
+**Website:** https://thenailbawse.com · **Instagram:** https://www.instagram.com/thenailbawse/
+
+_Approved for submission by Anisia (Nov 19). Years of experience left out on purpose._
