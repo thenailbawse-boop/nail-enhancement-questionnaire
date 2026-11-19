@@ -30,7 +30,7 @@ Times are a few minutes before the hour on purpose: on-the-hour runs queue behin
 ## The saved prompts
 
 The exact prompts are stored on the tasks themselves (readable with `get_trigger`). Summary:
-- **Daily**: fetch state branch → read CLAUDE.md + state → Gmail `from:skool.com` since last run (24h overlap,
+- **Daily** (prompt updated Nov 19 to add the operations sweep): fetch state branch → read CLAUDE.md + state → Gmail `from:skool.com` since last run (24h overlap,
   read-only) → dedupe → ≤5 drafts queued → `digests/YYYY-MM-DD.md` → validate, commit, push, confirm → digest message.
 - **Weekly**: same sources plus Calendar times → priorities, stale drafts, verified classes/replays, relationships,
   ≤1 post idea checked against publish history and rules → `digests/weekly-YYYY-MM-DD.md` → one workflow improvement.

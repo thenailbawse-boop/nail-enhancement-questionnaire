@@ -49,6 +49,20 @@
       ],
       "external_actions": "none",
       "result": "1 draft queued (D-005); 3 source IDs processed; schedules moved to Gmail-connected session"
+    },
+    {
+      "at": "2026-11-19T19:19:30Z",
+      "kind": "operations audit (handoff: Community, Education & Webinar Operations Manager)",
+      "sources_read": [
+        "gmail read-only: klaviyo, zoom, wix-forms, skool moderation email, sent outreach Oct 22-Nov 12, replies, bounces"
+      ],
+      "sources_unavailable": [
+        "google_drive: sign-in expired",
+        "google_calendar: sign-in expired",
+        "klaviyo/zoom/wix connectors: not installed"
+      ],
+      "external_actions": "none (daily task prompt updated to add operations sweep)",
+      "result": "operations/AUDIT-2026-11-19.md (17 findings), WEBINAR_WORKFLOW.md, DASHBOARD.md, opportunities.json (32), 3 drafts"
     }
   ],
   "sources": {
@@ -89,7 +103,8 @@
         "Gmail (via bound session)"
       ],
       "verified_saved": "2026-11-19T17:16:06Z",
-      "verified_cloud_run": "pending: first fire 2026-11-20 08:41 PT"
+      "verified_cloud_run": "pending: first fire 2026-11-20 08:41 PT",
+      "prompt_updated": "2026-11-19T19:19:30Z (adds daily operations sweep)"
     },
     "weekly": {
       "status": "saved",
@@ -265,6 +280,14 @@
       "asked_user": "2026-11-19",
       "closed": "2026-11-19T17:21:43Z",
       "resolution": "Anisia allowed it; both old tasks deleted"
+    },
+    {
+      "id": "B-004",
+      "opened": "2026-11-19",
+      "what": "Klaviyo, Zoom and Wix connectors not installed; Drive/Calendar sign-in expired. Flows (RqqwPF, old event flows), list WhYD4m wiring, Zoom plan and attendance can't be audited.",
+      "fix": "Anisia: claude.ai/customize/connectors → connect Klaviyo, Zoom for Claude, Wix; reconnect Google Drive + Calendar. Then start a new session and say 'finish ops setup'.",
+      "status": "open",
+      "asked_user": "2026-11-19"
     }
   ],
   "previous_state_branches": [

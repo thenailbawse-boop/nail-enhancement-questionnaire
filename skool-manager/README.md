@@ -16,3 +16,4 @@ Your persistent community-ops assistant. It prepares; **you** publish. Nothing h
 - `COMMUNITIES.yaml` · `examples/VOICE_GUIDE.md` · `SCHEDULED_ROUTINE.md`
 - `handoff/`: the original Nov 19 pack
 - State branch: `claude/skool-setup-3dza76`
+- Operations (webinar backend, relationships, dashboard): `../operations/DASHBOARD.md`

@@ -1,0 +1,27 @@
+# Elevate RTP 2027: talk submission (deadline Nov 30)
+Submit at: https://elevatertp.com/call-for-speakers/ (Dan from the planning team invited you to submit on Nov 14).
+Track: Everyone's New (AI) Coworker. Status: DRAFT, needs your OK before you submit. I don't submit forms for you.
+
+**Title:** AI That Actually Works on Monday: From One Customer Question to a Usable System
+
+**Abstract (≈100 words):**
+Most small-business owners don't need more AI tools. They need one workflow they can trust by Monday. In this
+session, a licensed cosmetologist who teaches service professionals walks through a single recurring customer
+question and turns it into three working assets: an inquiry reply, a website FAQ, and a short educational script.
+The key step most people skip comes next: checking each output against the business's real policies, prices and
+services before it goes live. Attendees leave with a repeatable process they can apply to their own front desk,
+inbox or DMs, whatever their industry.
+
+**Takeaways:**
+1. How to pick the one recurring task worth automating first
+2. How to give AI your real source information instead of generic prompts
+3. A simple verification checklist so nothing inaccurate reaches a customer
+
+**Format:** 30–45 min practical session with a live build. Works as a talk or a workshop.
+
+**Bio (≈60 words):**
+Anisia Burroughs is a Los Angeles licensed cosmetologist and nail technician and the founder of The Nail Bawse, an
+education and AI-systems business for beauty professionals. After years behind the chair, she now teaches service
+professionals to turn the knowledge they already share with clients into practical, verified AI workflows.
+
+_Check before submitting: years of experience (CLAUDE.md says eight; the draft leaves the number out), which website URL to list (see audit #12)._

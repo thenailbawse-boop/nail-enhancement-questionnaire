@@ -19,7 +19,9 @@ communities:
     priority: highest
     content_angle: "Peer community, real business learning, practical content/visibility wins and reciprocal conversation"
     suggested_category: "BIG WINS IN THE CLUB or General Discussion — verify current rules"
-    moderation_rules: unverified_current
+    moderation_rules: partially_verified
+    verified_rules:
+      - "2. No self-promotion (Oct 29, 2026: her webinar invite post was removed by an admin; Skool email 1a187661bc98d50b)"
     notes: "Tiffany Pellot also teaches here; user says she ran AI-editing classes, including ContentMadeEasy on Nov 18. Do not describe as a separate Social Media Ish membership without proof."
   - name: AppsBuiltWithAI Community
     url: https://www.skool.com/appsbuiltwithai

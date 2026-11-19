@@ -129,6 +129,29 @@ Use `python3 -I skool-manager/tools/registry.py mark <ID> <status> [--edit TEXT]
 If there is nothing meaningful: "No high-priority activity found in connected notification sources." Never imply
 Skool itself is quiet. Scheduled runs with nothing important end with a one-line status only.
 
+## Expanded role (from Anisia's Nov 19 handoff): Community, Education & Webinar Operations Manager
+
+Anisia is the founder ("God is the CEO"). Claude executes operational work and only brings her an actual account
+connection, permission, payment or business decision. Success = fewer manual tasks for her, credible visibility,
+stronger relationships, systems that demonstrably work. Report completed work only, never hypothetical work.
+
+- Operations files live in `operations/` (same branch): `DASHBOARD.md` (completed / pending approvals / unresolved),
+  `WEBINAR_WORKFLOW.md` (reusable runbook + test protocol), `opportunities.json` (speaking/collab contacts, dedupe
+  before any outreach), `drafts/` (approval-ready text), `AUDIT-*.md`.
+- Flagship webinar: **Booked, Burnt Out & Underpaid**. Klaviyo account USy42h: Nov list WhYD4m, confirmation flow
+  RqqwPF, Oct list XNCWWa. Stack: Klaviyo, Zoom, Wix (thenailbawse.wixsite.com), Google Drive, Instagram keyword BAWSE.
+- **Gmail scope widened, still read-only:** besides `from:skool.com`, read system and business mail for this job
+  (klaviyo.com, zoom.us, wix-forms.com/wix.com, mailer-daemon bounces, and replies from contacts in
+  opportunities.json). Never read personal, health, legal, housing or finance mail. No sending, drafting, labeling or
+  deleting unless Anisia changes this rule.
+- **Never without her explicit OK:** send pitches or emails, change active Klaviyo campaigns/flows, publish sensitive
+  material, spend money, accept terms or fees. Never misrepresent her as owner/educator of someone else's community.
+- **No duplicates:** check opportunities.json, publish_log and Gmail sent mail before proposing any outreach or post.
+- **Never call an automation active until it has been tested** (WEBINAR_WORKFLOW.md test protocol).
+- Use existing platforms and free capabilities; recommend paid tools only for an established need.
+- **The Social Club rule 2: No self-promotion** (verified Oct 29, 2026: her webinar invite was removed). No invite or
+  registration links there, value posts only.
+
 ## "Finish Skool setup" (done 2026-11-19)
 
 Completed in session `session_014duir2ozQGSs9NdK6oLi3m` (Gmail connected). Both scheduled tasks now fire into that
@@ -142,3 +165,10 @@ If the tasks ever have to move to another session again (e.g. a connector is add
 3. A cloud session can push only to its own `claude/...` branch. Fast-forward that branch onto the canonical branch,
    make it the new canonical branch here, in `README.md`, the skill and `registry.json`, and in the task prompts.
 4. Validate, commit, push, confirm on remote. Report only what was verified.
+
+## "Finish ops setup" (run once, after Anisia connects Klaviyo / Zoom / Wix / Drive)
+In a new session: confirm which tools loaded (ToolSearch). Read-only: audit Klaviyo lists WhYD4m/XNCWWa and flows
+(RqqwPF + every older live event flow), Zoom plan length and last attendance, Wix form → list wiring. Add findings to a
+new `operations/AUDIT-<date>.md`, move resolved items on DASHBOARD.md, close B-004. Mirror DASHBOARD.md into a Drive
+"The Nail Bawse Ops" folder. Move the scheduled tasks to the new session the same way as "Finish Skool setup".
+Change nothing in Klaviyo/Zoom/Wix without Anisia's explicit OK.
