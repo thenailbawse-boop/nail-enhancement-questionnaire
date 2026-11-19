@@ -1,0 +1,19 @@
+# Netlify: set "Base directory" to funnel-site. Everything else is read from here.
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+  command = "npm test"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/live"
+  to = "/"
+  status = 301
+
+[[headers]]
+  for = "/admin.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Cache-Control = "no-store"

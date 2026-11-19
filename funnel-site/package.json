@@ -1,0 +1,15 @@
+{
+  "name": "nail-bawse-funnel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reusable free-workshop registration funnel: one page, any topic, any date. Netlify Functions + Blobs + Gmail.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "8.1.0",
+    "nodemailer": "6.9.16"
+  },
+  "engines": { "node": ">=18" }
+}

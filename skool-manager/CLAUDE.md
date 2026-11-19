@@ -138,8 +138,11 @@ stronger relationships, systems that demonstrably work. Report completed work on
 - Operations files live in `operations/` (same branch): `DASHBOARD.md` (completed / pending approvals / unresolved),
   `WEBINAR_WORKFLOW.md` (reusable runbook + test protocol), `opportunities.json` (speaking/collab contacts, dedupe
   before any outreach), `drafts/` (approval-ready text), `AUDIT-*.md`.
-- Flagship webinar: **Booked, Burnt Out & Underpaid**. Klaviyo account USy42h: Nov list WhYD4m, confirmation flow
-  RqqwPF, Oct list XNCWWa. Stack: Klaviyo, Zoom, Wix (thenailbawse.wixsite.com), Google Drive, Instagram keyword BAWSE.
+- **Webinars (updated Nov 19):** free weekly sessions on whatever topic/day/time Anisia chooses; no fixed name. Funnel =
+  `funnel-site/` (Netlify + Gmail, her own domain). **Klaviyo is retired**: she is leaving it and does not want to pay for it.
+  Never suggest Klaviyo again. Old IDs for reference only: USy42h, lists WhYD4m/XNCWWa, flow RqqwPF.
+- **Approved by Anisia Nov 19:** submit the Elevate RTP 2027 talk (drafts/elevate-rtp-proposal.md); MUSE fee $350 (sent);
+  APCH follow-up (sent). Sending email for ops is allowed when she approves the specific message or action.
 - **Gmail scope widened, still read-only:** besides `from:skool.com`, read system and business mail for this job
   (klaviyo.com, zoom.us, wix-forms.com/wix.com, mailer-daemon bounces, and replies from contacts in
   opportunities.json). Never read personal, health, legal, housing or finance mail. No sending, drafting, labeling or

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>You're in | The Nail Bawse</title><meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;600&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<main class="wrap">
+  <div class="eyebrow">The Nail Bawse</div>
+  <h1 id="h">You're in 💅🏽</h1>
+  <p id="msg">Check your email for your Zoom link and calendar invite. If you don't see it in a few minutes, look in Promotions or Spam and move it to your inbox so the reminders reach you.</p>
+  <div class="when" id="whenbox" hidden><strong id="t"></strong><span id="w"></span></div>
+  <div class="links" id="cal" hidden><a id="gcal" target="_blank" rel="noopener">Add to Google Calendar</a><a id="ics">Add to Apple or Outlook calendar</a></div>
+  <p class="muted">See you there,<br>Anisia</p>
+</main>
+<script>
+(function () {
+  var p = new URLSearchParams(location.search), id = p.get("e");
+  if (p.get("m") === "0") document.getElementById("msg").textContent = "Your seat is saved. The confirmation email is running a little behind; it will reach you before the session. Save this page in the meantime.";
+  if (!id || id === "waitlist") { document.getElementById("h").textContent = "You're on the list 💅🏽"; document.getElementById("msg").textContent = "As soon as the next date is posted, you'll get the topic and a link to save your seat."; return; }
+  fetch("/api/events?id=" + encodeURIComponent(id)).then(function (r) { return r.json(); }).then(function (d) {
+    var ev = d.event; if (!ev) return;
+    var start = new Date(ev.startUtc), end = new Date(start.getTime() + (ev.durationMin || 45) * 60000);
+    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    document.getElementById("t").textContent = ev.title;
+    document.getElementById("w").textContent = new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(start);
+    document.getElementById("whenbox").hidden = false;
+    var f = function (d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); };
+    document.getElementById("gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates: f(start) + "/" + f(end), details: "Your Zoom link is in your confirmation email.", location: "Online (Zoom)" });
+    document.getElementById("ics").href = "/api/ics?id=" + encodeURIComponent(ev.id);
+    document.getElementById("cal").hidden = false;
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>

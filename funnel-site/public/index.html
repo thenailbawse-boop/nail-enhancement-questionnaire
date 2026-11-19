@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Free Live Session | The Nail Bawse</title>
+<meta name="description" content="Free live sessions for beauty professionals with Anisia Burroughs. Save your seat.">
+<meta property="og:title" content="Free live session with Anisia Burroughs">
+<meta property="og:description" content="Practical business and AI education for beauty professionals. Save your seat.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="stack">
+    <div class="eyebrow">Free live session · The Nail Bawse</div>
+    <h1 id="title">Free live sessions for beauty pros</h1>
+    <p class="muted" id="sub">Practical business and AI education with Anisia Burroughs, licensed cosmetologist and founder of The Nail Bawse.</p>
+  </header>
+
+  <section id="session" class="stack" hidden>
+    <div class="picker" id="picker" aria-label="Choose a date"></div>
+    <div class="when"><strong id="when"></strong><span class="muted" id="localwhen"></span></div>
+    <p class="desc" id="desc"></p>
+  </section>
+
+  <section id="waitlist" hidden class="notice">
+    <p><strong>The next date is coming soon.</strong> Leave your details and you'll get the topic and a link to save your seat as soon as it's posted.</p>
+  </section>
+
+  <form id="reg" method="post" action="/api/register" novalidate>
+    <h2 id="formtitle">Save my seat</h2>
+    <input type="hidden" name="eventId" id="eventId" value="waitlist">
+    <input type="hidden" name="tz" id="tz"><input type="hidden" name="ref" id="ref">
+    <div class="hp" aria-hidden="true"><label>Company<input name="company" id="company" tabindex="-1" autocomplete="off"></label></div>
+    <div class="row">
+      <label>First name<input name="firstName" id="firstName" autocomplete="given-name" required><span class="err" data-for="firstName"></span></label>
+      <label><span>Last name <span class="opt">(optional)</span></span><input name="lastName" id="lastName" autocomplete="family-name"></label>
+    </div>
+    <label>Email<input name="email" id="email" type="email" autocomplete="email" inputmode="email" required><span class="err" data-for="email"></span></label>
+    <label><span>Mobile number <span class="opt">(optional)</span></span><input name="phone" id="phone" type="tel" autocomplete="tel" inputmode="tel"><span class="err" data-for="phone"></span></label>
+    <label>What do you do?
+      <select name="role" id="role"><option value="">Choose one</option><option>Nail tech</option><option>Hairstylist</option><option>Esthetician</option><option>Lash or brow artist</option><option>Makeup artist</option><option>Salon or suite owner</option><option>Beauty educator</option><option>Barber</option><option>Other</option></select>
+    </label>
+    <label><span>How did you hear about this? <span class="opt">(optional)</span></span>
+      <select name="source" id="source"><option value="">Choose one</option><option>Instagram</option><option>Skool</option><option>A friend</option><option>Email</option><option>Event or class</option><option>Other</option></select>
+    </label>
+    <label><span>What do you most want help with? <span class="opt">(optional)</span></span><textarea name="goal" id="goal" maxlength="500"></textarea></label>
+    <label class="check"><input type="checkbox" name="optIn" id="optIn" checked> Email me when new free sessions are posted. Unsubscribe anytime.</label>
+    <span class="err" data-for="form" role="alert"></span>
+    <button class="primary" type="submit" id="submit">Save my seat</button>
+    <p class="fine">You'll get the Zoom link by email right away, plus a reminder the day before and an hour before. Your phone number is only used to reach you about sessions you sign up for.</p>
+  </form>
+  <noscript><p class="notice">Please turn on JavaScript to choose a date.</p></noscript>
+  <footer>© The Nail Bawse</footer>
+</main>
+<script src="/assets/app.js"></script>
+</body>
+</html>

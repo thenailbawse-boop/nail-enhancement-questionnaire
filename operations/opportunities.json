@@ -2,37 +2,213 @@
   "note": "Speaking, workshop and collaboration contacts. Dedupe by org+email before any new outreach. Nothing is sent without Anisia's approval.",
   "updated": "2026-11-19",
   "items": [
-    {"org": "Elevate RTP 2027", "contact": "admin@elevatertp.com", "status": "invited_to_submit", "last_inbound": "2026-11-14", "deadline": "2026-11-30", "next": "Submit talk via elevatertp.com/call-for-speakers (draft: drafts/elevate-rtp-proposal.md)", "owner": "anisia"},
-    {"org": "MUSE Hair Fest 2027", "contact": "hello@musehairfest.com", "status": "applied_fee_requested", "last_inbound": "2026-11-17", "next": "Decide your fee for a 30-45 min session, then reply (draft: drafts/muse-fee-reply.md)", "owner": "anisia_decision"},
-    {"org": "A Place Called Home (teens 9-12)", "contact": "laura@apch.org", "status": "awaiting_dates", "last_inbound": "2026-11-06", "next": "Gentle nudge for dates (draft: drafts/apch-nudge.md). No honorarium; supplies possible.", "owner": "anisia_send"},
-    {"org": "Professional Beauty Association", "contact": "raymon@probeauty.org", "status": "forwarded_to_education_team", "last_inbound": "2026-11-05", "next": "Wait; nudge after 2026-11-26 if quiet. Unpaid; events calendar / Member Portal possible.", "owner": "claude_watch"},
-    {"org": "Nia Costello (guest educator)", "contact": "niacostello@yahoo.com", "status": "awaiting_reply", "last_outbound": "2026-11-09", "next": "No reply to the no-fee reciprocal offer. Don't chase more than once.", "owner": "claude_watch"},
-    {"org": "Aquamarise (UGC)", "contact": "partnership@aquamarise.com", "status": "declined_on_file", "last_inbound": "2026-11-15", "next": "None this season"},
-    {"org": "B.L.N.D. 2026", "contact": "sara@agencyguacamole.com", "status": "sold_out", "last_inbound": "2026-11-04", "next": "None"},
-    {"org": "Beauty Changes Lives (Mentorship Matters)", "contact": "scholarships@beautychangeslives.org", "status": "auto_reply_only", "last_outbound": "2026-11-09", "next": "Christie left the org; only auto-replies so far"},
-    {"org": "LA Loc & Crown", "contact": "info@lalocandcrown.com", "status": "no_reply", "last_outbound": "2026-11-04"},
-    {"org": "Lab Beauty (Black Beauty Block Party Nov 15)", "contact": "info@labiocouture.com", "status": "event_passed", "last_outbound": "2026-11-04"},
-    {"org": "Black Women Vend", "contact": "jenn@blackwomenvend.org", "status": "no_reply", "last_outbound": "2026-11-04"},
-    {"org": "ICON CDC", "contact": "marketing@iconcdc.org", "status": "no_reply", "last_outbound": "2026-11-04"},
-    {"org": "El Camino College cosmetology", "contact": "brtran@elcamino.edu", "status": "no_reply", "last_outbound": "2026-11-04"},
-    {"org": "Phenix Salon Suites Sherman Oaks", "contact": "info@phenixsalonsuites.com", "status": "no_reply", "last_outbound": "2026-11-05"},
-    {"org": "Nail Tech Members Club", "contact": "info@thenailtech.org", "status": "no_reply", "last_outbound": "2026-11-05"},
-    {"org": "California Healthy Nail Salon Collaborative", "contact": "info@cahealthynailsalons.org", "status": "no_reply", "last_outbound": "2026-11-05"},
-    {"org": "Disbeaute Live", "contact": "info@disbeaute.com", "status": "no_reply", "last_outbound": "2026-11-05"},
-    {"org": "ASCP Beauty Pro Power Hour", "contact": "education@ascpskincare.com", "status": "no_reply", "last_outbound": "2026-11-05"},
-    {"org": "ANP", "contact": "membership@nailprofessional.com", "status": "no_reply", "last_outbound": "2026-11-05"},
-    {"org": "Sola Los Angeles (Miracle Mile)", "contact": "managers@solalosangeles.com", "status": "no_reply", "last_outbound": "2026-11-05"},
-    {"org": "Jordyn (beautybyjrdyn)", "contact": "beautybyjrdyn@gmail.com", "status": "no_reply", "last_outbound": "2026-11-05"},
-    {"org": "Academy of Beauty", "contact": "timnguyen114@msn.com", "status": "no_reply", "last_outbound": "2026-11-06"},
-    {"org": "Beyond The Chair Academy", "contact": "info@jenninaildthablock.com", "status": "no_reply", "last_outbound": "2026-11-06"},
-    {"org": "Tappy Tips (bootcamp)", "contact": "tappytipsnailbar@gmail.com", "status": "no_reply", "last_outbound": "2026-11-06"},
-    {"org": "The Nail Club (Tah)", "contact": "tahbeauty@hotmail.com", "status": "no_reply", "last_outbound": "2026-11-06"},
-    {"org": "The Beauty Exchange", "contact": "info@thebeautybiz.org", "status": "no_reply", "last_outbound": "2026-11-06"},
-    {"org": "Start My Salon Suites (Snoop)", "contact": "support@whoissnoop.com", "status": "no_reply", "last_outbound": "2026-11-06"},
-    {"org": "The Drip Society", "contact": "info@thenaildrip.com", "status": "no_reply", "last_outbound": "2026-11-06"},
-    {"org": "Awesome Foundation LA ($1,000 grant)", "contact": "la@awesomefoundation.org", "status": "no_reply", "last_outbound": "2026-11-12"},
-    {"org": "Anna Nails Beauty Training", "contact": "anna@annailsbeautytraining.com", "status": "bounced_domain_not_found", "next": "Find a working contact before any resend"},
-    {"org": "Black Beauty Founders", "contact": "connect@blackbeautyfounders.org", "status": "bounced_address_not_found", "next": "Find a working contact before any resend"},
-    {"org": "The Black Beauty Club", "contact": "partnerships@theblackbeautyclub.com", "status": "bounced_address_not_found", "next": "Find a working contact before any resend"}
+    {
+      "org": "Elevate RTP 2027",
+      "contact": "admin@elevatertp.com",
+      "status": "invited_to_submit",
+      "last_inbound": "2026-11-14",
+      "deadline": "2026-11-30",
+      "next": "Anisia approved submission Nov 19. Submit at elevatertp.com/call-for-speakers (needs a session that can reach the site).",
+      "owner": "claude"
+    },
+    {
+      "org": "MUSE Hair Fest 2027",
+      "contact": "hello@musehairfest.com",
+      "status": "fee_sent",
+      "last_inbound": "2026-11-17",
+      "next": "Fee $350 sent Nov 19. They review in early 2027; nudge only if quiet by mid-Feb.",
+      "owner": "claude_watch",
+      "last_outbound": "2026-11-19"
+    },
+    {
+      "org": "A Place Called Home (teens 9-12)",
+      "contact": "laura@apch.org",
+      "status": "nudged",
+      "last_inbound": "2026-11-06",
+      "next": "Follow-up sent Nov 19. Wait for dates.",
+      "owner": "claude_watch",
+      "last_outbound": "2026-11-19"
+    },
+    {
+      "org": "Professional Beauty Association",
+      "contact": "raymon@probeauty.org",
+      "status": "forwarded_to_education_team",
+      "last_inbound": "2026-11-05",
+      "next": "Wait; nudge after 2026-11-26 if quiet. Unpaid; events calendar / Member Portal possible.",
+      "owner": "claude_watch"
+    },
+    {
+      "org": "Nia Costello (guest educator)",
+      "contact": "niacostello@yahoo.com",
+      "status": "awaiting_reply",
+      "last_outbound": "2026-11-09",
+      "next": "No reply to the no-fee reciprocal offer. Don't chase more than once.",
+      "owner": "claude_watch"
+    },
+    {
+      "org": "Aquamarise (UGC)",
+      "contact": "partnership@aquamarise.com",
+      "status": "declined_on_file",
+      "last_inbound": "2026-11-15",
+      "next": "None this season"
+    },
+    {
+      "org": "B.L.N.D. 2026",
+      "contact": "sara@agencyguacamole.com",
+      "status": "sold_out",
+      "last_inbound": "2026-11-04",
+      "next": "None"
+    },
+    {
+      "org": "Beauty Changes Lives (Mentorship Matters)",
+      "contact": "scholarships@beautychangeslives.org",
+      "status": "auto_reply_only",
+      "last_outbound": "2026-11-09",
+      "next": "Christie left the org; only auto-replies so far"
+    },
+    {
+      "org": "LA Loc & Crown",
+      "contact": "info@lalocandcrown.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-04"
+    },
+    {
+      "org": "Lab Beauty (Black Beauty Block Party Nov 15)",
+      "contact": "info@labiocouture.com",
+      "status": "event_passed",
+      "last_outbound": "2026-11-04"
+    },
+    {
+      "org": "Black Women Vend",
+      "contact": "jenn@blackwomenvend.org",
+      "status": "no_reply",
+      "last_outbound": "2026-11-04"
+    },
+    {
+      "org": "ICON CDC",
+      "contact": "marketing@iconcdc.org",
+      "status": "no_reply",
+      "last_outbound": "2026-11-04"
+    },
+    {
+      "org": "El Camino College cosmetology",
+      "contact": "brtran@elcamino.edu",
+      "status": "no_reply",
+      "last_outbound": "2026-11-04"
+    },
+    {
+      "org": "Phenix Salon Suites Sherman Oaks",
+      "contact": "info@phenixsalonsuites.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-05"
+    },
+    {
+      "org": "Nail Tech Members Club",
+      "contact": "info@thenailtech.org",
+      "status": "no_reply",
+      "last_outbound": "2026-11-05"
+    },
+    {
+      "org": "California Healthy Nail Salon Collaborative",
+      "contact": "info@cahealthynailsalons.org",
+      "status": "no_reply",
+      "last_outbound": "2026-11-05"
+    },
+    {
+      "org": "Disbeaute Live",
+      "contact": "info@disbeaute.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-05"
+    },
+    {
+      "org": "ASCP Beauty Pro Power Hour",
+      "contact": "education@ascpskincare.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-05"
+    },
+    {
+      "org": "ANP",
+      "contact": "membership@nailprofessional.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-05"
+    },
+    {
+      "org": "Sola Los Angeles (Miracle Mile)",
+      "contact": "managers@solalosangeles.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-05"
+    },
+    {
+      "org": "Jordyn (beautybyjrdyn)",
+      "contact": "beautybyjrdyn@gmail.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-05"
+    },
+    {
+      "org": "Academy of Beauty",
+      "contact": "timnguyen114@msn.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-06"
+    },
+    {
+      "org": "Beyond The Chair Academy",
+      "contact": "info@jenninaildthablock.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-06"
+    },
+    {
+      "org": "Tappy Tips (bootcamp)",
+      "contact": "tappytipsnailbar@gmail.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-06"
+    },
+    {
+      "org": "The Nail Club (Tah)",
+      "contact": "tahbeauty@hotmail.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-06"
+    },
+    {
+      "org": "The Beauty Exchange",
+      "contact": "info@thebeautybiz.org",
+      "status": "no_reply",
+      "last_outbound": "2026-11-06"
+    },
+    {
+      "org": "Start My Salon Suites (Snoop)",
+      "contact": "support@whoissnoop.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-06"
+    },
+    {
+      "org": "The Drip Society",
+      "contact": "info@thenaildrip.com",
+      "status": "no_reply",
+      "last_outbound": "2026-11-06"
+    },
+    {
+      "org": "Awesome Foundation LA ($1,000 grant)",
+      "contact": "la@awesomefoundation.org",
+      "status": "no_reply",
+      "last_outbound": "2026-11-12"
+    },
+    {
+      "org": "Anna Nails Beauty Training",
+      "contact": "anna@annailsbeautytraining.com",
+      "status": "bounced_domain_not_found",
+      "next": "Find a working contact before any resend"
+    },
+    {
+      "org": "Black Beauty Founders",
+      "contact": "connect@blackbeautyfounders.org",
+      "status": "bounced_address_not_found",
+      "next": "Find a working contact before any resend"
+    },
+    {
+      "org": "The Black Beauty Club",
+      "contact": "partnerships@theblackbeautyclub.com",
+      "status": "bounced_address_not_found",
+      "next": "Find a working contact before any resend"
+    }
   ]
 }

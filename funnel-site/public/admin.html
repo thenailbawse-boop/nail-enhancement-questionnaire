@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Session Admin | The Nail Bawse</title><meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;600&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="stack"><div class="eyebrow">Private</div><h1>Your sessions</h1>
+    <p class="muted" id="stats">Add a date, and the public page updates right away.</p></header>
+
+  <form id="login" class="stack">
+    <label>Admin key<input id="key" type="password" autocomplete="current-password"></label>
+    <span class="err" id="loginErr"></span>
+    <button class="primary" type="submit">Open</button>
+  </form>
+
+  <div id="app" hidden class="stack">
+    <form id="ev" class="stack" novalidate>
+      <h2 id="formHead">Add a session</h2>
+      <input type="hidden" id="evId">
+      <label>Topic title<input id="title" maxlength="120" placeholder="e.g. Price your services with confidence"><span class="err" data-f="title"></span></label>
+      <label><span>Short description <span class="opt">(optional)</span></span><textarea id="description" maxlength="1500" placeholder="What they'll learn or leave with"></textarea></label>
+      <div class="row">
+        <label>Date<input id="date" type="date"><span class="err" data-f="date"></span></label>
+        <label>Start time<input id="time" type="time" value="19:00"></label>
+      </div>
+      <div class="row">
+        <label>Time zone<select id="tz"><option value="America/Los_Angeles">Pacific</option><option value="America/Denver">Mountain</option><option value="America/Chicago">Central</option><option value="America/New_York">Eastern</option></select></label>
+        <label>Length (minutes)<input id="durationMin" type="number" min="10" max="240" value="40"><span class="err" data-f="durationMin"></span></label>
+      </div>
+      <label>Zoom link<input id="zoomUrl" type="url" placeholder="https://us06web.zoom.us/j/…"><span class="err" data-f="zoomUrl"></span></label>
+      <label><span>Replay link <span class="opt">(add after the session; goes in the next-day email)</span></span><input id="replayUrl" type="url"><span class="err" data-f="replayUrl"></span></label>
+      <span class="err" id="evErr" role="alert"></span>
+      <div class="btns"><button class="primary" type="submit" id="save">Post this session</button><button class="btn" type="button" id="cancel" hidden>Cancel edit</button></div>
+      <p class="fine">Free Zoom meetings end at 40 minutes.</p>
+    </form>
+
+    <section class="stack"><h2>Sessions</h2><div id="list" class="stack"></div>
+      <div class="btns"><button class="btn" type="button" id="dlSubs">Download my email list (CSV)</button></div>
+    </section>
+    <p class="fine" id="flash" role="status"></p>
+  </div>
+</main>
+<script src="/assets/admin.js"></script>
+</body>
+</html>

@@ -33,8 +33,8 @@ Read `operations/DASHBOARD.md` and `operations/opportunities.json` first. Then, 
 1. **Replies** from any contact in opportunities.json → update its status/last_inbound; if it needs Anisia, write an
    approval-ready reply in `operations/drafts/` and list it under Pending approvals.
 2. **Bounces** (mailer-daemon) → mark the contact bounced; never resend without a verified address.
-3. **Webinar systems:** Klaviyo account/usage/billing alerts, Zoom notices, Wix form submissions (ignore ones marked
-   QA/TEST, but note that the test arrived). New real registrations or inquiries go to the top of the digest.
+3. **Webinar funnel:** count "New registration:" owner notices (from the funnel, via Gmail) per session; Zoom notices;
+   any Klaviyo billing email (she's leaving Klaviyo: flag any charge). Ignore QA/TEST submissions but note they arrived. New real registrations or inquiries go to the top of the digest.
 4. **Deadlines** in opportunities.json within 7 days → top of the digest.
 5. If a workshop is within 3 days, run the WEBINAR_WORKFLOW.md readiness checks you can verify and list the rest for Anisia.
 Update DASHBOARD.md (date, Completed, Pending approvals, Unresolved), validate opportunities.json parses, commit with the
