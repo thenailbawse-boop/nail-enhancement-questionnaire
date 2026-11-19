@@ -15,18 +15,24 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
 ## 👑 Pending your approval / decision (top first)
 1. **Funnel setup (`funnel-site/README.md`):** Gmail app password, free Netlify site, 5 settings, point your domain
 2. **Klaviyo (you're leaving it):** export your contacts, turn off Auto-upgrade, downgrade to free before the next bill (~Nov 27)
-3. **Elevate RTP: submit by Nov 30.** Approved by Anisia; needs a session on the "nail-enhancement-questionnaire" environment
+3. **Elevate RTP: submit by Nov 30.** Form checked; 3 answers needed from you (email, Workshop or Lecture, spoken before?). Preview in `drafts/elevate-rtp-proposal.md`
+3b. **Funnel redesign plan:** all 4 links viewed; your OK needed (`funnel/REFERENCES.md`)
 4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
 
-## 🔌 Connections only you can make (claude.ai/customize/connectors)
-- **Zoom for Claude**, **Wix**: Anisia is connecting them
-- **Google Calendar** shows "needs reconnect" at org level, and **Google Drive** needs a reconnect too
-- Connectors load only when a session starts → after connecting, start a new session on the
-  "nail-enhancement-questionnaire" environment and say "finish ops setup"
+## 🔌 Connections (checked Nov 19, read-only)
+| Connector | Status |
+|---|---|
+| Gmail | ✅ Working |
+| Google Calendar | ❌ Needs you to sign in again |
+| Google Drive | ❌ Needs you to sign in again |
+| Zoom | ❌ Not connected |
+| Wix | ❌ Not connected |
+
+Fix at claude.ai/customize/connectors, then start a new session on the "nail-enhancement-questionnaire" environment.
 
 ## ⚠️ Unresolved issues
-- Funnel redesign on hold until all 4 reference links are viewed (`funnel/REFERENCES.md`); this session can't open them
+- Funnel redesign: links viewed Nov 19, waiting for your OK before changing the pages
 - Funnel not deployed yet (needs the Gmail app password, Netlify site and domain, all things only you can create)
 - Klaviyo paid plan + Auto-upgrade still on until you change them; next charge is likely around Nov 27
 - Old Klaviyo contacts: export them before downgrading, then send me the CSV and I'll add an import to the funnel

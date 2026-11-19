@@ -27,3 +27,23 @@ professionals to turn the knowledge they already share with clients into practic
 **Website:** https://thenailbawse.com · **Instagram:** https://www.instagram.com/thenailbawse/
 
 _Approved for submission by Anisia (Nov 19). Years of experience left out on purpose._
+
+---
+## Exactly what will be sent (Google Form, checked Nov 19)
+Form: https://forms.gle/jbRW8DJT7yBZTZMC8 (6 pages). Sessions are 50 min including Q&A; abstract and outcomes 200 words max each.
+No headshot, phone, bio or website is asked for.
+
+| Form question | Answer |
+|---|---|
+| Email * | **NEEDED: which email?** |
+| First name * / Last name * | Anisia / Burroughs |
+| Session format * | **NEEDED: Workshop (50 min) recommended** (live build). Other choices: Lecture, Case Study, Panel |
+| Track * | Everyone's New (AI) Coworker |
+| Session title * | AI That Actually Works on Monday: From One Customer Question to a Usable System |
+| Abstract * | The approved abstract above, as written (≈100 words) |
+| Learning outcomes * | The 3 takeaways above, as a numbered list |
+| Panel discussion? * | No |
+| Spoken before? * | **NEEDED: Yes or No** |
+| Details of your experience (only if Yes) * | **NEEDED: events + any video/web links** |
+
+Not sent anywhere: bio, website, Instagram (the form has no place for them).
