@@ -1,23 +1,27 @@
 # Cloud scheduled tasks (saved Nov 19, 2026)
 
-These run in Anthropic's cloud, in the `nail-enhancement-questionnaire` cloud environment. They do **not** need
-your laptop, Chrome, or a hotspot. Each run starts a fresh cloud session, reads this repo, writes the digest,
-pushes state, and sends a push notification to the Claude app.
+These run in Anthropic's cloud. They do **not** need your laptop, Chrome or a hotspot. Each run wakes the
+cloud session that holds this repo with push access (the setup session), which re-reads state from GitHub,
+writes the digest, and pushes. Files, not chat memory, are the source of truth.
 
-| Task | ID | Schedule (Pacific) | Next run |
+| Task | ID | Schedule (Pacific) | Bound to |
 |---|---|---|---|
-| Skool daily digest | `trig_016VeEqLr3qRb4NtyJgcZkf1` | Every day 8:41 AM (digest ready by 9) | Thu Nov 20, 8:41 AM |
-| Skool weekly review | `trig_01U5D5Pm5u69tBSnBxFpmhGL` | Sundays 4:42 PM (ready by 5) | Sun Nov 22, 4:42 PM |
+| Skool daily digest | `trig_01BLdrK4D3HLGoYzDunqSY2A` | Every day 8:41 AM (ready by 9) | setup session |
+| Skool weekly review | `trig_01Emj5bb4qQWybFTotLiG3kJ` | Sundays 4:42 PM (ready by 5) | setup session |
 
-Times are set a few minutes before the hour on purpose: on-the-hour runs queue behind everyone else's.
+Times are a few minutes before the hour on purpose: on-the-hour runs queue behind everyone else's.
 
-## Known limit: connectors
+## Verification history
 
-Both tasks were created from a session that had no Gmail connection, so they currently run **without** Gmail or
-Calendar. Until that changes, each run records "Gmail not connected" once and stays quiet. Fix (one time):
-connect Gmail at claude.ai/customize/connectors, then in a **new** session on this repo say
-**"finish Skool setup"**. That session (which will hold Gmail) recreates both tasks with Gmail attached,
-deletes these two, and updates this table. Alternatively, add Gmail to each task in the claude.ai routines screen.
+- 2026-11-19: first version ran as fresh cloud sessions. A manual test run started in the cloud, cloned the repo
+  and read state correctly, but its **push was refused (403)**: fresh routine sessions get no repo write access.
+  Those two tasks were deleted and replaced by the session-bound tasks above.
+
+## Known limit: Gmail
+
+The setup session started before Gmail was connected, so these runs have **no Gmail** yet; each records the
+blocker and stays brief. Fix (one time): connect Gmail at claude.ai/customize/connectors, then open a **new**
+Claude Code session on this repo and say **"finish Skool setup"** (steps in CLAUDE.md).
 
 ## The saved prompts
 

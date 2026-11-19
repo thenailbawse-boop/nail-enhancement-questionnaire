@@ -3,7 +3,7 @@
 Your persistent community-ops assistant. It prepares; **you** publish. Nothing here posts to Skool.
 
 ## Every day, from your phone
-1. A push notification arrives a little before 9 AM PT (only when something matters).
+1. A little before 9 AM PT the daily digest lands in this Claude Code session, and in `digests/`.
 2. Open it, copy a reply, paste it into Skool yourself.
 3. Tell Claude what happened, in any session on this repo, in plain words:
    - `posted D-002` · `edited D-001: <your version>` · `skip D-004` · `already replied to Minami`

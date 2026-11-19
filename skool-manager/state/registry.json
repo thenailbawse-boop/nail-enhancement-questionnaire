@@ -20,6 +20,12 @@
       ],
       "external_actions": "none",
       "result": "4 drafts queued from historical screenshot items; all reply_status needs_verification"
+    },
+    {
+      "at": "2026-11-19T17:00:52Z",
+      "kind": "cloud_routine_test (fresh session)",
+      "result": "ran in cloud, read state, Gmail unavailable handled; push refused 403; no state saved",
+      "external_actions": "none"
     }
   ],
   "sources": {
@@ -53,25 +59,32 @@
   "schedules": {
     "daily": {
       "status": "saved",
-      "trigger_id": "trig_016VeEqLr3qRb4NtyJgcZkf1",
+      "trigger_id": "trig_01BLdrK4D3HLGoYzDunqSY2A",
       "cron": "CRON_TZ=America/Los_Angeles 41 8 * * *",
-      "environment": "nail-enhancement-questionnaire (cloud)",
+      "bound_to_session": "session_014duir3h5TYwiL5pKFvYcF9",
       "connectors": [],
-      "push_notifications": true,
-      "verified_saved": "2026-11-19 (create_trigger returned CREATED, enabled, next_run 2026-11-20T16:41Z)",
+      "verified_saved": "2026-11-19",
       "verified_cloud_run": "pending"
     },
     "weekly": {
       "status": "saved",
-      "trigger_id": "trig_01U5D5Pm5u69tBSnBxFpmhGL",
+      "trigger_id": "trig_01Emj5bb4qQWybFTotLiG3kJ",
       "cron": "CRON_TZ=America/Los_Angeles 42 16 * * 0",
-      "environment": "nail-enhancement-questionnaire (cloud)",
+      "bound_to_session": "session_014duir3h5TYwiL5pKFvYcF9",
       "connectors": [],
-      "push_notifications": true,
-      "verified_saved": "2026-11-19 (create_trigger returned CREATED, enabled, next_run 2026-11-23T00:42Z)",
+      "verified_saved": "2026-11-19",
       "verified_cloud_run": "pending"
     },
-    "limitation": "Both tasks hold no connectors (created from a session without Gmail). Recreate them from a Gmail-connected session: see CLAUDE.md 'Finish Skool setup'."
+    "retired": [
+      {
+        "ids": [
+          "trig_016VeEqLr3qRb4NtyJgcZkf1",
+          "trig_01U5D5Pm5u69tBSnBxFpmhGL"
+        ],
+        "reason": "fresh-session routines could not push state (403); deleted 2026-11-19"
+      }
+    ],
+    "limitation": "No Gmail on these runs until 'Finish Skool setup' in a Gmail-connected session."
   },
   "processed_source_ids": [],
   "draft_queue": [

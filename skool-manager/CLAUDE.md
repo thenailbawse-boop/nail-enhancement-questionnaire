@@ -131,11 +131,11 @@ Skool itself is quiet. Scheduled runs with nothing important end with a one-line
 
 ## "Finish Skool setup" (run once, after Anisia connects Gmail)
 
-When she says "finish Skool setup" in a new session:
+When she says "finish Skool setup" in a new session on this repo:
 1. Confirm a Gmail tool is actually loaded (ToolSearch "gmail"). If not, tell her it still isn't connected and stop.
-2. Read both saved tasks with `get_trigger` (IDs in `SCHEDULED_ROUTINE.md`) and create replacements with the **same
-   prompts, schedules, environment and push notifications**, plus `connectors: ["Gmail", "Google Calendar"]`
-   (Calendar only if connected). Confirm each was created, then delete the old two. Update `SCHEDULED_ROUTINE.md` and
-   `registry.json → schedules`.
+2. Read both saved tasks with `get_trigger` (IDs in `SCHEDULED_ROUTINE.md`). Create replacements **bound to this
+   new session** (no `create_new_session_on_fire`: fresh routine sessions cannot push to the repo; verified 403 on
+   2026-11-19) with the same prompts and schedules. Confirm each was created, then delete the old two.
+   Update `SCHEDULED_ROUTINE.md` and `registry.json → schedules`.
 3. Run the first live read-only digest from Gmail (last 3 days), close blocker B-001, set `last_successful_run_utc`.
-4. Validate, commit, push, confirm. Report only what was verified.
+4. Validate, commit, push, confirm on remote. Report only what was verified.
