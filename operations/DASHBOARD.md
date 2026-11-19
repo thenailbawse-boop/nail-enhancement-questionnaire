@@ -4,11 +4,15 @@ _Updated Thu Nov 19, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 ## ✅ Completed (verified)
 - Skool manager live: Gmail connected, daily + Sunday scheduled tasks bound to the Gmail session, first live digest done
 - Systems audit of Klaviyo / Zoom / Wix / Skool / outreach from Gmail evidence (17 findings)
-- Reusable webinar workflow with a test protocol (`WEBINAR_WORKFLOW.md`)
+- Reusable webinar workflow with a test protocol (`WEBINAR_WORKFLOW.md`), now evergreen
+- Simple funnel designed: 1 link, 1 list, 1 recurring Zoom, 3 evergreen emails, all copy written (`funnel/`)
 - Relationship tracker rebuilt from sent mail: 32 contacts, replies and bounces (`opportunities.json`)
 - Social Club "No self-promotion" rule recorded so drafts never repeat the Oct 29 removal
 
 ## 👑 Pending your approval / decision (top first)
+0. **New simple funnel (`funnel/`):** approve these 3 settings and I'll treat it as the plan:
+   (a) workshop every **Thursday 8 PM PT**, (b) **40 minutes** so free Zoom works, (c) the community name + link for the
+   invite email (Email 4 stays off until then)
 1. **Elevate RTP talk: submit by Nov 30.** Draft ready: `drafts/elevate-rtp-proposal.md`
 2. **MUSE Hair Fest asked for your fee.** Pick the number; reply ready: `drafts/muse-fee-reply.md`
 3. **A Place Called Home: nudge for dates.** Ready to send: `drafts/apch-nudge.md`
