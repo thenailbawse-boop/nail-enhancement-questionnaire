@@ -1,0 +1,54 @@
+# Historical community inventory. Refresh role/status using authorized sources; do not scrape Skool.
+reviewed_as_of: 2026-11-19
+communities:
+  - name: AI Automation Club
+    url: https://www.skool.com/ai-automation-scaling-6959
+    role: member
+    status: participating
+    host: Tiffany Pellot
+    priority: highest
+    content_angle: "AI implementation; personalizing Tiffany's systems; meaningful wins; mentor credit"
+    suggested_category: "Wins + Results — verify current categories and posting rules before publishing"
+    moderation_rules: unverified_current
+    notes: "Past posts about Wix, AI Business Starter System, networking dashboard. Tiffany mentors user. User personalized Tiffany's ContentMadeEasy workflow for iPhone."
+  - name: The Social Club
+    url: https://www.skool.com/the-social-club-2696
+    role: member
+    status: participating
+    host: Sevyn Buffins
+    priority: highest
+    content_angle: "Peer community, real business learning, practical content/visibility wins and reciprocal conversation"
+    suggested_category: "BIG WINS IN THE CLUB or General Discussion — verify current rules"
+    moderation_rules: unverified_current
+    notes: "Tiffany Pellot also teaches here; user says she ran AI-editing classes, including ContentMadeEasy on Nov 18. Do not describe as a separate Social Media Ish membership without proof."
+  - name: AppsBuiltWithAI Community
+    url: https://www.skool.com/appsbuiltwithai
+    role: member
+    status: participating_last_verified_2026-11-17
+    priority: medium
+    content_angle: "App development and practical technical learning"
+    notes: "Justin Burns shared platform get-started and tech-founder essentials training; replays not independently verified."
+  - name: Skoolers
+    url: https://www.skool.com/skoolers
+    role: member
+    status: participating_last_verified_2026-11-17
+    priority: low
+    content_angle: "Official platform/community-operator learning"
+  - name: Legacy Over Likes
+    url: https://www.skool.com/legacy-over-likes-2460
+    role: owner
+    status: retired_do_not_promote
+  - name: The Nail Bawse Academy
+    url: https://www.skool.com/the-nail-bawse-academy-6145
+    role: owner
+    status: inactive_do_not_promote
+  - name: Beauty Bawse Club
+    url: null
+    role: creator_ecosystem
+    status: evolving_unverified_active_group
+    notes: "Do not conflate with Legacy Over Likes; verify exact live URL and status."
+  - name: The Bawse Club / The Bawse Collective
+    url: null
+    role: planned
+    status: not_confirmed_active
+    notes: "Do not promote as live or invite anyone without verified URL and status."
