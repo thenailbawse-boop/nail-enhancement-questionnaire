@@ -157,18 +157,21 @@ stronger relationships, systems that demonstrably work. Report completed work on
 - **The Social Club rule 2: No self-promotion** (verified Oct 29, 2026: her webinar invite was removed). No invite or
   registration links there, value posts only.
 
-## Beauty Bawse Club: passive community manager (Nov 20)
-Her own Skool community. The setup that runs without her:
-1. **Skool → Gmail → daily run:** her group's notification emails (new members, posts, comments, requests) feed the
-   8:41 AM digest, which drafts replies and welcome messages.
-2. **Skool's official Zapier app** (enabled in her Zapier MCP Nov 20; she must sign in once): read new members'
-   membership answers and new paid members; invite people by email; unlock a course for a buyer. Use these in the daily
-   run only for actions she has approved as standing rules (e.g. "invite every webinar sign-up who opted in").
-3. **Skool's built-in features** carry the rest: scheduled posts, classroom level unlocks, calendar events with reminders,
-   membership questions. Claude writes all text; she pastes/schedules it in one weekly sitting.
-4. **Brevo** (connector live) for email to members and leads, drafts first, sends only on her OK.
-Never: browser automation on Skool, Claude in Chrome clicking in Skool, posting or DMing as her. Skool's platform policy
-prohibits bots and the community is her main product; losing it is the biggest risk to her business.
+## Beauty Bawse Club: passive community manager (FREE ONLY, updated Nov 20)
+**Budget rule: Anisia is on Skool's $9 Hobby plan and cannot pay for anything else.** Never suggest Skool Pro, the Skool
+Zapier plugin (Pro only), paid Zapier, or any paid tool. Check that a feature works on her plan before suggesting it;
+if unsure, say so and offer the free path first.
+The $0 setup:
+1. **Skool email notifications → Gmail → daily run (8:41 AM PT):** new members, join requests, posts and comments in
+   Beauty Bawse Club are read from Gmail. The digest gives her copy-paste welcomes, replies and the day's post.
+2. **Joining without Zapier:** her group's own join/invite link goes on the thenailbawse.com thank-you page, in session
+   emails and in her IG bio. People join themselves.
+3. **Onboarding:** a pinned "Start Here" post + a "Start Here" classroom lesson (Claude writes; she pastes once).
+4. **Posts:** Claude writes a week at a time. Each morning's digest carries that day's post, ready to paste (2–5 min).
+   If her plan has post scheduling, she can batch them weekly instead.
+5. **Email outside Skool:** Gmail (via the funnel) or Brevo's free plan, drafts only until she approves.
+Never: browser automation on Skool, Claude in Chrome clicking in Skool, posting or DMing as her (Skool platform policy;
+the community is her main product).
 
 ## "Finish Skool setup" (done 2026-11-19)
 

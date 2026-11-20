@@ -53,9 +53,11 @@ communities:
     managed_by_claude: true
     priority: highest
     notes: "Anisia's own community and main product (Nov 20: she asked Claude to build out classroom, teaching, offers and programming, and to manage it passively). Do not conflate with Legacy Over Likes."
+    skool_plan: "Hobby ($9/mo). No Pro features. Budget: free tools only."
     automation:
-      zapier_skool_app: "enabled Nov 20 (triggers: membership_questions_answered, new_paid_member; actions: invite_member, unlock_course_for_member). Needs Anisia's one-time Skool sign-in in Zapier."
-      rule: "Official Zapier integration only. Never browser-automate Skool or post/DM as her (Skool platform policy); Claude writes, Skool's own scheduler and auto features run it."
+      zapier_skool_app: "NOT USABLE: Skool's Zapier plugin needs the $99 Pro plan. Dropped Nov 20."
+      free_path: "Gmail notifications -> daily digest with copy-paste welcomes/replies/posts; join link on her site and emails; pinned Start Here post + lesson."
+      rule: "Never browser-automate Skool or post/DM as her (Skool platform policy)."
   - name: The Bawse Club / The Bawse Collective
     url: null
     role: planned
