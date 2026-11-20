@@ -172,7 +172,7 @@
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (res) {
         if (res.ok) {
-          location.href = "/thanks.html?e=" + encodeURIComponent(res.j.eventId) + (res.j.emailed ? "" : "&m=0") + "&n=" + encodeURIComponent((body.firstName || "").slice(0, 30));
+          location.href = (document.documentElement.getAttribute("data-thanks") || "/thanks.html") + "?e=" + encodeURIComponent(res.j.eventId) + (res.j.emailed ? "" : "&m=0") + "&n=" + encodeURIComponent((body.firstName || "").slice(0, 30));
           return;
         }
         var fields = res.j.fields || {};
