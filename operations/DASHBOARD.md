@@ -1,9 +1,10 @@
 # Operating dashboard: The Nail Bawse
-_Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
+_Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
-- Nov 19: funnel pages redesigned in her brand (countdown, date card, 3-step thank-you, story seat card); 16 tests pass, browser-checked
-- Nov 19: Elevate form filled and checked; pre-filled link ready for her to tap Submit
+- Nov 20: **Elevate RTP talk submitted** by Anisia (results by Dec 21)
+- Nov 20: funnel rebuilt (v2) to match the 2 examples' craft, themed as her salon front desk; 16 tests pass, browser-checked
+- Rule: every webinar is called **Build Your AI Agent** (no branded phrase)
 - Public website set: **thenailbawse.com** (all docs and the Elevate proposal updated)
 - Nov 19: MUSE Hair Fest replied with fee $350 (sent) · A Place Called Home follow-up (sent)
 - New funnel built and tested end to end in a browser (`funnel-site/`, 16 automated tests pass); not deployed yet
@@ -17,8 +18,7 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
 ## 👑 Pending your approval / decision (top first)
 1. **Funnel setup (`funnel-site/README.md`):** Gmail app password, free Netlify site, 5 settings, point your domain
 2. **Klaviyo (you're leaving it):** export your contacts, turn off Auto-upgrade, downgrade to free before the next bill (~Nov 27)
-3. **Elevate RTP: submit by Nov 30.** Approved. Google requires a human check, so YOU tap Submit: `drafts/ELEVATE-SUBMIT-LINK.md` (pre-filled, 2 min). Preview in `drafts/elevate-rtp-proposal.md`
-3b. **Funnel redesign done** in your pink (approved Nov 19). Check the 4 "This is for you if…" lines; send a Skool link if you want one on the thank-you page
+3. **Funnel v2 (Build Your AI Agent):** rebuilt from the 2 examples; your review needed. Send a photo of you for the host section
 4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
 
@@ -28,7 +28,7 @@ _Updated Thu Nov 19, 2026 (evening) by Claude. The daily run (8:41 AM PT) refres
 | Gmail | ✅ Working |
 | Google Calendar | ✅ Working (thenailbawse@gmail.com) |
 | Google Drive | ✅ Working, but signed in as asburroughs26@gmail.com (sees files shared from thenailbawse) |
-| Zoom | ✅ Working (weekly "Booked, Burnt Out & Underpaid" meeting visible) |
+| Zoom | ✅ Working (weekly class meeting visible; Zoom title still says "Booked, Burnt Out & Underpaid") |
 | Wix | ✅ Working (4 sites, incl. "The Nail Bawse") |
 
 All connected. Manage them at claude.ai/customize/connectors.

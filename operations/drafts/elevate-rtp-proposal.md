@@ -49,3 +49,5 @@ No headshot, phone, bio or website is asked for.
 Not sent: bio (the form has no place for it). Website + Instagram go in the experience answer.
 
 **Nov 19:** Anisia said submit. The form's Submit button shows a Google "are you human" check, so Claude stopped and made a pre-filled link instead: `ELEVATE-SUBMIT-LINK.md`. Not submitted yet.
+
+**Nov 20: SUBMITTED by Anisia** via the pre-filled link. Speakers notified by Dec 21.

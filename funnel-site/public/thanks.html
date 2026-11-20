@@ -2,72 +2,160 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>You're in | The Nail Bawse</title><meta name="robots" content="noindex"><meta name="theme-color" content="#F4A6C4">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css">
+<title>You're booked | The Nail Bawse</title><meta name="robots" content="noindex"><meta name="theme-color" content="#3B2621">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="/assets/funnel.css">
 </head>
-<body>
-<main class="wrap">
-  <header class="stack hero">
-    <div class="eyebrow">The Nail Bawse</div>
-    <h1 id="h" class="caps">You're in.</h1>
-    <p class="lead" id="msg">Your seat is saved. Three quick things before we go live:</p>
-  </header>
+<body class="thanks">
+<div class="topbar"><div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div></div>
+<main>
+<section class="hero ty-hero">
+  <svg class="prop prop-polish" viewBox="0 0 80 150" aria-hidden="true"><use href="#i-polish"/></svg>
+  <svg class="prop prop-spark s1" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spark"/></svg>
+  <div class="brand"><span class="mono">NB</span><span>The Nail Bawse<small>Anisia Burroughs</small></span></div>
+  <h1 class="display" id="h">You're <em>booked.</em></h1>
+  <p class="lead" id="msg">Your seat is saved. Here's your appointment card, plus three quick things before we go live.</p>
 
-  <div class="seat" id="seat" hidden>
-    <div class="seat-top"><span>Seat saved</span><span>Free live class</span></div>
-    <strong class="seat-title caps" id="t"></strong>
-    <dl>
-      <div><dt>Date</dt><dd id="sDate"></dd></div>
-      <div><dt>Time</dt><dd id="sTime"></dd></div>
-      <div id="sNameRow" hidden><dt>Guest</dt><dd id="sName"></dd></div>
-    </dl>
-    <div class="seat-foot"><span>Anisia the Nail Bawse</span><span>@thenailbawse</span></div>
+  <div class="appt" id="appt" hidden>
+    <div class="appt-top"><span class="mono sm">NB</span><div><b>The Nail Bawse</b><small>Appointment card</small></div><span class="appt-free">Free</span></div>
+    <div class="appt-row"><span>For</span><b id="aName">You</b></div>
+    <div class="appt-row"><span>Service</span><b id="aTitle"></b></div>
+    <div class="appt-row"><span>Date</span><b id="aDate"></b></div>
+    <div class="appt-row"><span>Time</span><b id="aTime"></b></div>
+    <div class="appt-row"><span>With</span><b>Anisia</b></div>
+    <div class="appt-foot"><span>Live on Zoom</span><span>@thenailbawse</span></div>
+    <div class="stamp" aria-hidden="true">Confirmed</div>
   </div>
+  <button class="cta" type="button" id="story" hidden><span>Save for my story</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>
+  <p class="script center" id="tagline" hidden>post it &amp; tag @thenailbawse, I'm reposting!</p>
+</section>
 
-  <ol class="steps big" id="steps">
-    <li>
-      <strong class="caps">Check your inbox</strong>
-      <p id="inbox">Your Zoom link and calendar invite are on the way. Don't see it in a few minutes? Look in Promotions or Spam and move it to your inbox so the reminders reach you.</p>
-    </li>
-    <li id="calStep" hidden>
-      <strong class="caps">Add it to your calendar</strong>
-      <div class="btns"><a class="btn" id="gcal" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics">Apple / Outlook</a></div>
-    </li>
-    <li>
-      <strong class="caps">Post your seat</strong>
-      <p>Screenshot your seat card, post it to your story and tag <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a>. Bring one question you want answered live.</p>
-    </li>
-  </ol>
+<section class="sec ty-steps" id="steps">
+  <p class="script">before we go live</p>
+  <h2 class="display">Three things <em>to do next.</em></h2>
 
-  <p class="signoff">See you there,<br>Anisia</p>
-  <footer>Beyond the service. Beyond the title.<br>© The Nail Bawse</footer>
+  <article class="step-card">
+    <span class="step-n">01</span>
+    <div><h3>Check your inbox</h3>
+    <p id="inbox">Your Zoom link and calendar invite are on the way. Not there in a few minutes? Check Promotions or Spam and move it to your inbox so your reminders land.</p></div>
+  </article>
+
+  <article class="step-card" id="calStep" hidden>
+    <span class="step-n">02</span>
+    <div><h3>Add it to your calendar</h3>
+    <p>So your Zoom link is right there when it's time.</p>
+    <div class="cal-btns"><a class="pill" id="gcal" target="_blank" rel="noopener">Google Calendar</a><a class="pill" id="ics">Apple / iPhone</a><a class="pill" id="ics2">Outlook</a></div></div>
+  </article>
+
+  <article class="step-card">
+    <span class="step-n" id="n3">03</span>
+    <div><h3>Pick the DM you're done answering</h3>
+    <p>We'll build your agent around it live. Tap one:</p>
+    <div class="pick" id="pick">
+      <button type="button" aria-pressed="false">"How much is a…?"</button>
+      <button type="button" aria-pressed="false">"Do you have anything…?"</button>
+      <button type="button" aria-pressed="false">Deposit &amp; late policy</button>
+      <button type="button" aria-pressed="false">Aftercare questions</button>
+    </div>
+    <p class="script small" id="pickNote" aria-live="polite"></p></div>
+  </article>
+
+  <p class="sig center">See you there,<br>Anisia</p>
+</section>
+<footer class="foot"><span class="mono">NB</span><p>You are the asset. Build accordingly.</p><p class="small">© The Nail Bawse · <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a></p></footer>
 </main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-polish" x1="0" x2="1"><stop offset="0" stop-color="#F7BFD4"/><stop offset=".55" stop-color="#F4A6C4"/><stop offset="1" stop-color="#D9799F"/></linearGradient>
+    <linearGradient id="g-cap" x1="0" x2="1"><stop offset="0" stop-color="#5A3A31"/><stop offset=".5" stop-color="#3B2621"/><stop offset="1" stop-color="#24150F"/></linearGradient>
+    <symbol id="i-polish" viewBox="0 0 80 150">
+      <rect x="27" y="4" width="26" height="58" rx="5" fill="url(#g-cap)"/><rect x="31" y="8" width="4" height="48" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="22" y="58" width="36" height="10" rx="3" fill="#2A1A15"/>
+      <path d="M14 76 Q14 66 26 66 H54 Q66 66 66 76 V132 Q66 146 52 146 H28 Q14 146 14 132 Z" fill="url(#g-polish)"/>
+      <path d="M21 78 Q21 72 28 72 H33 V138 H28 Q21 138 21 130 Z" fill="#fff" opacity=".35"/>
+      <rect x="25" y="96" width="30" height="22" rx="3" fill="#FFF8F2" opacity=".85"/><text x="40" y="111" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#3B2621">NB</text>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z"/></symbol>
+  </defs>
+</svg>
 <script>
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var p = new URLSearchParams(location.search), id = p.get("e"), name = (p.get("n") || "").trim().slice(0, 30);
-  if (p.get("m") === "0") $("inbox").textContent = "Your confirmation email is running a little behind; it will reach you before the class. Save this page in the meantime.";
+  var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+  function ticker(items) { var t = $("ticker"); t.textContent = ""; for (var r = 0; r < 2; r++) { var s = document.createElement("span"); for (var k = 0; k < 2; k++) items.forEach(function (x, i) { var b = document.createElement(i % 2 ? "b" : "span"); b.textContent = x + " · "; s.appendChild(b); }); t.appendChild(s); } }
+  ticker(["You're booked", "Build Your AI Agent", "Check your inbox", "Add it to your calendar", "Tag @thenailbawse"]);
+  if (p.get("m") === "0") $("inbox").textContent = "Your confirmation email is running a little behind; it will reach you before class. Keep this page open or screenshot your card in the meantime.";
+  if (name) $("aName").textContent = name;
+
+  // Step 3 picker
+  document.querySelectorAll("#pick button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll("#pick button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      $("pickNote").textContent = "Got it. Bring a real example of that DM to class.";
+    });
+  });
+
   if (!id || id === "waitlist") {
-    $("h").textContent = "You're on the list.";
-    $("msg").textContent = "As soon as the next date is posted, you'll get the topic and a link to save your seat.";
+    $("h").innerHTML = "You're on <em>the list.</em>";
+    $("msg").textContent = "The moment the next date is posted, you'll get it by email with your link to save a seat.";
     $("steps").hidden = true; return;
   }
+
+  var ev = null;
   fetch("/api/events?id=" + encodeURIComponent(id)).then(function (r) { return r.json(); }).then(function (d) {
-    var ev = d.event; if (!ev) return;
-    var start = new Date(ev.startUtc), end = new Date(start.getTime() + (ev.durationMin || 45) * 60000);
-    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ev.tz;
-    var f = function (o) { return new Intl.DateTimeFormat("en-US", Object.assign({ timeZone: tz }, o)).format(start); };
-    $("t").textContent = ev.title;
-    $("sDate").textContent = f({ weekday: "long", month: "long", day: "numeric" });
-    $("sTime").textContent = f({ hour: "numeric", minute: "2-digit", timeZoneName: "short" });
-    if (name) { $("sName").textContent = name; $("sNameRow").hidden = false; }
-    $("seat").hidden = false;
+    ev = d.event; if (!ev) return;
+    var zone = tz || ev.tz, start = new Date(ev.startUtc), end = new Date(start.getTime() + (ev.durationMin || 45) * 60000);
+    var f = function (o) { return new Intl.DateTimeFormat("en-US", Object.assign({ timeZone: zone }, o)).format(start); };
+    $("aTitle").textContent = ev.title;
+    $("aDate").textContent = f({ weekday: "long", month: "long", day: "numeric" });
+    $("aTime").textContent = f({ hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+    $("appt").hidden = false; $("story").hidden = false; $("tagline").hidden = false;
+    ticker(["You're booked", ev.title, f({ weekday: "short", month: "short", day: "numeric" }), f({ hour: "numeric", minute: "2-digit", timeZoneName: "short" }), "Tag @thenailbawse"]);
     var z = function (d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); };
     $("gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates: z(start) + "/" + z(end), details: "Your Zoom link is in your confirmation email.", location: "Online (Zoom)" });
-    $("ics").href = "/api/ics?id=" + encodeURIComponent(ev.id);
+    $("ics").href = $("ics2").href = "/api/ics?id=" + encodeURIComponent(ev.id);
     $("calStep").hidden = false;
-  }).catch(function () {});
+  }).catch(function () { $("n3").textContent = "02"; });
+
+  // Story image (1080x1920) drawn on a canvas
+  $("story").addEventListener("click", function () {
+    if (!ev) return;
+    var c = document.createElement("canvas"); c.width = 1080; c.height = 1920; var g = c.getContext("2d");
+    var serif = "Fraunces, Georgia, serif", sans = "Inter, Arial, sans-serif", hand = "Caveat, cursive";
+    g.fillStyle = "#F4A6C4"; g.fillRect(0, 0, 1080, 1920);
+    g.fillStyle = "rgba(59,38,33,.08)"; for (var x = 20; x < 1080; x += 40) for (var y = 20; y < 1920; y += 40) { g.beginPath(); g.arc(x, y, 2.4, 0, 7); g.fill(); }
+    g.fillStyle = "#3B2621"; g.textAlign = "center";
+    g.font = "italic 400 120px " + serif; g.fillText("You're booked.", 540, 330);
+    g.font = "700 64px " + hand; g.fillText("free live class with @thenailbawse", 540, 430);
+    // card
+    g.save(); g.translate(540, 1050); g.rotate(-0.03);
+    g.fillStyle = "#3B2621"; round(g, -420 + 18, -440 + 18, 840, 880, 40); g.fill();
+    g.fillStyle = "#FFFDFB"; round(g, -420, -440, 840, 880, 40); g.fill();
+    g.strokeStyle = "#3B2621"; g.lineWidth = 6; round(g, -420, -440, 840, 880, 40); g.stroke();
+    g.textAlign = "left"; g.fillStyle = "#3B2621"; g.font = "800 30px " + sans; g.fillText("THE NAIL BAWSE · APPOINTMENT CARD", -360, -360);
+    var rows = [["FOR", $("aName").textContent], ["SERVICE", ev.title], ["DATE", $("aDate").textContent], ["TIME", $("aTime").textContent], ["WITH", "Anisia"]];
+    rows.forEach(function (r, i) {
+      var yy = -250 + i * 130;
+      g.fillStyle = "#76605A"; g.font = "800 26px " + sans; g.fillText(r[0], -360, yy);
+      g.fillStyle = "#A24D6E"; g.font = "700 62px " + hand; fit(g, r[1], -150, yy + 4, 520);
+      g.strokeStyle = "#E7D8CE"; g.lineWidth = 3; g.setLineDash([10, 10]); g.beginPath(); g.moveTo(-360, yy + 34); g.lineTo(360, yy + 34); g.stroke(); g.setLineDash([]);
+    });
+    g.save(); g.translate(220, 360); g.rotate(-0.2); g.strokeStyle = "#A24D6E"; g.lineWidth = 7; round(g, -170, -55, 340, 110, 14); g.stroke();
+    g.fillStyle = "#A24D6E"; g.textAlign = "center"; g.font = "800 58px " + sans; g.fillText("CONFIRMED", 0, 20); g.restore();
+    g.restore();
+    g.textAlign = "center"; g.fillStyle = "#3B2621"; g.font = "italic 400 56px " + serif; g.fillText("Build Your AI Agent", 540, 1690);
+    g.font = "800 30px " + sans; g.fillText("LIVE ON ZOOM · FREE", 540, 1760);
+    c.toBlob(function (blob) {
+      var file = new File([blob], "nail-bawse-seat.png", { type: "image/png" });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) { navigator.share({ files: [file] }).catch(function () {}); return; }
+      var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "nail-bawse-seat.png"; document.body.appendChild(a); a.click(); a.remove();
+    });
+  });
+  function round(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+  function fit(g, t, x, y, max) { var s = 62; while (g.measureText(t).width > max && s > 30) { s -= 4; g.font = "700 " + s + "px Caveat, cursive"; } g.fillText(t, x, y); }
 })();
 </script>
 </body>

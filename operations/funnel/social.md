@@ -1,12 +1,12 @@
 # Instagram pieces (no hashtags)
 
 **BAWSE auto-reply / DM:**
-Hey love! Here's your link to save a seat at my free Thursday workshop, Booked, Burnt Out & Underpaid:
+Hey love! Here's your link to save a seat at my free Thursday workshop, Build Your AI Agent:
 [SIGNUP LINK]
 8 PM Pacific, live on Zoom. See you there 💅🏽
 
 **Bio line:**
-Free Thursday workshop for beauty pros 👇🏽 Booked, Burnt Out & Underpaid
+Free Thursday workshop for beauty pros 👇🏽 Build Your AI Agent
 [SIGNUP LINK]
 
 **Caption ending (reuse on any post):**

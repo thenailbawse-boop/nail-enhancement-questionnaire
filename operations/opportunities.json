@@ -1,15 +1,16 @@
 {
   "note": "Speaking, workshop and collaboration contacts. Dedupe by org+email before any new outreach. Nothing is sent without Anisia's approval.",
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "items": [
     {
       "org": "Elevate RTP 2027",
       "contact": "admin@elevatertp.com",
-      "status": "invited_to_submit",
+      "status": "submitted",
       "last_inbound": "2026-11-14",
       "deadline": "2026-11-30",
-      "next": "Anisia approved submission Nov 19. Submit at elevatertp.com/call-for-speakers (needs a session that can reach the site).",
-      "owner": "claude"
+      "next": "Anisia submitted the speaker form Nov 20 (Workshop, AI Coworker track). Selections announced by Dec 21; watch Gmail.",
+      "owner": "claude",
+      "submitted": "2026-11-20"
     },
     {
       "org": "MUSE Hair Fest 2027",

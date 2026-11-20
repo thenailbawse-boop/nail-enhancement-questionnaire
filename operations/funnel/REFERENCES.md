@@ -11,7 +11,7 @@ Take from both "in my own branding": the structure and what makes each page work
 | 4 | https://thelacelocker.store/webinar/confirmed | The Lace Locker webinar confirmation page |
 
 Status: **all 4 viewed Nov 19, 2026** at desktop (1366px) and phone (390px) width. ✅ 1 ✅ 2 ✅ 3 ✅ 4
-Phone screenshots: `screenshots/key-*.png`. **Anisia approved Nov 19. Redesign done in `funnel-site/public/`** (16 tests pass, browser-checked phone/desktop/dark). Preview: `screenshots/new/`.
+Phone screenshots: `screenshots/key-*.png`. **v1 (Nov 19) rejected by Anisia: too plain, didn't match the examples' craft.** **v2 (Nov 20)** rebuilt in `funnel-site/public/` (index.html, thanks.html, assets/funnel.css, app.js) (16 tests pass, browser-checked phone/desktop/dark). Preview: `screenshots/new/`.
 Not done: Skool button (her Skool groups are marked do-not-promote; send a link to add one). "This is for you if…" lines are placeholder copy for her to edit.
 
 ## What each page does
@@ -46,3 +46,17 @@ Not done: Skool button (her Skool groups are marked do-not-promote; send a link 
 - Her own button words: "Save my seat", "Come build with me", "Learn the system", "Let's get to work"
 - Sign-offs: "You are the asset. Build accordingly." · "Beyond the service. Beyond the title." · "Build from what you know."
 - Current funnel pages use a placeholder plum/pink palette: swap to her brand when redesigning.
+
+## v2 (Nov 20): what was taken from the examples, in her brand
+Theme: her salon front desk; the AI agent is the new hire. Her site's look: espresso, cream, blush, Fraunces serif with italic pink, NB monogram.
+- Sticky scrolling ticker + flip-clock countdown (Lace Locker)
+- Handwritten accent lines, drawn props (polish bottle, nail file, press-on, sparkles), swoosh underline (Lace Locker)
+- Appointment-book date card with rings + spinning "LIVE ON ZOOM" seal (Lace Locker calendar page + seal)
+- Animated DM demo: client DMs → agent drafting → draft with sources → tap "Approve & send" (Lace DMs + Tiff demo)
+- "Class menu" styled as a salon service menu (Lace class notes)
+- 4 dark window cards with status chips and progress bars (Tiff "AI team member" steps)
+- Before vs after cards (Lace then-vs-now) · tap-to-check sticky notes with tally (Lace "tap a note" + Tiff checklist)
+- Host card, final section with PT/MT/CT/ET pills and countdown (Tiff) · floating "Save my seat" button
+- Thank-you: "You're booked" appointment card with CONFIRMED stamp, "Save for my story" PNG (Lace hall pass),
+  3 steps: inbox · calendar (Google/Apple/Outlook) · pick the DM to automate (Tiff)
+Missing vs the examples: real photos/video of Anisia (send a headshot + a few work photos to add).
