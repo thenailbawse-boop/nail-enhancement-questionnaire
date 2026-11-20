@@ -47,10 +47,15 @@ communities:
     role: owner
     status: inactive_do_not_promote
   - name: Beauty Bawse Club
-    url: null
-    role: creator_ecosystem
-    status: evolving_unverified_active_group
-    notes: "Do not conflate with Legacy Over Likes; verify exact live URL and status."
+    url: null  # Anisia to confirm the live link
+    role: owner
+    status: building_now
+    managed_by_claude: true
+    priority: highest
+    notes: "Anisia's own community and main product (Nov 20: she asked Claude to build out classroom, teaching, offers and programming, and to manage it passively). Do not conflate with Legacy Over Likes."
+    automation:
+      zapier_skool_app: "enabled Nov 20 (triggers: membership_questions_answered, new_paid_member; actions: invite_member, unlock_course_for_member). Needs Anisia's one-time Skool sign-in in Zapier."
+      rule: "Official Zapier integration only. Never browser-automate Skool or post/DM as her (Skool platform policy); Claude writes, Skool's own scheduler and auto features run it."
   - name: The Bawse Club / The Bawse Collective
     url: null
     role: planned

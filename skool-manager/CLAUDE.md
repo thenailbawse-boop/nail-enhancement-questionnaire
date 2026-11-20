@@ -157,6 +157,19 @@ stronger relationships, systems that demonstrably work. Report completed work on
 - **The Social Club rule 2: No self-promotion** (verified Oct 29, 2026: her webinar invite was removed). No invite or
   registration links there, value posts only.
 
+## Beauty Bawse Club: passive community manager (Nov 20)
+Her own Skool community. The setup that runs without her:
+1. **Skool → Gmail → daily run:** her group's notification emails (new members, posts, comments, requests) feed the
+   8:41 AM digest, which drafts replies and welcome messages.
+2. **Skool's official Zapier app** (enabled in her Zapier MCP Nov 20; she must sign in once): read new members'
+   membership answers and new paid members; invite people by email; unlock a course for a buyer. Use these in the daily
+   run only for actions she has approved as standing rules (e.g. "invite every webinar sign-up who opted in").
+3. **Skool's built-in features** carry the rest: scheduled posts, classroom level unlocks, calendar events with reminders,
+   membership questions. Claude writes all text; she pastes/schedules it in one weekly sitting.
+4. **Brevo** (connector live) for email to members and leads, drafts first, sends only on her OK.
+Never: browser automation on Skool, Claude in Chrome clicking in Skool, posting or DMing as her. Skool's platform policy
+prohibits bots and the community is her main product; losing it is the biggest risk to her business.
+
 ## "Finish Skool setup" (done 2026-11-19)
 
 Completed in session `session_014duir2ozQGSs9NdK6oLi3m` (Gmail connected). Both scheduled tasks now fire into that
