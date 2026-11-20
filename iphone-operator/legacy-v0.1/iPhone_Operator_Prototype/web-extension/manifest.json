@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "iPhone Operator — Safe Web Prototype",
+  "version": "0.1.0",
+  "description": "User-initiated observe/act/verify prototype for permitted Safari webpages. No unattended publishing or destructive actions.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "iPhone Operator",
+    "default_popup": "popup.html"
+  }
+}

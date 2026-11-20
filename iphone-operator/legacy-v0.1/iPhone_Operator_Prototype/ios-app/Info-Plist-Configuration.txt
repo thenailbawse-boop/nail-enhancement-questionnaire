@@ -1,0 +1,10 @@
+In the Xcode iOS App target > Info > Custom iOS Target Properties, add:
+
+NSPhotoLibraryUsageDescription (Privacy - Photo Library Usage Description):
+"iPhone Operator organizes only the Photos items you allow into review albums. It never deletes or uploads your media."
+
+If building a distribution version, review Apple's current App Store privacy disclosures, entitlement rules, and account permissions.
+
+App Intents can be triggered from Shortcuts. A recurring Shortcuts schedule is not a guarantee of indefinite background execution.
+
+Supported starting target: iOS 18 or later (actual device tests still required). Device-specific Apple Intelligence/ChatGPT features are optional and not used by this native app code.

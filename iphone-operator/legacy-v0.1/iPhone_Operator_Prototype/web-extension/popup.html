@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhone Operator</title>
+  <style>
+    :root { color-scheme: light; font: 14px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+    body { width: min(360px, 96vw); margin: 0; padding: 16px; background: #fffafa; color: #39261f; }
+    h1 { font-size: 18px; margin: 0 0 4px; } p { line-height: 1.45; }
+    button { border: 0; background: #39261f; color: white; border-radius: 10px; padding: 10px; font-weight: 650; margin: 4px 4px 8px 0; }
+    textarea { width: 100%; box-sizing: border-box; min-height: 116px; padding: 8px; border: 1px solid #c9b6ab; border-radius: 8px; font: 12px ui-monospace, SFMono-Regular, monospace; }
+    pre { max-height: 240px; overflow: auto; white-space: pre-wrap; word-break: break-word; background: #f5e9e8; padding: 10px; border-radius: 8px; font-size: 11px; }
+    .help { color: #6b5650; font-size: 12px; } label { display: block; font-weight: 650; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>iPhone Operator</h1>
+  <p class="help">Prototype: inspect an authorized Safari tab, then run a reviewed JSON action plan. Does not control native apps.</p>
+  <button id="inspect">Inspect this page</button>
+  <button id="copy">Copy inspection</button>
+  <label for="plan">Reviewed action plan (JSON)</label>
+  <textarea id="plan" spellcheck="false">{"steps":[{"action":"scroll","direction":"down"}]}</textarea>
+  <button id="run">Run reviewed plan</button>
+  <p class="help">Actions: scroll, type, click. Forms cannot be submitted. Destructive or sensitive clicks are blocked. No keys, passwords, or page input values are collected.</p>
+  <pre id="output" aria-live="polite">Select “Inspect this page”.</pre>
+  <script src="popup.js"></script>
+</body>
+</html>

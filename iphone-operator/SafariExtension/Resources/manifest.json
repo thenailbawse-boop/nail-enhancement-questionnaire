@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Creator Reset Operator",
+  "short_name": "Creator Reset",
+  "version": "0.2.0",
+  "description": "Looks at the page you choose, plans safe steps, waits for your OK, does them, then checks the result. Never submits forms, buys, posts or deletes.",
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png",
+    "256": "images/icon-256.png",
+    "512": "images/icon-512.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Creator Reset",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/toolbar-16.png",
+      "32": "images/toolbar-32.png"
+    }
+  },
+  "permissions": ["activeTab", "scripting", "nativeMessaging"]
+}

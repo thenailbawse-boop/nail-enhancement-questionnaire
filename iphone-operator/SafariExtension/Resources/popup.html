@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creator Reset</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#fffafa; --fg:#39261f; --muted:#6b5650; --card:#f5e9e8; --line:#c9b6ab; --accent:#39261f; --accentFg:#fff; --bad:#a3271b; --good:#1f6b3a;
+      font: 15px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#1d1513; --fg:#f6ebe7; --muted:#c3aea7; --card:#2c211e; --line:#5a4640; --accent:#f6ebe7; --accentFg:#1d1513; --bad:#ff8a7d; --good:#7fd69b; } }
+    body { margin:0; padding:14px; background:var(--bg); color:var(--fg); min-width: 300px; }
+    h1 { font-size:18px; margin:0 0 2px; } .help { color:var(--muted); font-size:13px; line-height:1.4; margin:4px 0 10px; }
+    .step { border:1px solid var(--line); border-radius:12px; padding:10px; margin:10px 0; }
+    .step h2 { font-size:14px; margin:0 0 6px; }
+    button { border:0; background:var(--accent); color:var(--accentFg); border-radius:10px; padding:10px 12px; font-weight:650; font-size:14px; margin:4px 4px 4px 0; }
+    button.secondary { background:transparent; color:var(--fg); border:1px solid var(--line); }
+    button:disabled { opacity:.45; }
+    input[type=text], textarea { width:100%; box-sizing:border-box; padding:9px; border:1px solid var(--line); border-radius:9px; background:var(--bg); color:var(--fg); font-size:14px; }
+    textarea { min-height:90px; font:12px ui-monospace, SFMono-Regular, monospace; }
+    ol { margin:6px 0; padding-left:20px; } li { margin:3px 0; }
+    .bad { color:var(--bad); } .good { color:var(--good); }
+    pre { max-height:200px; overflow:auto; white-space:pre-wrap; word-break:break-word; background:var(--card); padding:8px; border-radius:8px; font-size:11px; }
+    details summary { cursor:pointer; color:var(--muted); font-size:13px; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <h1>Creator Reset</h1>
+  <p class="help">Works only on this page, only when you tap. It never signs in, submits, buys, posts or deletes.</p>
+
+  <div class="step">
+    <h2>1. Look at the page</h2>
+    <button id="inspect">Inspect this page</button>
+    <p id="pageInfo" class="help">Not inspected yet.</p>
+  </div>
+
+  <div class="step">
+    <h2>2. Say what you want</h2>
+    <input id="goal" type="text" placeholder="e.g. search this site for nail art ideas" />
+    <button id="planAI" disabled>Plan with on-device AI</button>
+    <button id="copyPrompt" class="secondary" disabled>Copy for ChatGPT / Claude</button>
+    <p id="aiStatus" class="help">On-device AI needs an iPhone with Apple Intelligence (iOS 26+).</p>
+    <details>
+      <summary>Paste or edit a plan (JSON)</summary>
+      <textarea id="plan" spellcheck="false">{"steps":[{"action":"scroll","direction":"down"}]}</textarea>
+      <button id="check" class="secondary">Check this plan</button>
+    </details>
+  </div>
+
+  <div class="step">
+    <h2>3. Approve</h2>
+    <div id="readable" class="help">No plan yet.</div>
+    <button id="run" disabled>Approve &amp; run</button>
+  </div>
+
+  <div class="step">
+    <h2>4. Result</h2>
+    <div id="result" class="help">Nothing run yet.</div>
+    <button id="next" class="secondary" disabled>Next step (inspect again)</button>
+  </div>
+
+  <details><summary>Details</summary><pre id="output"></pre></details>
+  <script src="plan-validator.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
