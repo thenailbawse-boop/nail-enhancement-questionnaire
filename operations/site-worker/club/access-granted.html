@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Access Granted | Beauty Bawse Club</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#3B2621">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="/club-assets/club.css">
+</head>
+<body>
+<div class="topbar">Beauty Bawse Club · Access granted</div>
+
+<header class="hero">
+  <div class="wrap stack" style="max-width:620px">
+    <div class="brand"><span class="mono">NB</span><span>The Nail Bawse<small>Beauty Bawse Club</small></span></div>
+
+    <!-- Member card -->
+    <div class="mcard" aria-label="Your Beauty Bawse Club member card">
+      <div class="mcard-top"><span>Beauty Bawse Club</span><span class="mono sm">NB</span></div>
+      <p class="mcard-kicker">Member card</p>
+      <p class="mcard-name" id="mName">Welcome, Bawse</p>
+      <div class="mcard-row"><span>Status</span><b>Access granted</b></div>
+      <div class="mcard-row"><span>Plan</span><b id="mPlan">Beauty Bawse Club</b></div>
+      <div class="mcard-foot"><span>Build accordingly</span><span>@thenailbawse</span></div>
+      <div class="mstamp" aria-hidden="true">Welcome in</div>
+    </div>
+
+    <h1 class="display">Access <span class="hl">granted.</span></h1>
+    <p class="lead">You're officially in Beauty Bawse Club. <b>Your payment went through</b> and your receipt is on its way from Stripe. Here's how to get inside.</p>
+  </div>
+</header>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap stack" style="max-width:620px">
+    <p class="script">do these 3 things now</p>
+    <ol class="next">
+      <li>
+        <span class="nn">01</span>
+        <div><h2>Open the club on Skool</h2>
+        <p>Tap below and join using <b>the same email you paid with</b>. That's how we match you to your membership.</p>
+        <a class="cta" href="https://www.skool.com/legacy-over-likes-2460/about" target="_blank" rel="noopener"><span>Open the club</span></a></div>
+      </li>
+      <li>
+        <span class="nn">02</span>
+        <div><h2>Check your email</h2>
+        <p>Your Skool invite and your Stripe receipt are on the way. Not there in a few minutes? Check Promotions or Spam.</p></div>
+      </li>
+      <li>
+        <span class="nn">03</span>
+        <div><h2>Introduce yourself</h2>
+        <p>Post in the community: your name, what you do, and <b>the one area of your business</b> you want to build first.</p>
+        <div class="areas" id="areas">
+          <button type="button" aria-pressed="false">Foundations</button><button type="button" aria-pressed="false">Brand</button><button type="button" aria-pressed="false">Money</button>
+          <button type="button" aria-pressed="false">Marketing</button><button type="button" aria-pressed="false">Systems</button><button type="button" aria-pressed="false">Income</button>
+        </div>
+        <p class="script small" id="areaNote" aria-live="polite"></p></div>
+      </li>
+    </ol>
+    <div class="help"><b>Need help getting in?</b> Send a DM to <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a> with the email you paid with.</div>
+    <p class="sig" style="text-align:center">So glad you're here,<br>Anisia</p>
+  </div>
+</section>
+<footer class="foot"><span class="mono">NB</span><p class="s">You are the asset. Build accordingly.</p><p>© The Nail Bawse</p></footer>
+
+<script>
+(function () {
+  var p = new URLSearchParams(location.search);
+  var plans = { monthly: "Monthly", quarterly: "Quarterly starter", annual: "Annual pass", lifetime: "Lifetime access" };
+  if (plans[p.get("plan")]) document.getElementById("mPlan").textContent = plans[p.get("plan")];
+  var n = (p.get("name") || "").trim().slice(0, 30);
+  if (n) document.getElementById("mName").textContent = "Welcome, " + n;
+  document.querySelectorAll("#areas button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll("#areas button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      document.getElementById("areaNote").textContent = "Start with " + b.textContent.toLowerCase() + ". Say it in your intro post!";
+    });
+  });
+})();
+</script>
+</body>
+</html>
