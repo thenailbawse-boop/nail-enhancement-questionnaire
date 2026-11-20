@@ -35,6 +35,15 @@ struct CreatorResetApp: App {
 
 struct RootView: View {
     var body: some View {
+        tabs
+        #if DEBUG
+            .overlay(alignment: .top) {
+                if SelfTest.requested { SelfTestBanner() }
+            }
+        #endif
+    }
+
+    private var tabs: some View {
         TabView {
             HomeView()
                 .tabItem { Label("Home", systemImage: "house") }
@@ -49,3 +58,18 @@ struct RootView: View {
         }
     }
 }
+
+#if DEBUG
+/// Only visible when launched with -CRSelfTest (automated checks). Never in Release builds.
+struct SelfTestBanner: View {
+    @ObservedObject private var status = SelfTestStatus.shared
+
+    var body: some View {
+        Text(status.text)
+            .font(.caption2)
+            .padding(6)
+            .background(.yellow.opacity(0.9))
+            .accessibilityIdentifier("selftest-status")
+    }
+}
+#endif

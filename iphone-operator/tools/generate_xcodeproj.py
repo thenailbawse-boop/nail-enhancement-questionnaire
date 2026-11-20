@@ -18,6 +18,7 @@ DEPLOYMENT = "17.0"
 
 APP = "CreatorReset"
 EXT = "CreatorResetSafari"
+UIT = "CreatorResetUITests"
 
 
 def oid(*parts):
@@ -43,6 +44,7 @@ ext_sources = ["SafariExtension/SafariWebExtensionHandler.swift"]
 
 app_target_sources = app_sources + shared_sources + core_sources
 ext_target_sources = ext_sources + ["Shared/OnDeviceAIStatus.swift", "Core/Sources/OperatorCore/WebPlan.swift"]
+uit_target_sources = rel(glob.glob(os.path.join(ROOT, "UITests/*.swift")))
 
 # Web extension files are copied FLAT into the .appex (manifest.json at the bundle root).
 # Do not copy a folder named "Resources" into an iOS bundle: iOS then treats it as an
@@ -72,7 +74,7 @@ def ftype(path):
     return "folder"
 
 
-for p in sorted(set(app_target_sources + ext_target_sources + ext_web_resources + [
+for p in sorted(set(app_target_sources + ext_target_sources + uit_target_sources + ext_web_resources + [
         "App/Info.plist", "App/Assets.xcassets", "SafariExtension/Info.plist", "START_HERE.md"])):
     if os.path.exists(os.path.join(ROOT, p)):
         file_refs[p] = (oid("ref", p), ftype(p))
@@ -97,6 +99,7 @@ for p in file_refs:
 products_group = oid("group", "<products>")
 app_product = oid("product", APP)
 ext_product = oid("product", EXT)
+uit_product = oid("product", UIT)
 
 objs = []  # (isa, id, body-lines)
 sections = {}
@@ -117,6 +120,7 @@ app_src_bf = [build_file(APP, p) for p in app_target_sources]
 ext_src_bf = [build_file(EXT, p) for p in ext_target_sources]
 app_res_bf = [build_file(APP, "App/Assets.xcassets")]
 ext_res_bf = [build_file(EXT, p) for p in ext_web_resources]
+uit_src_bf = [build_file(UIT, p) for p in uit_target_sources]
 embed_bf = oid("build", APP, "embed", EXT)
 add("PBXBuildFile", embed_bf, [("fileRef", ext_product), ("settings", "{ATTRIBUTES = (RemoveHeadersOnCopy, ); }")], EXT + ".appex")
 
@@ -128,6 +132,8 @@ add("PBXFileReference", app_product, [("explicitFileType", "wrapper.application"
                                       ("path", APP + ".app"), ("sourceTree", "BUILT_PRODUCTS_DIR")], APP + ".app")
 add("PBXFileReference", ext_product, [("explicitFileType", '"wrapper.app-extension"'), ("includeInIndex", "0"),
                                       ("path", EXT + ".appex"), ("sourceTree", "BUILT_PRODUCTS_DIR")], EXT + ".appex")
+add("PBXFileReference", uit_product, [("explicitFileType", "wrapper.cfbundle"), ("includeInIndex", "0"),
+                                      ("path", UIT + ".xctest"), ("sourceTree", "BUILT_PRODUCTS_DIR")], UIT + ".xctest")
 
 # Groups
 for d, g in groups.items():
@@ -139,11 +145,11 @@ for d, g in groups.items():
         add("PBXGroup", g["id"], [("children", kids), ("sourceTree", '"<group>"')])
     else:
         add("PBXGroup", g["id"], [("children", kids), ("path", q(g["name"])), ("sourceTree", '"<group>"')], g["name"])
-add("PBXGroup", products_group, [("children", [app_product, ext_product]), ("name", "Products"), ("sourceTree", '"<group>"')], "Products")
+add("PBXGroup", products_group, [("children", [app_product, ext_product, uit_product]), ("name", "Products"), ("sourceTree", '"<group>"')], "Products")
 
 # Build phases
 phase = {}
-for t, srcs, res in ((APP, app_src_bf, app_res_bf), (EXT, ext_src_bf, ext_res_bf)):
+for t, srcs, res in ((APP, app_src_bf, app_res_bf), (EXT, ext_src_bf, ext_res_bf), (UIT, uit_src_bf, [])):
     phase[t] = {"src": oid("phase", t, "src"), "res": oid("phase", t, "res"), "fw": oid("phase", t, "fw")}
     add("PBXSourcesBuildPhase", phase[t]["src"], [("buildActionMask", "2147483647"), ("files", srcs),
                                                   ("runOnlyForDeploymentPostprocessing", "0")], "Sources")
@@ -165,6 +171,12 @@ dep = oid("dependency", EXT)
 add("PBXContainerItemProxy", proxy, [("containerPortal", project_id), ("proxyType", "1"),
                                      ("remoteGlobalIDString", ext_target), ("remoteInfo", EXT)], "PBXContainerItemProxy")
 add("PBXTargetDependency", dep, [("target", ext_target), ("targetProxy", proxy)], "PBXTargetDependency")
+uit_target = oid("target", UIT)
+uit_proxy = oid("proxy", UIT, APP)
+uit_dep = oid("dependency", UIT, APP)
+add("PBXContainerItemProxy", uit_proxy, [("containerPortal", project_id), ("proxyType", "1"),
+                                         ("remoteGlobalIDString", app_target), ("remoteInfo", APP)], "PBXContainerItemProxy")
+add("PBXTargetDependency", uit_dep, [("target", app_target), ("targetProxy", uit_proxy)], "PBXTargetDependency")
 
 
 def config_list(owner, settings_debug, settings_release, comment):
@@ -251,6 +263,24 @@ ext_settings = {
 project_cl = config_list("project", project_debug, project_release, 'Build configuration list for PBXProject "%s"' % APP)
 app_cl = config_list(APP, app_settings, app_settings, 'Build configuration list for PBXNativeTarget "%s"' % APP)
 ext_cl = config_list(EXT, ext_settings, ext_settings, 'Build configuration list for PBXNativeTarget "%s"' % EXT)
+uit_settings = {
+    "CODE_SIGN_STYLE": "Automatic",
+    "CURRENT_PROJECT_VERSION": BUILD,
+    "DEVELOPMENT_TEAM": "",
+    "GENERATE_INFOPLIST_FILE": "YES",
+    "MARKETING_VERSION": VERSION,
+    "PRODUCT_BUNDLE_IDENTIFIER": "$(CR_BUNDLE_PREFIX).creatorreset.uitests",
+    "PRODUCT_NAME": "$(TARGET_NAME)",
+    "SWIFT_EMIT_LOC_STRINGS": "NO",
+    "TARGETED_DEVICE_FAMILY": "1",
+    "TEST_TARGET_NAME": APP,
+}
+uit_cl = config_list(UIT, uit_settings, uit_settings, 'Build configuration list for PBXNativeTarget "%s"' % UIT)
+add("PBXNativeTarget", uit_target, [
+    ("buildConfigurationList", uit_cl),
+    ("buildPhases", [phase[UIT]["src"], phase[UIT]["fw"], phase[UIT]["res"]]),
+    ("buildRules", []), ("dependencies", [uit_dep]), ("name", UIT), ("productName", UIT),
+    ("productReference", uit_product), ("productType", '"com.apple.product-type.bundle.ui-testing"')], UIT)
 
 add("PBXNativeTarget", app_target, [
     ("buildConfigurationList", app_cl),
@@ -265,12 +295,13 @@ add("PBXNativeTarget", ext_target, [
 
 add("PBXProject", project_id, [
     ("attributes", "{BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 2600; LastUpgradeCheck = 2600; "
-                   "TargetAttributes = {%s = {CreatedOnToolsVersion = 26.0; }; %s = {CreatedOnToolsVersion = 26.0; }; }; }"
-     % (app_target, ext_target)),
+                   "TargetAttributes = {%s = {CreatedOnToolsVersion = 26.0; }; %s = {CreatedOnToolsVersion = 26.0; }; "
+                   "%s = {CreatedOnToolsVersion = 26.0; TestTargetID = %s; }; }; }"
+     % (app_target, ext_target, uit_target, app_target)),
     ("buildConfigurationList", project_cl), ("compatibilityVersion", '"Xcode 14.0"'), ("developmentRegion", "en"),
     ("hasScannedForEncodings", "0"), ("knownRegions", ["en", "Base"]), ("mainGroup", groups[""]["id"]),
     ("productRefGroup", products_group), ("projectDirPath", '""'), ("projectRoot", '""'),
-    ("targets", [app_target, ext_target])], "Project object")
+    ("targets", [app_target, ext_target, uit_target])], "Project object")
 
 
 def fmt_setting(v, indent):
@@ -321,6 +352,11 @@ scheme = """<?xml version="1.0" encoding="UTF-8"?>
       </BuildActionEntries>
    </BuildAction>
    <TestAction buildConfiguration = "Debug" selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB" shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference skipped = "NO">
+            %(uit)s
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction buildConfiguration = "Debug" selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB" launchStyle = "0" useCustomWorkingDirectory = "NO" ignoresPersistentStateOnLaunch = "NO" debugDocumentVersioning = "YES" debugServiceExtension = "internal" allowLocationSimulation = "YES">
       <BuildableProductRunnable runnableDebuggingMode = "0">
@@ -337,7 +373,7 @@ scheme = """<?xml version="1.0" encoding="UTF-8"?>
    <ArchiveAction buildConfiguration = "Release" revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
-""" % {"app": ref(app_target, APP, APP + ".app")}
+""" % {"app": ref(app_target, APP, APP + ".app"), "uit": ref(uit_target, UIT, UIT + ".xctest")}
 with open(os.path.join(PROJ, "xcshareddata", "xcschemes", APP + ".xcscheme"), "w") as f:
     f.write(scheme)
 

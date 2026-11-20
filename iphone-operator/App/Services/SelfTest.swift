@@ -5,6 +5,13 @@ import Photos
 /// Automatic smoke test for the iOS Simulator (used by the GitHub build check).
 /// Runs only in Debug builds and only when launched with the argument -CRSelfTest.
 /// It uses FAKE test photos only. Writes Documents/selftest.json with pass/fail per check.
+/// Shown on screen during a self-test so the UI test (UITests/) can read the result.
+@MainActor
+final class SelfTestStatus: ObservableObject {
+    static let shared = SelfTestStatus()
+    @Published var text = "SELFTEST WAITING"
+}
+
 enum SelfTest {
     static var requested: Bool { ProcessInfo.processInfo.arguments.contains("-CRSelfTest") }
 
@@ -22,6 +29,7 @@ enum SelfTest {
 
     static func runIfRequested() async {
         guard requested else { return }
+        await MainActor.run { SelfTestStatus.shared.text = "SELFTEST RUNNING" }
         var checks: [Check] = []
         func check(_ name: String, _ passed: Bool, _ detail: String) {
             checks.append(Check(name: name, passed: passed, detail: detail))
@@ -66,6 +74,10 @@ enum SelfTest {
         }
 
         let report = Report(finishedAt: Date(), passed: checks.allSatisfy(\.passed), checks: checks)
+        let lines = checks.map { "\($0.passed ? "PASS" : "FAIL") \($0.name): \($0.detail)" }.joined(separator: " || ")
+        await MainActor.run {
+            SelfTestStatus.shared.text = (report.passed ? "SELFTEST PASSED || " : "SELFTEST FAILED || ") + lines
+        }
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         encoder.dateEncodingStrategy = .iso8601
