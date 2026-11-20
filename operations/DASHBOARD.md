@@ -28,7 +28,7 @@ _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 | Gmail | ✅ Working |
 | Google Calendar | ✅ Working (thenailbawse@gmail.com) |
 | Google Drive | ✅ Working, but signed in as asburroughs26@gmail.com (sees files shared from thenailbawse) |
-| Zoom | ✅ Working (weekly meeting renamed "Build Your AI Agent | The Nail Bawse™" on Nov 20; same join link) |
+| Zoom | ✅ Working (weekly meeting renamed "Build Your AI Agent \| The Nail Bawse™" on Nov 20; same join link) |
 | Wix | ✅ Working (4 sites, incl. "The Nail Bawse") |
 
 All connected. Manage them at claude.ai/customize/connectors.
