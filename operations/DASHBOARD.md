@@ -18,7 +18,7 @@ _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 ## 👑 Pending your approval / decision (top first)
 1. **Funnel setup (`funnel-site/README.md`):** Gmail app password, free Netlify site, 5 settings, point your domain
 2. **Klaviyo (you're leaving it):** export your contacts, turn off Auto-upgrade, downgrade to free before the next bill (~Nov 27)
-3. **Funnel v2 (Build Your AI Agent):** rebuilt from the 2 examples; your review needed. Send a photo of you for the host section
+3. **Funnel v2 (Build Your AI Agent):** rebuilt from the 2 examples; your review needed. Headshot added Nov 20
 4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
 
@@ -28,7 +28,7 @@ _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 | Gmail | ✅ Working |
 | Google Calendar | ✅ Working (thenailbawse@gmail.com) |
 | Google Drive | ✅ Working, but signed in as asburroughs26@gmail.com (sees files shared from thenailbawse) |
-| Zoom | ✅ Working (weekly class meeting visible; Zoom title still says "Booked, Burnt Out & Underpaid") |
+| Zoom | ✅ Working (weekly meeting renamed "Build Your AI Agent | The Nail Bawse™" on Nov 20; same join link) |
 | Wix | ✅ Working (4 sites, incl. "The Nail Bawse") |
 
 All connected. Manage them at claude.ai/customize/connectors.
