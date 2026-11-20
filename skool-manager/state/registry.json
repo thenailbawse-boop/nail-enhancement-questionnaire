@@ -253,22 +253,41 @@
       "snippet": "Her recap list",
       "priority": 1,
       "reply_status": "not_applicable",
-      "status": "queued_for_user",
+      "status": "published_confirmed",
       "draft_text": "TIFF!! I \"COPIED THE RIGHT CAT\" AND MY WEBINAR PAGE IS LIVE 😭💗\n\nY'all, here's what I got done between last night's final work session and this morning's first one:\n\n✅ Moved my speaking engagement work from ChatGPT into Claude on my iPhone, revised my pitches, and submitted my first conference talk proposal\n✅ Finished my domain setup. Every link now lives under ONE address, thenailbawse.com, just like Tiff recommends\n✅ Revised my email marketing system to fit where my business actually is right now, instead of paying for more than I need\n✅ \"Copied the right cat\" 🐈 My webinar landing page and thank-you page are live on my own domain, and sign-ups save straight to my site\n✅ Connected Gmail, Calendar, Zoom and Wix to Claude, so my daily community and webinar check-ins run without me copying and pasting between apps\n\nSee it here 👉🏽 https://thenailbawse.com/webinar\n(Screenshots of the landing page, thank-you page and my appointment card graphic below 👇🏽)\n\nStill in progress: my two-step checkout form and my confirmation email. I'm not calling those done until I test them.\n\nBiggest lesson: one home base changes everything. When every link points to the same place, I stop rebuilding and start building.\n\nTiff keeps handing us the blueprint. I'm building it to fit my life.\n\nFor those of you already running webinars: what's the one thing in your confirmation email that actually gets people to show up live?",
       "user_edit": null,
-      "publish_confirmation": null,
+      "publish_confirmation": {
+        "confirmed_by": "Anisia",
+        "at": "2026-11-20T16:12:31Z",
+        "note": "Anisia: posted D-006 (Nov 20) in AI Automation Club"
+      },
       "history": [
         {
           "at": "2026-11-20T16:01:04Z",
           "from": "queued_for_user",
           "to": "queued_for_user",
           "note": "Anisia: Tiff allows visual results and requests links. Added thenailbawse.com/webinar + screenshot line."
+        },
+        {
+          "at": "2026-11-20T16:12:31Z",
+          "from": "queued_for_user",
+          "to": "published_confirmed",
+          "note": "Anisia: posted D-006 (Nov 20) in AI Automation Club"
         }
       ],
       "note": "Links + visuals added Nov 20: Tiff allows visual results and asks for links (Anisia)."
     }
   ],
-  "publish_log": [],
+  "publish_log": [
+    {
+      "draft_id": "D-006",
+      "at": "2026-11-20T16:12:31Z",
+      "community": "AI Automation Club",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "text": "TIFF!! I \"COPIED THE RIGHT CAT\" AND MY WEBINAR PAGE IS LIVE 😭💗\n\nY'all, here's what I got done between last night's final work session and this morning's first one:\n\n✅ Moved my speaking engagement work from ChatGPT into Claude on my iPhone, revised my pitches, and submitted my first conference talk proposal\n✅ Finished my domain setup. Every link now lives under ONE address, thenailbawse.com, just like Tiff recommends\n✅ Revised my email marketing system to fit where my business actually is right now, instead of paying for more than I need\n✅ \"Copied the right cat\" 🐈 My webinar landing page and thank-you page are live on my own domain, and sign-ups save straight to my site\n✅ Connected Gmail, Calendar, Zoom and Wix to Claude, so my daily community and webinar check-ins run without me copying and pasting between apps\n\nSee it here 👉🏽 https://thenailbawse.com/webinar\n(Screenshots of the landing page, thank-you page and my appointment card graphic below 👇🏽)\n\nStill in progress: my two-step checkout form and my confirmation email. I'm not calling those done until I test them.\n\nBiggest lesson: one home base changes everything. When every link points to the same place, I stop rebuilding and start building.\n\nTiff keeps handing us the blueprint. I'm building it to fit my life.\n\nFor those of you already running webinars: what's the one thing in your confirmation email that actually gets people to show up live?",
+      "note": "Anisia: posted D-006 (Nov 20) in AI Automation Club"
+    }
+  ],
   "feedback_log": [
     {
       "at": "2026-11-20T16:01:04Z",
@@ -285,7 +304,7 @@
       "community": "AI Automation Club / The Social Club",
       "topic": "ContentMadeEasy follow-up once captioning + final delivery are verified",
       "status": "waiting_on_real_result",
-      "note": "Both original ContentMadeEasy posts already went out (see VOICE_GUIDE). Only propose a follow-up when there is a new, verified result. Do not repost."
+      "note": "Both original ContentMadeEasy posts already went out (see VOICE_GUIDE). Only propose a follow-up when there is a new, verified result. Do not repost. Nov 20: AI Automation Club progress update posted (D-006): domain, webinar page live, links + screenshots. Next update only with a new verified result (e.g. checkout form or confirmation email tested)."
     }
   ],
   "blockers": [
