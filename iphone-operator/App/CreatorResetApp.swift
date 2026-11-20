@@ -13,7 +13,12 @@ struct CreatorResetApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(model)
-                .task { await model.refresh() }
+                .task {
+                    #if DEBUG
+                    await SelfTest.runIfRequested()
+                    #endif
+                    await model.refresh()
+                }
         }
         .onChange(of: scenePhase) { _, phase in
             switch phase {
