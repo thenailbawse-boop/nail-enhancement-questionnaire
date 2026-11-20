@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>You're booked | The Nail Bawse</title><meta name="robots" content="noindex"><meta name="theme-color" content="#3B2621">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="/webinar-assets/funnel.css">
+</head>
+<body class="thanks">
+<div class="topbar"><div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div></div>
+<main>
+<section class="hero ty-hero">
+  <svg class="prop prop-polish" viewBox="0 0 80 150" aria-hidden="true"><use href="#i-polish"/></svg>
+  <svg class="prop prop-spark s1" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spark"/></svg>
+  <div class="brand"><span class="mono">NB</span><span>The Nail Bawse<small>Anisia Burroughs</small></span></div>
+  <h1 class="display" id="h">You're <em>booked.</em></h1>
+  <p class="lead" id="msg">Your seat is saved. Here's your appointment card. Download it, post it to your story, and tag me.</p>
+
+  <div class="appt" id="appt" hidden>
+    <div class="appt-top"><span class="mono sm">NB</span><div><b>The Nail Bawse</b><small>Appointment card</small></div><span class="appt-free">Free</span></div>
+    <div class="appt-row"><span>For</span><b id="aName">You</b></div>
+    <div class="appt-row"><span>Service</span><b id="aTitle"></b></div>
+    <div class="appt-row"><span>Date</span><b id="aDate"></b></div>
+    <div class="appt-row"><span>Time</span><b id="aTime"></b></div>
+    <div class="appt-row"><span>With</span><b>Anisia</b></div>
+    <div class="appt-foot"><span>Live on Zoom</span><span>@thenailbawse</span></div>
+    <div class="stamp" aria-hidden="true">Confirmed</div>
+  </div>
+  <button class="cta" type="button" id="story" hidden><span id="storyText">Download my card</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>
+  <p class="fine" id="saveHint" hidden>Saves a story-size picture of your card. On iPhone, choose "Save Image".</p>
+  <p class="script center" id="tagline" hidden>post it &amp; tag @thenailbawse, I'm reposting!</p>
+</section>
+
+<section class="sec ty-steps" id="steps">
+  <p class="script">before we go live</p>
+  <h2 class="display">Three things <em>to do next.</em></h2>
+
+  <article class="step-card">
+    <span class="step-n">01</span>
+    <div><h3>Check your inbox</h3>
+    <p id="inbox">Your Zoom link and calendar invite are on the way. Not there in a few minutes? Check Promotions or Spam and move it to your inbox so your reminders land.</p></div>
+  </article>
+
+  <article class="step-card" id="calStep" hidden>
+    <span class="step-n">02</span>
+    <div><h3>Add it to your calendar</h3>
+    <p>So your Zoom link is right there when it's time.</p>
+    <div class="cal-btns"><a class="pill" id="gcal" target="_blank" rel="noopener">Google Calendar</a><a class="pill" id="ics">Apple / iPhone</a><a class="pill" id="ics2">Outlook</a></div></div>
+  </article>
+
+  <article class="step-card">
+    <span class="step-n" id="n3">03</span>
+    <div><h3>Pick the DM you're done answering</h3>
+    <p>We'll build your agent around it live. Tap one:</p>
+    <div class="pick" id="pick">
+      <button type="button" aria-pressed="false">"How much is a…?"</button>
+      <button type="button" aria-pressed="false">"Do you have anything…?"</button>
+      <button type="button" aria-pressed="false">Deposit &amp; late policy</button>
+      <button type="button" aria-pressed="false">Aftercare questions</button>
+    </div>
+    <p class="script small" id="pickNote" aria-live="polite"></p></div>
+  </article>
+
+  <div class="signoff-row"><img src="https://static.wixstatic.com/media/86a5ad_1db25fb895c54f74b2ee64d9d9a78d44~mv2.jpg" width="160" height="160" alt=""><p class="sig">See you there,<br>Anisia</p></div>
+</section>
+<footer class="foot"><span class="mono">NB</span><p>You are the asset. Build accordingly.</p><p class="small">© The Nail Bawse · <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a></p></footer>
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-polish" x1="0" x2="1"><stop offset="0" stop-color="#F7BFD4"/><stop offset=".55" stop-color="#F4A6C4"/><stop offset="1" stop-color="#D9799F"/></linearGradient>
+    <linearGradient id="g-cap" x1="0" x2="1"><stop offset="0" stop-color="#5A3A31"/><stop offset=".5" stop-color="#3B2621"/><stop offset="1" stop-color="#24150F"/></linearGradient>
+    <symbol id="i-polish" viewBox="0 0 80 150">
+      <rect x="27" y="4" width="26" height="58" rx="5" fill="url(#g-cap)"/><rect x="31" y="8" width="4" height="48" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="22" y="58" width="36" height="10" rx="3" fill="#2A1A15"/>
+      <path d="M14 76 Q14 66 26 66 H54 Q66 66 66 76 V132 Q66 146 52 146 H28 Q14 146 14 132 Z" fill="url(#g-polish)"/>
+      <path d="M21 78 Q21 72 28 72 H33 V138 H28 Q21 138 21 130 Z" fill="#fff" opacity=".35"/>
+      <rect x="25" y="96" width="30" height="22" rx="3" fill="#FFF8F2" opacity=".85"/><text x="40" y="111" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#3B2621">NB</text>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z"/></symbol>
+  </defs>
+</svg>
+<script src="/webinar-assets/card.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var p = new URLSearchParams(location.search), id = p.get("e"), name = (p.get("n") || "").trim().slice(0, 30);
+  var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+  function ticker(items) { var t = $("ticker"); t.textContent = ""; for (var r = 0; r < 2; r++) { var s = document.createElement("span"); for (var k = 0; k < 2; k++) items.forEach(function (x, i) { var b = document.createElement(i % 2 ? "b" : "span"); b.textContent = x + " · "; s.appendChild(b); }); t.appendChild(s); } }
+  ticker(["You're booked", "Build Your AI Agent", "Add it to your calendar", "Tag @thenailbawse"]);
+  if (p.get("m") === "0") $("inbox").textContent = "Your confirmation email is running a little behind; it will reach you before class. Keep this page open or screenshot your card in the meantime.";
+
+  // Step 3 picker
+  document.querySelectorAll("#pick button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll("#pick button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      $("pickNote").textContent = "Got it. Bring a real example of that DM to class.";
+    });
+  });
+
+  if (!id || id === "waitlist") {
+    $("h").innerHTML = "You're on <em>the list.</em>";
+    $("msg").textContent = "The moment the next date is posted, you'll get it by email with your link to save a seat.";
+    $("steps").hidden = true; return;
+  }
+
+  var ev = null;
+  fetch("/api/events?id=" + encodeURIComponent(id)).then(function (r) { return r.json(); }).then(function (d) {
+    ev = d.event; if (!ev) return;
+    var zone = tz || ev.tz, start = new Date(ev.startUtc), end = new Date(start.getTime() + (ev.durationMin || 45) * 60000);
+    var f = function (o) { return new Intl.DateTimeFormat("en-US", Object.assign({ timeZone: zone }, o)).format(start); };
+    if (name) $("aName").textContent = name;
+    $("aTitle").textContent = ev.title;
+    $("aDate").textContent = f({ weekday: "long", month: "long", day: "numeric" });
+    $("aTime").textContent = f({ hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+    $("appt").hidden = false; $("story").hidden = false; $("saveHint").hidden = false; $("tagline").hidden = false;
+    ticker(["You're booked", ev.title, f({ weekday: "short", month: "short", day: "numeric" }), f({ hour: "numeric", minute: "2-digit", timeZoneName: "short" }), "Tag @thenailbawse"]);
+    var z = function (d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); };
+    $("gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates: z(start) + "/" + z(end), details: "Your Zoom link is in your confirmation email.", location: "Online (Zoom)" });
+    $("ics").href = $("ics2").href = "/api/ics?id=" + encodeURIComponent(ev.id);
+    $("calStep").hidden = false;
+    if (ev.joinUrl) {
+      var st = $("inbox").parentNode;
+      st.querySelector("h3").textContent = "Save your Zoom link";
+      $("inbox").textContent = "This is your room for class. It's also in your calendar invite.";
+      var a = document.createElement("a"); a.className = "pill"; a.href = ev.joinUrl; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Open my Zoom link";
+      var row = document.createElement("div"); row.className = "cal-btns"; row.appendChild(a); st.appendChild(row);
+    }
+  }).catch(function () { $("n3").textContent = "02"; });
+
+  // Download the appointment card: share sheet on phones (Save Image), file download elsewhere
+  $("story").addEventListener("click", function () {
+    if (!ev) return;
+    $("storyText").textContent = "Making your card…";
+    window.NBCard.draw({ name: $("aName").textContent, title: $("aTitle").textContent, date: $("aDate").textContent, time: $("aTime").textContent }).then(function (c) {
+      c.toBlob(function (blob) {
+        var name = "nail-bawse-appointment-card.png";
+        $("storyText").textContent = "Download my card";
+        if (window.NBSave) { window.NBSave(blob, name); return; }
+        var file = new File([blob], name, { type: "image/png" });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) { navigator.share({ files: [file], title: "My appointment card" }).catch(function () {}); return; }
+        var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+        $("storyText").textContent = "Saved ✓";
+      }, "image/png");
+    });
+  });
+})();
+</script>
+</body>
+</html>

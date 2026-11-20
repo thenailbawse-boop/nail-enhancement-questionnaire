@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" data-thanks="/webinar/thanks">
+<head>
+<link rel="canonical" href="https://thenailbawse.com/webinar">
+<meta property="og:url" content="https://thenailbawse.com/webinar">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Build Your AI Agent | Free Live Class with The Nail Bawse</title>
+<meta name="description" content="A free live class for beauty professionals: build an AI agent that answers your DMs with your real prices and policies, and never sends without your OK.">
+<meta property="og:title" content="Build Your AI Agent: free live class with Anisia the Nail Bawse">
+<meta property="og:description" content="Build an AI agent that answers your client DMs with your real prices and policies. Free, live on Zoom.">
+<meta name="theme-color" content="#3B2621">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="/webinar-assets/funnel.css">
+</head>
+<body>
+
+<!-- Sticky: ticker + flip countdown -->
+<div class="topbar" id="topbar">
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"><span>Free live class · Build Your AI Agent ·</span></div></div>
+  <div class="clockbar" id="clockbar" hidden>
+    <div class="flip" id="flip1" aria-label="Time until class"></div>
+    <span class="livedot">Live</span>
+  </div>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <svg class="prop prop-polish" viewBox="0 0 80 150" aria-hidden="true"><use href="#i-polish"/></svg>
+  <svg class="prop prop-file" viewBox="0 0 40 220" aria-hidden="true"><use href="#i-file"/></svg>
+  <svg class="prop prop-nail" viewBox="0 0 60 90" aria-hidden="true"><use href="#i-nail"/></svg>
+  <svg class="prop prop-spark s1" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spark"/></svg>
+  <svg class="prop prop-spark s2" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spark"/></svg>
+
+  <div class="brand"><span class="mono">NB</span><span>The Nail Bawse<small>Anisia Burroughs</small></span></div>
+  <p class="script">free live class for beauty pros</p>
+  <h1 class="display"><span id="title">Build Your AI Agent</span><em>for your beauty business.</em></h1>
+  <svg class="swoosh" viewBox="0 0 300 16" aria-hidden="true"><path d="M3 11 C 80 3, 190 2, 297 8" /><path d="M40 14 C 120 8, 210 8, 270 12" /></svg>
+  <p class="lead" id="sub">Build an AI agent that answers client DMs with your real prices, policies and voice, and never sends a word without your OK.</p>
+
+  <div class="datewrap" id="session" hidden>
+    <div class="picker" id="picker" aria-label="Choose a date"></div>
+    <div class="apptbook">
+      <div class="rings" aria-hidden="true"><i></i><i></i></div>
+      <div class="ab-month" id="calMonth"></div>
+      <div class="ab-day" id="calDay"></div>
+      <div class="ab-line"><span>When</span><b id="calWeekday"></b></div>
+      <div class="ab-line"><span>Time</span><b id="calTime"></b></div>
+    </div>
+    <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="sealPath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+      <circle cx="60" cy="60" r="58" class="seal-bg"/><circle cx="60" cy="60" r="31" class="seal-in"/>
+      <g class="seal-spin"><text><textPath href="#sealPath">LIVE ON ZOOM · FREE CLASS ·</textPath></text></g>
+      <text x="60" y="66" text-anchor="middle" class="seal-mid">LIVE</text>
+    </svg>
+  </div>
+  <p class="when-line" id="whenline" hidden><span id="when"></span><span id="localwhen"></span></p>
+
+  <section id="waitlist" hidden class="soon">
+    <p class="script">next date drops soon</p>
+    <p>Leave your name and email and you'll get the date and your link to save a seat the moment it's posted.</p>
+  </section>
+
+  <form id="reg" method="post" action="/api/register" novalidate>
+    <div class="form-head"><span class="label">Reserve your chair</span><span class="free">Free</span></div>
+    <h2 id="formtitle" class="caps">Save my seat</h2>
+    <input type="hidden" name="eventId" id="eventId" value="waitlist">
+    <input type="hidden" name="tz" id="tz"><input type="hidden" name="ref" id="ref">
+    <div class="hp" aria-hidden="true"><label>Company<input name="company" id="company" tabindex="-1" autocomplete="off"></label></div>
+    <label class="field"><span>First name</span><input name="firstName" id="firstName" autocomplete="given-name" required placeholder="Your first name"><span class="err" data-for="firstName"></span></label>
+    <label class="field"><span>Email</span><input name="email" id="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com"><span class="err" data-for="email"></span></label>
+    <label class="check"><input type="checkbox" name="optIn" id="optIn" checked><span>Email me when new free classes are posted. Unsubscribe anytime.</span></label>
+    <span class="err" data-for="form" role="alert"></span>
+    <button class="cta" type="submit" id="submit"><span id="submitText">Save my seat</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <p class="fine">Zoom link by email right away, plus a reminder the day before and an hour before.</p>
+  </form>
+  <noscript><p class="soon">Please turn on JavaScript to choose a date.</p></noscript>
+</section>
+
+<!-- DM DEMO -->
+<section class="sec dms">
+  <p class="script">sound familiar?</p>
+  <h2 class="display">The DMs you answer <em>every single day.</em></h2>
+  <p class="lead">In class you'll build an agent that drafts replies like this one, using <b>your</b> menu and <b>your</b> policies. You tap approve. That's it.</p>
+  <div class="phone" id="dmPhone">
+    <div class="phone-top"><span class="notch"></span></div>
+    <div class="chat-head"><span class="avatar">K</span><div><b>kiki.books.nails</b><small>Example client</small></div></div>
+    <div class="chat" id="chat">
+      <div class="msg in" data-step="0">hiii how much for a full set? 😩</div>
+      <div class="msg in" data-step="1">and do u have anything saturday??</div>
+      <div class="typing" data-step="2"><i></i><i></i><i></i><span>Your agent is drafting…</span></div>
+      <div class="msg out" data-step="3">Hi love! 💕 A full set starts at $65 and takes about 90 minutes. Saturday I have 11 AM or 2 PM open. Want me to hold one? A $20 deposit locks it in.
+        <span class="srcs"><i>✓ price list</i><i>✓ booking calendar</i><i>✓ deposit policy</i></span></div>
+      <div class="approve" data-step="4"><span class="chip">Draft · waiting for your OK</span><button type="button" id="approveBtn">Approve &amp; send</button></div>
+    </div>
+  </div>
+  <p class="note">Example conversation. Prices and times come from your own business info.</p>
+</section>
+
+<!-- CLASS MENU -->
+<section class="sec menu-sec">
+  <p class="script">what you'll learn</p>
+  <h2 class="display">The class <em>menu.</em></h2>
+  <div class="menu-card">
+    <div class="menu-head"><span class="mono sm">NB</span><div><b>Service menu</b><small>Build Your AI Agent · live class</small></div></div>
+    <ol class="menu">
+      <li><span class="m-n">01</span><span class="m-t"><b>Pick the one job</b><small>The DM you're tired of answering becomes your agent's first job.</small></span><span class="m-dots"></span><span class="m-p">incl.</span></li>
+      <li><span class="m-n">02</span><span class="m-t"><b>Give it your real info</b><small>Prices, policies, hours and your voice, so it never makes things up.</small></span><span class="m-dots"></span><span class="m-p">incl.</span></li>
+      <li><span class="m-n">03</span><span class="m-t"><b>Build it live, with me</b><small>Step by step on Zoom. No coding. Bring your phone.</small></span><span class="m-dots"></span><span class="m-p">incl.</span></li>
+      <li><span class="m-n">04</span><span class="m-t"><b>Check before it sends</b><small>A simple checklist so nothing wrong ever reaches a client.</small></span><span class="m-dots"></span><span class="m-p">incl.</span></li>
+    </ol>
+    <div class="menu-total"><span>Total</span><span class="m-dots"></span><b>FREE</b></div>
+    <p class="menu-foot" id="menuFoot">45 min · live on Zoom · bring your phone</p>
+  </div>
+  <p class="desc" id="desc"></p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec dark how">
+  <p class="script light">your new front desk</p>
+  <h2 class="display light">What your agent <em>does all day.</em></h2>
+  <div class="flow">
+    <article class="win"><header><i></i><i></i><i></i><span>Step / 01</span></header>
+      <div class="win-body"><span class="big">01</span><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span>
+      <h3>Learns your business</h3><p>Your menu, prices, deposit rules and how you talk to clients.</p>
+      <div class="status"><span class="pulse"></span>Loading your price list<b class="bar"><i style="--w:72%"></i></b></div></div></article>
+    <article class="win"><header><i></i><i></i><i></i><span>Step / 02</span></header>
+      <div class="win-body"><span class="big">02</span><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H9l-5 4z"/></svg></span>
+      <h3>Reads the DM</h3><p>Figures out what the client actually wants: price, booking, aftercare.</p>
+      <div class="status"><span class="pulse"></span>Reading new message<b class="bar"><i style="--w:48%"></i></b></div></div></article>
+    <article class="win"><header><i></i><i></i><i></i><span>Step / 03</span></header>
+      <div class="win-body"><span class="big">03</span><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16zM14 6l3 3"/></svg></span>
+      <h3>Drafts your reply</h3><p>In your voice, with your real numbers. No guessing.</p>
+      <div class="status"><span class="pulse"></span>Drafting in progress<b class="bar"><i style="--w:86%"></i></b></div></div></article>
+    <article class="win"><header><i></i><i></i><i></i><span>Step / 04</span></header>
+      <div class="win-body"><span class="big">04</span><span class="ico"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/></svg></span>
+      <h3>Waits for your OK</h3><p>You approve, edit or skip. You stay in control.</p>
+      <div class="status"><span class="pulse"></span>Waiting for you<b class="bar"><i style="--w:100%"></i></b></div></div></article>
+  </div>
+  <p class="pull light">You bring the skill. <em>Your agent handles the desk.</em></p>
+  <a class="cta light" href="#reg" data-cta><span>Save my seat</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="sec">
+  <p class="script">habit check</p>
+  <h2 class="display">Before <em>vs.</em> after</h2>
+  <div class="ba">
+    <div class="ba-row"><div class="ba-b"><small>Before</small><s>Answering DMs at 11 PM</s></div><div class="ba-a"><small>With your agent</small>Replies drafted while you're with a client</div></div>
+    <div class="ba-row"><div class="ba-b"><small>Before</small><s>Typing your prices for the 100th time</s></div><div class="ba-a"><small>With your agent</small>The same right answer, every time</div></div>
+    <div class="ba-row"><div class="ba-b"><small>Before</small><s>Booking requests lost in your inbox</s></div><div class="ba-a"><small>With your agent</small>Every request gets a reply</div></div>
+    <div class="ba-row"><div class="ba-b"><small>Before</small><s>Scared AI will say something wrong</s></div><div class="ba-a"><small>With your agent</small>Nothing sends without your OK</div></div>
+  </div>
+</section>
+
+<!-- FOR YOU IF -->
+<section class="sec notes-sec">
+  <p class="script">roll call</p>
+  <h2 class="display">This is for you <em>if…</em></h2>
+  <p class="tapnote">tap the ones that sound like you <svg viewBox="0 0 40 20" aria-hidden="true"><path d="M2 4 C 14 18, 26 16, 36 8 M30 6 l6 2 -3 6"/></svg></p>
+  <div class="notes" id="notes">
+    <button type="button" class="note-card" aria-pressed="false"><span class="box"></span>You're booked, but everything still runs through you.</button>
+    <button type="button" class="note-card" aria-pressed="false"><span class="box"></span>You answer the same client questions over and over.</button>
+    <button type="button" class="note-card" aria-pressed="false"><span class="box"></span>You've tried ChatGPT, but nothing stuck.</button>
+    <button type="button" class="note-card" aria-pressed="false"><span class="box"></span>You lose bookings because you couldn't reply fast enough.</button>
+    <button type="button" class="note-card" aria-pressed="false"><span class="box"></span>You want something you can use Monday, not theory.</button>
+  </div>
+  <p class="tally" id="tally" aria-live="polite"></p>
+</section>
+
+<!-- HOST -->
+<section class="sec host">
+  <p class="script">meet your teacher</p>
+  <div class="host-card">
+    <figure class="polaroid"><span class="tape" aria-hidden="true"></span><img src="https://static.wixstatic.com/media/86a5ad_65777c887ac14c5d9884accaf44a6826~mv2.jpg" width="900" height="900" alt="Anisia Burroughs, founder of The Nail Bawse" loading="lazy"><figcaption>Anisia, your teacher</figcaption></figure>
+    <h2 class="display">Anisia <em>Burroughs.</em></h2>
+    <p class="label">Founder of The Nail Bawse · Los Angeles</p>
+    <p>Licensed cosmetologist and nail tech. After years behind the chair, I teach beauty pros to turn what they already know into AI systems that actually work, checked against their real business before anything goes live.</p>
+    <div class="chips"><span>Licensed cosmetologist</span><span>Nail tech</span><span>Educator</span><span>AI systems</span></div>
+    <p class="sig">You are the asset. Build accordingly.</p>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec final" id="final" hidden>
+  <p class="script light">your chair is waiting</p>
+  <h2 class="display light">See you <em>live.</em></h2>
+  <p class="final-date" id="finalWhen"></p>
+  <div class="zones" id="zones"></div>
+  <div class="flip big" id="flip2" aria-hidden="true"></div>
+  <a class="cta pink" href="#reg" data-cta><span>Save my seat</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <p class="fine light">Free to attend · live on Zoom</p>
+</section>
+
+<footer class="foot">
+  <span class="mono">NB</span>
+  <p>Beyond the service. Beyond the title.</p>
+  <p class="small">© The Nail Bawse · <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a></p>
+</footer>
+</main>
+
+<a class="float-cta" id="floatCta" href="#reg" data-cta hidden>Save my seat</a>
+
+<!-- Icon sprites (drawn for The Nail Bawse) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-polish" x1="0" x2="1"><stop offset="0" stop-color="#F7BFD4"/><stop offset=".55" stop-color="#F4A6C4"/><stop offset="1" stop-color="#D9799F"/></linearGradient>
+    <linearGradient id="g-cap" x1="0" x2="1"><stop offset="0" stop-color="#5A3A31"/><stop offset=".5" stop-color="#3B2621"/><stop offset="1" stop-color="#24150F"/></linearGradient>
+    <linearGradient id="g-file" x1="0" x2="1"><stop offset="0" stop-color="#E9D6C4"/><stop offset="1" stop-color="#CDB39B"/></linearGradient>
+    <symbol id="i-polish" viewBox="0 0 80 150">
+      <rect x="27" y="4" width="26" height="58" rx="5" fill="url(#g-cap)"/><rect x="31" y="8" width="4" height="48" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="22" y="58" width="36" height="10" rx="3" fill="#2A1A15"/>
+      <path d="M14 76 Q14 66 26 66 H54 Q66 66 66 76 V132 Q66 146 52 146 H28 Q14 146 14 132 Z" fill="url(#g-polish)"/>
+      <path d="M21 78 Q21 72 28 72 H33 V138 H28 Q21 138 21 130 Z" fill="#fff" opacity=".35"/>
+      <rect x="25" y="96" width="30" height="22" rx="3" fill="#FFF8F2" opacity=".85"/><text x="40" y="111" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#3B2621">NB</text>
+    </symbol>
+    <symbol id="i-file" viewBox="0 0 40 220">
+      <rect x="6" y="4" width="28" height="212" rx="14" fill="url(#g-file)"/>
+      <rect x="6" y="110" width="28" height="106" rx="14" fill="#F4A6C4"/><rect x="6" y="110" width="28" height="12" fill="#F4A6C4"/>
+      <g fill="#8B6B57" opacity=".35"><circle cx="14" cy="30" r="1"/><circle cx="24" cy="44" r="1"/><circle cx="18" cy="60" r="1"/><circle cx="27" cy="78" r="1"/><circle cx="13" cy="92" r="1"/><circle cx="22" cy="20" r="1"/></g>
+      <g fill="#fff" opacity=".35"><circle cx="15" cy="140" r="1"/><circle cx="25" cy="160" r="1"/><circle cx="17" cy="182" r="1"/><circle cx="26" cy="198" r="1"/></g>
+    </symbol>
+    <symbol id="i-nail" viewBox="0 0 60 90">
+      <path d="M8 86 V40 C8 14 20 4 30 4 C40 4 52 14 52 40 V86 Z" fill="#F4A6C4" stroke="#3B2621" stroke-width="2"/>
+      <path d="M16 70 V42 C16 22 23 12 30 11" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z"/></symbol>
+  </defs>
+</svg>
+<script src="/webinar-assets/app.js"></script>
+</body>
+</html>
