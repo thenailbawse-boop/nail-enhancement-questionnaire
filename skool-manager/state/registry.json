@@ -238,6 +238,27 @@
       "publish_confirmation": null,
       "history": [],
       "note": "Email shows only the start of her comment. Read the full comment before replying and adjust if the rest asks a question."
+    },
+    {
+      "id": "D-006",
+      "dedupe_key": "ai automation club|progress update 2026-11-20|anisia burroughs|user-request-2026-11-20",
+      "created_at": "2026-11-20T15:54:02Z",
+      "community": "AI Automation Club",
+      "source_type": "user_request",
+      "kind": "post",
+      "source_ref": "Anisia's recap Nov 20 + verified repo work (Elevate submitted, thenailbawse.com/webinar live, connectors)",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "author": "Anisia Burroughs (own post)",
+      "conversation": "New post: progress update since last night's final session",
+      "snippet": "Her recap list",
+      "priority": 1,
+      "reply_status": "not_applicable",
+      "status": "queued_for_user",
+      "draft_text": "TIFF!! I \"COPIED THE RIGHT CAT\" AND MY WEBINAR PAGE IS LIVE 😭💗\n\nY'all, here's what I got done between last night's final work session and this morning's first one:\n\n✅ Moved my speaking engagement work from ChatGPT into Claude on my iPhone, revised my pitches, and submitted my first conference talk proposal\n✅ Finished my domain setup. Every link now lives under ONE address, thenailbawse.com, just like Tiff recommends\n✅ Revised my email marketing system to fit where my business actually is right now, instead of paying for more than I need\n✅ \"Copied the right cat\" 🐈 My webinar landing page and thank-you page are live on my own domain, and sign-ups save straight to my site\n✅ Connected Gmail, Calendar, Zoom and Wix to Claude, so my daily community and webinar check-ins run without me copying and pasting between apps\n\nStill in progress: my two-step checkout form and my confirmation email. I'm not calling those done until I test them.\n\nBiggest lesson: one home base changes everything. When every link points to the same place, I stop rebuilding and start building.\n\nTiff keeps handing us the blueprint. I'm building it to fit my life.\n\nFor those of you already running webinars: what's the one thing in your confirmation email that actually gets people to show up live?",
+      "user_edit": null,
+      "publish_confirmation": null,
+      "history": [],
+      "note": "No registration link included (others' community; rules unverified). Category suggestion: Wins + Results, check current categories."
     }
   ],
   "publish_log": [],
