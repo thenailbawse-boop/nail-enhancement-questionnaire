@@ -35,8 +35,10 @@ _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 All connected. Manage them at claude.ai/customize/connectors.
 
 ## ⚠️ Unresolved issues
+- Zoom: Dec 21 and Dec 28 class dates were deleted today (11:29 AM PT); weekly series otherwise runs Mondays 5 PM PT through January. Confirm that was intended and that the class page doesn't list those dates
+- Weekly class is booked 5:00–5:45 PM on a us05 (free-style) Zoom link: free meetings stop at 40 min
 - Funnel not deployed yet (needs the Gmail app password, Netlify site and domain, all things only you can create)
 - Klaviyo paid plan + Auto-upgrade still on until you change them; next charge is likely around Nov 27
 - Old Klaviyo contacts: export them before downgrading, then send me the CSV and I'll add an import to the funnel
 - Zoom: confirm your plan (free meetings stop at 40 min; the funnel defaults to 40)
-- 3 bounced pitch addresses need correct contacts before any resend
+- 5 bounced pitch addresses need correct contacts before any resend (new Nov 20: Vicinity podcast, OC Talk Radio)
