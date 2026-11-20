@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Beauty Bawse Club | The Nail Bawse</title>
+<meta name="description" content="Beauty Bawse Club: the Skool community where beauty professionals learn the business side and build it. Business foundations, brand, money, marketing, systems and income beyond the station. From $37/month.">
+<meta property="og:title" content="Beauty Bawse Club with Anisia Burroughs">
+<meta property="og:description" content="Stop winging the business side. Start building like a CEO. From $37/month.">
+<meta name="theme-color" content="#3B2621">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
+<style>
+/* Beauty Bawse Club: a membership card theme in the Nail Bawse palette (espresso, cream, blush, pink). */
+:root{
+  --espresso:#3B2621; --espresso-2:#2A1A15; --cream:#FBF6F1; --paper:#FFFDFB; --tan:#EFE4DA; --blush:#F8E1EA;
+  --pink:#F4A6C4; --pink-2:#F9C9DB; --rose:#A24D6E; --ink:#2A1A15; --muted:#76605A; --line:#E7D8CE; --ok:#2F7A55;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --hand:"Caveat","Segoe Print",cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0}
+body{background:var(--cream);color:var(--ink);font:16px/1.6 var(--sans);overflow-x:clip;
+  background-image:radial-gradient(rgba(59,38,33,.07) 1px,transparent 1.2px);background-size:18px 18px}
+h1,h2,h3,p{margin:0}
+a{color:var(--rose)}
+[hidden]{display:none!important}
+.wrap{max-width:620px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px)) 0 max(16px,env(safe-area-inset-right,0px))}
+.script{font-family:var(--hand);font-weight:700;font-size:1.6rem;line-height:1;color:var(--rose)}
+.script.light{color:var(--pink)}
+.label{font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.display{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,9vw,3.3rem);line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+.display em{font-style:italic;color:var(--rose)}
+.hl{background:linear-gradient(transparent 12%,var(--pink) 12%,var(--pink) 88%,transparent 88%);padding:0 .12em;font-style:italic;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dark .display{color:var(--cream)} .dark .display em{color:var(--pink)}
+.lead{color:var(--muted);font-size:1.05rem}
+.lead b,.b{color:var(--ink);font-weight:700}
+.mark{color:var(--rose);font-weight:700}
+.center{text-align:center}
+.stack{display:flex;flex-direction:column;gap:14px}
+.sec{padding:64px 0}
+.dark{background:var(--espresso);color:var(--cream);background-image:radial-gradient(120% 50% at 50% 0%,rgba(244,166,196,.18),transparent 60%),radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.2px);background-size:auto,18px 18px}
+.dark .lead{color:#E2CFC8}
+
+/* Buttons */
+.cta{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font:800 .9rem var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+  color:var(--cream);background:var(--espresso);border:0;border-radius:999px;padding:18px 22px;cursor:pointer;box-shadow:0 12px 26px -10px rgba(59,38,33,.6);overflow:hidden;text-align:center}
+.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(244,166,196,.35) 50%,transparent 70%);transform:translateX(-100%);animation:shine 3.4s 1.2s infinite}
+@keyframes shine{40%,100%{transform:translateX(100%)}}
+.cta.pink{background:var(--pink);color:var(--espresso);box-shadow:0 12px 30px -10px rgba(244,166,196,.7)}
+.cta.ghost{background:var(--paper);color:var(--espresso);border:2px solid var(--espresso);box-shadow:none}
+.cta:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:30;background:var(--espresso);color:var(--cream);font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  display:flex;align-items:center;justify-content:center;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));text-align:center}
+.topbar a{color:var(--pink);text-decoration:none;white-space:nowrap}
+
+/* Hero */
+.hero{padding:30px 0 56px;position:relative}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+.mono{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:9px;background:var(--espresso);color:var(--cream);font:italic 400 1rem var(--serif);flex:none}
+.brand small{display:block;font-size:.6rem;color:var(--muted);letter-spacing:.18em;font-weight:600}
+.hero .display{font-size:clamp(2.4rem,11vw,4rem);margin-top:6px}
+.hero-photo{position:relative;margin:8px auto 0;width:min(100%,360px)}
+.polaroid{background:#fff;padding:12px 12px 0;border-radius:4px;transform:rotate(-2.5deg);box-shadow:0 26px 40px -20px rgba(42,26,21,.6)}
+.polaroid img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:50% 18%}
+.polaroid figcaption{font:700 1.45rem var(--hand);text-align:center;padding:8px 0 12px;color:var(--espresso)}
+.tape{position:absolute;top:-12px;left:50%;width:100px;height:24px;margin-left:-50px;background:rgba(244,166,196,.75);transform:rotate(3deg);z-index:2}
+.chip-float{position:absolute;z-index:3;background:var(--paper);border:2px solid var(--espresso);border-radius:999px;padding:7px 12px;font:800 .7rem var(--sans);letter-spacing:.08em;text-transform:uppercase;box-shadow:4px 4px 0 var(--pink);animation:bob 5s ease-in-out infinite}
+.chip-float.c1{left:-6px;top:36%}.chip-float.c2{right:-8px;top:62%;animation-delay:1.4s}.chip-float.c3{right:-6px;top:8%;animation-delay:.7s}
+@keyframes bob{50%{translate:0 -6px}}
+.price-teaser{display:flex;align-items:baseline;justify-content:center;gap:8px;flex-wrap:wrap}
+.price-teaser b{font:600 2.2rem var(--serif);color:var(--espresso)}
+.price-teaser span{font-size:.9rem;color:var(--muted)}
+
+/* Pain cards */
+.pain{display:flex;flex-direction:column;gap:16px;margin-top:6px}
+.pcard{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 18px 34px -26px rgba(42,26,21,.55)}
+.pcard h3{font:600 1.35rem/1.2 var(--serif);margin:14px 0 6px}
+.pcard p{color:var(--muted)}
+.mini{background:var(--cream);border:1.5px solid var(--line);border-radius:16px;padding:14px;position:relative;overflow:hidden}
+.mini .bar3{display:flex;gap:4px;margin-bottom:10px}.mini .bar3 i{width:8px;height:8px;border-radius:50%;background:var(--pink)}.mini .bar3 i+i{opacity:.6}.mini .bar3 i+i+i{opacity:.35}
+.money-row{display:flex;justify-content:space-between;font-size:.85rem;padding:6px 0;border-bottom:1px dashed var(--line)}
+.money-row b{font-variant-numeric:tabular-nums}
+.money-row.out b{color:var(--rose)}
+.mini.has-stamp{padding-bottom:40px}
+.q-stamp{position:absolute;right:12px;bottom:8px;font:700 1.35rem var(--hand);color:var(--rose);transform:rotate(-6deg)}
+.dm-pill{display:flex;align-items:center;gap:8px;background:var(--paper);border-radius:12px;padding:8px 10px;margin-top:6px;font-size:.82rem;box-shadow:0 1px 0 var(--line)}
+.dm-pill .av{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--rose));flex:none}
+.dm-pill b{margin-left:auto;font-size:.65rem;background:var(--espresso);color:var(--cream);border-radius:999px;padding:2px 7px}
+.clock{position:absolute;right:12px;top:10px;font:800 .7rem var(--sans);letter-spacing:.1em;color:var(--rose)}
+.todo{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.todo li{display:flex;align-items:center;gap:8px;font-size:.88rem}
+.todo li::before{content:"";width:16px;height:16px;border:2px solid var(--espresso);border-radius:4px;flex:none}
+.todo li.q{color:var(--muted)}
+.todo li.q::after{content:"?";font:700 1.1rem var(--hand);color:var(--rose);margin-left:auto}
+.bridge{font:400 1.5rem/1.3 var(--serif);text-align:center;margin-top:30px}
+.bridge em{color:var(--rose)}
+
+/* Quote */
+.quote{font:italic 400 clamp(1.7rem,7vw,2.4rem)/1.2 var(--serif);text-align:center;color:var(--cream)}
+.quote small{display:block;margin-top:12px;font:700 1.4rem var(--hand);color:var(--pink);font-style:normal}
+
+/* Path (animated steps) */
+.path{background:var(--paper);border:2px solid var(--espresso);border-radius:22px;overflow:hidden;box-shadow:8px 8px 0 var(--pink)}
+.path-head{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:2px solid var(--espresso);background:var(--blush)}
+.path-head i{width:9px;height:9px;border-radius:50%;background:var(--espresso)}.path-head i+i{opacity:.55}.path-head i+i+i{opacity:.3}
+.path-head span{margin-left:auto;font:800 .62rem var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.path-body{padding:16px;display:flex;flex-direction:column;gap:10px}
+.step{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:16px;padding:12px 14px;transition:all .4s}
+.step .n{font:italic 600 1.6rem var(--serif);color:var(--muted);width:34px}
+.step b{display:block;font-size:.98rem}
+.step small{color:var(--muted);font-size:.82rem}
+.state{font:800 .6rem var(--sans);letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:4px 9px;background:var(--tan);color:var(--muted);white-space:nowrap}
+.step.on{border-color:var(--espresso);background:var(--blush);box-shadow:0 10px 20px -16px rgba(42,26,21,.6)}
+.step.on .n{color:var(--rose)} .step.on .state{background:var(--espresso);color:var(--cream)}
+.step.done .state{background:var(--ok);color:#fff}
+.path-foot{padding:0 16px 16px;font:700 1.25rem var(--hand);color:var(--rose);text-align:center}
+
+/* Inside the club */
+.inside{display:flex;flex-direction:column;gap:18px;margin-top:8px}
+.icard{background:linear-gradient(180deg,#4A302A,#3B2621);border:1px solid rgba(244,166,196,.28);border-radius:22px;overflow:hidden;box-shadow:0 24px 40px -24px rgba(0,0,0,.7)}
+.icard .art{height:150px;display:grid;place-items:center;background:radial-gradient(70% 90% at 50% 100%,rgba(244,166,196,.25),transparent 70%);border-bottom:1px solid rgba(244,166,196,.18)}
+.icard .art svg{width:150px;height:120px}
+.icard .body{padding:18px}
+.tag{display:inline-block;font:800 .6rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--espresso);background:var(--pink);border-radius:6px;padding:4px 8px}
+.icard .sub{display:block;font:700 1.15rem var(--hand);color:var(--pink);margin-top:10px}
+.icard h3{font:600 1.45rem/1.15 var(--serif);color:var(--cream);margin:2px 0 10px}
+.icard p{color:#E2CFC8;font-size:.95rem}
+.icard p+p{margin-top:10px}
+.icard p b{color:var(--cream)} .icard p .mark{color:var(--pink)}
+.icard .meta{display:flex;justify-content:space-between;gap:10px;margin-top:16px;padding-top:12px;border-top:1px dashed rgba(244,166,196,.3);font:800 .6rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--pink-2)}
+
+/* Host */
+.host{display:flex;flex-direction:column;gap:14px}
+.host .display{font-size:2.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:800 .66rem var(--sans);letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--espresso);border-radius:999px;padding:5px 10px}
+.sig{font:700 1.7rem var(--hand);color:var(--rose)}
+
+/* Plans: membership cards */
+.plans{display:flex;flex-direction:column;gap:22px;margin-top:10px}
+.plan{position:relative;background:var(--paper);border:2px solid var(--espresso);border-radius:26px;overflow:hidden;box-shadow:0 26px 44px -28px rgba(42,26,21,.65)}
+.plan-top{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:var(--blush);border-bottom:2px solid var(--espresso);font:800 .62rem var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.plan-top .save{background:var(--espresso);color:var(--cream);border-radius:999px;padding:4px 10px}
+.plan-body{padding:20px 18px 18px;display:flex;flex-direction:column;gap:12px}
+.plan .kind{font:700 1.3rem var(--hand);color:var(--rose)}
+.plan h3{font:600 1.5rem/1.1 var(--serif);margin-top:-6px}
+.price{display:flex;align-items:baseline;gap:8px}
+.price b{font:600 3.2rem/1 var(--serif);letter-spacing:-.02em}
+.price span{font:800 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.plan .note{color:var(--muted);font-size:.9rem}
+.incl{list-style:none;margin:0;padding:12px 0 0;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:8px}
+.incl li{display:flex;gap:10px;font-size:.92rem}
+.incl li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--pink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%233B2621' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.bonus{background:var(--blush);border-radius:16px;padding:12px 14px;font-size:.9rem}
+.bonus .label{color:var(--rose);display:block;margin-bottom:4px}
+.fine{font-size:.78rem;color:var(--muted);text-align:center}
+.plan.feature{transform:rotate(-1deg);box-shadow:10px 10px 0 var(--pink)}
+.plan.life{background:linear-gradient(160deg,#4A302A,#2A1A15);color:var(--cream);border-color:var(--pink)}
+.plan.life .plan-top{background:rgba(244,166,196,.14);border-color:var(--pink);color:var(--pink-2)}
+.plan.life .plan-top .save{background:var(--pink);color:var(--espresso)}
+.plan.life .kind{color:var(--pink)} .plan.life h3{color:var(--cream)}
+.plan.life .price b{background:linear-gradient(100deg,#FCE1EB,var(--pink) 45%,#FBD3E2 60%,#E58BAE);-webkit-background-clip:text;background-clip:text;color:transparent}
+.plan.life .price span,.plan.life .note,.plan.life .fine{color:#D9C5BE}
+.plan.life .incl{border-color:rgba(244,166,196,.3)} .plan.life .bonus{background:rgba(244,166,196,.14)}
+.plan.life::after{content:"";position:absolute;inset:-50%;background:linear-gradient(115deg,transparent 45%,rgba(255,255,255,.08) 50%,transparent 55%);animation:sheen 6s infinite;pointer-events:none}
+@keyframes sheen{0%{transform:translateX(-40%)}60%,100%{transform:translateX(40%)}}
+
+/* Questions cards */
+.qcards{display:flex;flex-direction:column;gap:12px}
+.qcard{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--pink);border-radius:16px;padding:14px 16px}
+.qcard .label{color:var(--rose)}
+.qcard h3{font:600 1.2rem var(--serif);margin:4px 0}
+.qcard p{color:var(--muted);font-size:.92rem}
+
+/* For you / not for you */
+.fit{display:grid;gap:14px}
+.fit-col{border-radius:20px;padding:16px;background:var(--paper);border:1px solid var(--line)}
+.fit-col.no{background:var(--tan)}
+.fit-col h3{font:800 .7rem var(--sans);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.fit-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.fit-col li{display:flex;gap:10px;font-size:.95rem}
+.fit-col li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:6px;background:var(--pink);display:grid;place-items:center;font-weight:800;font-size:.8rem;color:var(--espresso)}
+.fit-col.no li::before{content:"✕";background:var(--paper);color:var(--rose)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:0 16px}
+.faq summary{list-style:none;cursor:pointer;padding:15px 0;font-weight:700;display:flex;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";margin-left:auto;flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--espresso);display:grid;place-items:center;font-weight:800}
+.faq details[open] summary::after{content:"–";background:var(--espresso);color:var(--cream)}
+.faq details p{color:var(--muted);padding:0 0 16px}
+
+/* Final */
+.final{text-align:center}
+.steps3{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;text-align:left}
+.steps3 li{display:flex;gap:12px;align-items:center;background:rgba(244,166,196,.1);border:1px solid rgba(244,166,196,.3);border-radius:14px;padding:12px 14px}
+.steps3 li span{font:italic 600 1.5rem var(--serif);color:var(--pink);width:30px}
+.foot{text-align:center;padding:36px 16px 100px;color:var(--muted);font-size:.8rem;display:flex;flex-direction:column;gap:6px;align-items:center}
+.foot p.s{font:italic 400 1.1rem var(--serif);color:var(--ink)}
+.float-cta{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:40;background:var(--espresso);color:var(--cream);text-decoration:none;white-space:nowrap;
+  font:800 .76rem var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:14px 24px;border-radius:999px;box-shadow:0 12px 30px -8px rgba(42,26,21,.7),0 0 0 3px var(--pink)}
+@media (min-width:900px){
+  .wrap{max-width:1040px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .pain,.inside,.qcards{display:grid;grid-template-columns:repeat(3,1fr)}
+  .inside{grid-template-columns:repeat(2,1fr)}
+  .plans{display:grid;grid-template-columns:repeat(2,1fr);align-items:start}
+  .fit{grid-template-columns:1fr 1fr}
+  .narrow{max-width:680px;margin:0 auto}
+  .float-cta{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="topbar">Beauty Bawse Club · from $37/month <a href="#plans">See plans →</a></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="stack">
+      <div class="brand"><span class="mono">NB</span><span>The Nail Bawse<small>Beauty Bawse Club</small></span></div>
+      <p class="script">for beauty pros who are talented, booked, busy or building</p>
+      <h1 class="display">Stop winging the business side. <span class="hl">Start building like a CEO.</span></h1>
+      <p class="lead">Beauty Bawse Club is my Skool community where you learn <b>the part nobody taught you</b>: business foundations, brand, money, marketing, systems and income beyond the station. Then you build it, one piece at a time.</p>
+      <div class="price-teaser"><span>Join from</span><b>$37</b><span>/ month · or $97 for 3 months</span></div>
+      <a class="cta" href="#plans"><span>Join Beauty Bawse Club</span></a>
+      <p class="fine">Hosted on Skool. Membership and billing are handled securely there.</p>
+    </div>
+    <div class="hero-photo">
+      <span class="tape" aria-hidden="true"></span>
+      <figure class="polaroid" style="margin:0"><img src="__PHOTO__" width="900" height="900" alt="Anisia Burroughs, founder of The Nail Bawse"><figcaption>your host, Anisia</figcaption></figure>
+      <span class="chip-float c1">Licensed cosmetologist</span>
+      <span class="chip-float c2">Nail tech · LA</span>
+      <span class="chip-float c3">AI systems educator</span>
+    </div>
+  </div>
+</header>
+
+<!-- SOUND FAMILIAR -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap stack">
+    <p class="script center">sound familiar?</p>
+    <h2 class="display center">You're great at your craft. <em>The business side is another story.</em></h2>
+    <div class="pain">
+      <article class="pcard">
+        <div class="mini has-stamp" aria-hidden="true"><div class="bar3"><i></i><i></i><i></i></div>
+          <div class="money-row"><span>Fri · full set + art</span><b>+$95</b></div>
+          <div class="money-row"><span>Sat · 6 clients</span><b>+$480</b></div>
+          <div class="money-row out"><span>Supplies, rent, apps…</span><b>−$???</b></div>
+          <span class="q-stamp">where did it go?</span></div>
+        <h3>Money in. But where is it going?</h3>
+        <p>Maybe you're making money but don't always know where it's going.</p>
+      </article>
+      <article class="pcard">
+        <div class="mini" aria-hidden="true"><div class="bar3"><i></i><i></i><i></i></div><span class="clock">11:48 PM</span>
+          <div class="dm-pill"><span class="av"></span>"do u have anything sat?"<b>NEW</b></div>
+          <div class="dm-pill"><span class="av"></span>"how much for a fill?"<b>NEW</b></div>
+          <div class="dm-pill"><span class="av"></span>"can I come at 9 instead"<b>NEW</b></div></div>
+        <h3>Everything depends on you.</h3>
+        <p>Your hands are full, your mind is overwhelmed, and your business still depends on you being available 24/7.</p>
+      </article>
+      <article class="pcard">
+        <div class="mini" aria-hidden="true"><div class="bar3"><i></i><i></i><i></i></div>
+          <ul class="todo"><li>Book clients</li><li class="q">Pricing</li><li class="q">Branding</li><li class="q">Marketing</li><li class="q">Systems</li><li class="q">Money management</li></ul></div>
+        <h3>The part nobody taught you.</h3>
+        <p>You're amazing at your craft, but pricing, branding, marketing, systems and money still feel like the part nobody really taught you.</p>
+      </article>
+    </div>
+    <p class="bridge">Beauty school taught you the service. <em>Nobody taught you the business behind it.</em></p>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="sec dark">
+  <div class="wrap"><p class="quote">"I know that version of you because I was her."<small>Anisia Burroughs, founder</small></p></div>
+</section>
+
+<!-- PATH -->
+<section class="sec">
+  <div class="wrap stack narrow">
+    <p class="script center">how the club works</p>
+    <h2 class="display center">Learn the business side. <span class="hl">Then build it.</span></h2>
+    <p class="lead center">You don't have to fix your whole business at once. Pick one area, learn it inside the club, and put it to work in your own business.</p>
+    <div class="path" id="path">
+      <div class="path-head"><i></i><i></i><i></i><span>Your path inside the club</span></div>
+      <div class="path-body">
+        <div class="step"><span class="n">01</span><div><b>Pick one area</b><small>Pricing, brand, money, marketing or systems.</small></div><span class="state">Up next</span></div>
+        <div class="step"><span class="n">02</span><div><b>Learn it with us</b><small>Lessons and support inside the Skool community.</small></div><span class="state">Up next</span></div>
+        <div class="step"><span class="n">03</span><div><b>Build it into your business</b><small>Put it to work, then pick the next area.</small></div><span class="state">Up next</span></div>
+      </div>
+      <p class="path-foot">one piece at a time, like a CEO</p>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE -->
+<section class="sec dark" id="inside">
+  <div class="wrap stack">
+    <p class="script light center">inside the club</p>
+    <h2 class="display center">Everything the business side needs, <em>in one place.</em></h2>
+    <p class="lead center">Six areas, the same ones I had to figure out myself after years behind the chair.</p>
+    <div class="inside">
+      <article class="icard"><div class="art" aria-hidden="true"><svg viewBox="0 0 150 120"><rect x="30" y="20" width="90" height="80" rx="8" fill="#FFFDFB"/><rect x="30" y="20" width="90" height="18" rx="8" fill="#F4A6C4"/><path d="M45 55h60M45 68h48M45 81h55" stroke="#3B2621" stroke-width="4" stroke-linecap="round"/><circle cx="112" cy="96" r="16" fill="#3B2621"/><path d="M105 96l5 5 9-10" stroke="#F4A6C4" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="body"><span class="tag">01 · Foundations</span><span class="sub">set it up right</span><h3>Business foundations</h3>
+        <p>The basics most beauty pros skip: <b>how your business is set up</b>, how you <span class="mark">price your services</span>, and the policies that protect your time.</p>
+        <div class="meta"><span>Start here</span><span>Structure first</span></div></div></article>
+      <article class="icard"><div class="art" aria-hidden="true"><svg viewBox="0 0 150 120"><rect x="38" y="14" width="74" height="96" rx="12" fill="#2A1A15" stroke="#F4A6C4" stroke-width="3"/><rect x="46" y="26" width="58" height="40" rx="6" fill="#F4A6C4"/><text x="75" y="52" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="16" fill="#3B2621">NB</text><path d="M48 78h54M48 90h36" stroke="#FFFDFB" stroke-width="4" stroke-linecap="round"/></svg></div>
+        <div class="body"><span class="tag">02 · Brand</span><span class="sub">look like the pro you are</span><h3>Brand clarity</h3>
+        <p>Get clear on <b>who you serve</b>, what you're known for, and how your brand shows up so the <span class="mark">right clients find you</span>.</p>
+        <div class="meta"><span>Be known for something</span><span>Clarity</span></div></div></article>
+      <article class="icard"><div class="art" aria-hidden="true"><svg viewBox="0 0 150 120"><rect x="26" y="30" width="98" height="64" rx="10" fill="#FFFDFB"/><rect x="26" y="44" width="98" height="12" fill="#3B2621"/><rect x="36" y="68" width="34" height="8" rx="4" fill="#F4A6C4"/><circle cx="104" cy="74" r="10" fill="#F4A6C4"/><circle cx="92" cy="74" r="10" fill="#A24D6E" opacity=".8"/></svg></div>
+        <div class="body"><span class="tag">03 · Money</span><span class="sub">know your numbers</span><h3>Financial confidence</h3>
+        <p>Stop guessing. Learn <b>where your money goes</b>, what you actually earn, and how to <span class="mark">make money decisions with confidence</span>.</p>
+        <div class="meta"><span>Money in, money kept</span><span>Confidence</span></div></div></article>
+      <article class="icard"><div class="art" aria-hidden="true"><svg viewBox="0 0 150 120"><path d="M30 70l70-34v52z" fill="#F4A6C4"/><rect x="18" y="58" width="18" height="26" rx="5" fill="#FFFDFB"/><path d="M40 84l8 20h12l-6-20" fill="#FFFDFB"/><path d="M110 46q14 12 0 30M118 38q24 20 0 46" stroke="#F9C9DB" stroke-width="4" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="body"><span class="tag">04 · Marketing</span><span class="sub">get booked on purpose</span><h3>Marketing</h3>
+        <p>Content and promotion that <b>bring in the clients you want</b>, without posting all day and hoping something works.</p>
+        <div class="meta"><span>Visibility</span><span>Bookings</span></div></div></article>
+      <article class="icard"><div class="art" aria-hidden="true"><svg viewBox="0 0 150 120"><circle cx="40" cy="40" r="16" fill="#F4A6C4"/><circle cx="110" cy="40" r="16" fill="#FFFDFB"/><circle cx="75" cy="90" r="16" fill="#FFFDFB"/><path d="M56 40h38M48 54l18 24M102 54l-18 24" stroke="#F9C9DB" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/><path d="M34 40l5 5 8-9" stroke="#3B2621" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="body"><span class="tag">05 · Systems</span><span class="sub">so it doesn't all depend on you</span><h3>Systems</h3>
+        <p>Set up the booking, follow-up and admin systems (including <span class="mark">practical AI</span>) so your business <b>stops depending on you being available 24/7</b>.</p>
+        <div class="meta"><span>Less busywork</span><span>Time back</span></div></div></article>
+      <article class="icard"><div class="art" aria-hidden="true"><svg viewBox="0 0 150 120"><rect x="22" y="70" width="22" height="30" rx="4" fill="#FFFDFB"/><rect x="52" y="54" width="22" height="46" rx="4" fill="#F9C9DB"/><rect x="82" y="38" width="22" height="62" rx="4" fill="#F4A6C4"/><path d="M110 30l14-12 4 18" stroke="#FFFDFB" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 104h106" stroke="#F9C9DB" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="body"><span class="tag">06 · Income</span><span class="sub">beyond the chair</span><h3>Income streams beyond the station</h3>
+        <p>Ways to <b>earn beyond the service you do with your hands</b>: education, digital products and offers built from <span class="mark">what you already know</span>.</p>
+        <div class="meta"><span>Beyond the station</span><span>Grow</span></div></div></article>
+    </div>
+    <div class="stack center" style="margin-top:18px">
+      <div class="price-teaser"><span style="color:#E2CFC8">Start from</span><b style="color:var(--pink)">$37</b><span style="color:#E2CFC8">/ month</span></div>
+      <a class="cta pink" href="#plans"><span>Choose how you want to join</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- HOST -->
+<section class="sec">
+  <div class="wrap host narrow">
+    <p class="script">meet your host</p>
+    <h2 class="display">Anisia <em>Burroughs.</em></h2>
+    <p class="label">Founder, The Nail Bawse · Los Angeles</p>
+    <p class="lead">I'm a licensed cosmetologist and nail tech. I know what it's like to be <b>talented, booked and busy</b> and still feel like the business side is running you.</p>
+    <p class="lead">After years behind the chair, I built Beauty Bawse Club to teach the part nobody taught us, so you can <b>build a business that supports your life, not one that drains it.</b></p>
+    <div class="chips"><span>Licensed cosmetologist</span><span>Nail tech</span><span>Educator</span><span>AI systems</span></div>
+    <p class="sig">You are the asset. Build accordingly.</p>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="sec" id="plans" style="padding-top:20px">
+  <div class="wrap stack">
+    <p class="script center">pick your membership card</p>
+    <h2 class="display center">Choose how you want <em>to join.</em></h2>
+    <p class="lead center">Every membership includes the full Beauty Bawse Club community on Skool.</p>
+    <div class="plans">
+
+      <article class="plan feature">
+        <div class="plan-top"><span>Quarterly starter</span><span class="save">Save $14</span></div>
+        <div class="plan-body">
+          <span class="kind">most popular way to start</span><h3>Beauty Bawse Club</h3>
+          <div class="price"><b>$97</b><span>/ first 3 months</span></div>
+          <p class="note">One payment covers your first 3 months.</p>
+          <ul class="incl"><li>Beauty Bawse Club community on Skool</li><li>All 6 areas: foundations, brand, money, marketing, systems, income</li><li>Learn and build alongside other beauty bawses</li></ul>
+          <a class="cta" href="__JOIN_QUARTERLY__"><span>Get my first 3 months</span></a>
+          <p class="fine">$97 for 3 months · __RENEW_NOTE__</p>
+        </div>
+      </article>
+
+      <article class="plan">
+        <div class="plan-top"><span>Monthly</span><span class="save">Most flexible</span></div>
+        <div class="plan-body">
+          <span class="kind">go month to month</span><h3>Beauty Bawse Club</h3>
+          <div class="price"><b>$37</b><span>/ month</span></div>
+          <p class="note">Billed monthly through Skool.</p>
+          <ul class="incl"><li>Beauty Bawse Club community on Skool</li><li>All 6 areas: foundations, brand, money, marketing, systems, income</li><li>Learn and build alongside other beauty bawses</li></ul>
+          <a class="cta ghost" href="__JOIN_MONTHLY__"><span>Join monthly</span></a>
+          <p class="fine">$37 billed monthly</p>
+        </div>
+      </article>
+
+      <article class="plan">
+        <div class="plan-top"><span>Annual pass</span><span class="save">One payment a year</span></div>
+        <div class="plan-body">
+          <span class="kind">a full year of building</span><h3>Beauty Bawse Club</h3>
+          <div class="price"><b>$470</b><span>/ year</span></div>
+          <p class="note">A full year of learning and building. Billed once a year.</p>
+          <ul class="incl"><li>Beauty Bawse Club community on Skool</li><li>All 6 areas: foundations, brand, money, marketing, systems, income</li><li>Learn and build alongside other beauty bawses</li></ul>
+          <a class="cta ghost" href="__JOIN_ANNUAL__"><span>Join annual</span></a>
+          <p class="fine">$470 billed annually</p>
+        </div>
+      </article>
+
+      <article class="plan life">
+        <div class="plan-top"><span>Lifetime access</span><span class="save">Pay once</span></div>
+        <div class="plan-body">
+          <span class="kind">one payment, forever</span><h3>Beauty Bawse Club</h3>
+          <div class="price"><b>$597</b><span>/ lifetime</span></div>
+          <p class="note">Pay once for lifetime membership. No monthly or yearly fees.</p>
+          <ul class="incl"><li>Beauty Bawse Club community on Skool</li><li>All 6 areas: foundations, brand, money, marketing, systems, income</li><li>Learn and build alongside other beauty bawses</li></ul>
+          <div class="bonus"><span class="label">Plus</span>No monthly or yearly membership fees, ever.</div>
+          <a class="cta pink" href="__JOIN_LIFETIME__"><span>Get lifetime access</span></a>
+          <p class="fine">One payment of $597 · no recurring fees</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- QUESTIONS -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap stack">
+    <p class="script center">start with your business</p>
+    <h2 class="display center">You don't need more motivation. <em>You need a plan you can build.</em></h2>
+    <div class="qcards">
+      <div class="qcard"><span class="label">Money</span><h3>Do you know your numbers?</h3><p>What you charge, what you keep, and where the rest goes.</p></div>
+      <div class="qcard"><span class="label">Time</span><h3>What only works if you're there?</h3><p>Bookings, replies and admin that stop the moment you do.</p></div>
+      <div class="qcard"><span class="label">Growth</span><h3>What could earn beyond the chair?</h3><p>The knowledge you already share with clients every day.</p></div>
+    </div>
+    <p class="lead center">Those questions tell you where to start. <b>Bring your answer to the club. Let's build there.</b></p>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap stack">
+    <p class="script center">roll call</p>
+    <h2 class="display center">This is for you <em>if…</em></h2>
+    <div class="fit">
+      <div class="fit-col"><h3>For you</h3><ul>
+        <li>You're a beauty pro who is talented, booked, busy or building.</li>
+        <li>You know your business needs more structure.</li>
+        <li>You're ready to learn, implement, grow and build a business that supports your life.</li></ul></div>
+      <div class="fit-col no"><h3>Not for you</h3><ul>
+        <li>Hobbyists.</li><li>Excuse-makers.</li><li>People who only want motivation.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap stack narrow">
+    <p class="script center">questions before you join?</p>
+    <h2 class="display center">Good <em>questions.</em></h2>
+    <div class="faq">
+      <details><summary>Where is the club?</summary><p>Beauty Bawse Club is hosted on Skool. After you join, you'll find everything inside the community there.</p></details>
+      <details><summary>How do I pay?</summary><p>Membership and billing are handled securely on Skool. Pick the plan that fits you above.</p></details>
+      <details><summary>Which plan should I choose?</summary><p>Want to try it out? Start with $97 for your first 3 months. Want flexibility? Go monthly at $37. Ready to commit? Choose annual ($470) or pay once with lifetime ($597).</p></details>
+      <details><summary>Do all plans get the same community?</summary><p>Yes. Every plan includes the full Beauty Bawse Club community. The plans only change how you pay.</p></details>
+      <details><summary>Who is it for?</summary><p>Beauty professionals who are talented, booked, busy or building, and know their business needs more structure.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec dark final">
+  <div class="wrap stack narrow">
+    <p class="script light">your seat at the table</p>
+    <h2 class="display">Ready to build <em>like a CEO?</em></h2>
+    <ol class="steps3"><li><span>1</span>Pick the plan that fits you.</li><li><span>2</span>Join Beauty Bawse Club on Skool.</li><li><span>3</span>Start with one area of your business.</li></ol>
+    <a class="cta pink" href="#plans"><span>Join Beauty Bawse Club</span></a>
+    <p class="fine" style="color:#E2CFC8">From $37/month · $97 for 3 months · $470/year · $597 lifetime</p>
+  </div>
+</section>
+
+<footer class="foot"><span class="mono">NB</span><p class="s">Beyond the service. Beyond the title.</p><p>© The Nail Bawse · <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a></p></footer>
+<a class="float-cta" id="floatCta" href="#plans" hidden>See membership plans</a>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Path demo: walk through the three steps
+  var steps = document.querySelectorAll("#path .step"), i = 0;
+  function show() {
+    steps.forEach(function (s, k) {
+      s.classList.toggle("on", k === i); s.classList.toggle("done", k < i);
+      s.querySelector(".state").textContent = k < i ? "Done" : k === i ? "Active" : "Up next";
+    });
+    i = (i + 1) % (steps.length + 1);
+  }
+  show(); if (!reduce) setInterval(show, 1800);
+  // Floating button while the plans are off screen
+  if ("IntersectionObserver" in window) {
+    var heroGone = false, plansSeen = false, f = document.getElementById("floatCta");
+    var upd = function () { f.hidden = !heroGone || plansSeen; };
+    new IntersectionObserver(function (e) { heroGone = !e[0].isIntersecting; upd(); }).observe(document.querySelector(".hero"));
+    new IntersectionObserver(function (e) { plansSeen = e[0].isIntersecting; upd(); }, { rootMargin: "0px 0px -30% 0px" }).observe(document.getElementById("plans"));
+  }
+})();
+</script>
+</body>
+</html>
