@@ -1,16 +1,37 @@
 // The Nail Bawse "Build Your AI Agent" class page for thenailbawse.com (served by the thenailbawse-official Worker).
-// Built by build.py from funnel-site/public. Routes: /webinar, /webinar/thanks, /registration (redirect),
-// /webinar-assets/*, /api/events, /api/register, /api/ics. Sign-ups go to the same D1 "signups" table.
-const ASSETS = __ASSETS__;
+// Built by build.py from funnel-site/public (pass the commit that holds dist/).
+// Routes: /webinar, /webinar/thanks, /registration (redirect), /webinar-assets/*, /api/events, /api/register, /api/ics. Sign-ups go to the same D1 "signups" table.
+// Page files live in the repo at a pinned commit (dist/). The first request fetches each one, checks its
+// SHA-256 against MANIFEST, and keeps it in the NB_WEBINAR KV namespace; later requests are served from KV.
+const MANIFEST = __MANIFEST__;
+const COMMIT = "__COMMIT__";
+const SOURCES = ["https://cdn.jsdelivr.net/gh/thenailbawse-boop/nail-enhancement-questionnaire@" + COMMIT + "/operations/site-worker/dist/",
+                 "https://raw.githubusercontent.com/thenailbawse-boop/nail-enhancement-questionnaire/" + COMMIT + "/operations/site-worker/dist/"];
 const TITLE = "Build Your AI Agent";
 const TZ = "America/Los_Angeles";
 
-function bytes(b64) { const s = atob(b64); const u = new Uint8Array(s.length); for (let i = 0; i < s.length; i++) u[i] = s.charCodeAt(i); return u; }
-function asset(name, status) {
-  const a = ASSETS[name];
-  const html = a.t.startsWith("text/html");
-  return new Response(a.e === "b64" ? bytes(a.b) : a.b, { status: status || 200, headers: {
-    "content-type": a.t, "cache-control": html ? "no-store" : "public, max-age=3600",
+async function sha256(s) { return Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)))).map(b => b.toString(16).padStart(2, "0")).join(""); }
+async function load(name, env) {
+  const m = MANIFEST[name], key = name + ":" + m.s;
+  let body = await env.NB_WEBINAR.get(key);
+  if (body !== null) return body;
+  for (const base of SOURCES) {
+    try {
+      const r = await fetch(base + m.f, { cf: { cacheTtl: 300 } });
+      if (!r.ok) continue;
+      const t = await r.text();
+      if (await sha256(t) !== m.s) continue;
+      await env.NB_WEBINAR.put(key, t);
+      return t;
+    } catch (e) { /* try the next source */ }
+  }
+  return null;
+}
+async function asset(name, env) {
+  const m = MANIFEST[name], body = await load(name, env);
+  if (body === null) return new Response("This page is updating. Please refresh in a minute.", { status: 503, headers: { "content-type": "text/plain; charset=utf-8", "retry-after": "30" } });
+  const html = m.t.startsWith("text/html");
+  return new Response(body, { headers: { "content-type": m.t, "cache-control": html ? "no-store" : "public, max-age=3600",
     "x-content-type-options": "nosniff", "referrer-policy": "strict-origin-when-cross-origin" } });
 }
 function json(obj, status) { return new Response(JSON.stringify(obj), { status: status || 200, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } }); }
@@ -23,8 +44,8 @@ function tFromId(id, h) {
 export async function funnel(request, env, h) {
   const key = h.key, method = request.method;
   if (key === "/registration") { const u = new URL(request.url); return Response.redirect("https://" + h.APEX + "/webinar" + u.search, 301); }
-  if ((key === "/webinar" || key === "/webinar/thanks") && (method === "GET" || method === "HEAD")) return asset(key === "/webinar" ? "index" : "thanks");
-  if (h.path.startsWith("/webinar-assets/") && method === "GET") { const n = h.path.slice(16); return ASSETS[n] ? asset(n) : null; }
+  if ((key === "/webinar" || key === "/webinar/thanks") && (method === "GET" || method === "HEAD")) return asset(key === "/webinar" ? "index" : "thanks", env);
+  if (h.path.startsWith("/webinar-assets/") && method === "GET") { const n = h.path.slice(16); return MANIFEST[n] ? asset(n, env) : null; }
   if (key === "/api/events" && method === "GET") {
     const id = new URL(request.url).searchParams.get("id");
     if (id) { const t = tFromId(id, h); return t ? json({ event: evFor(t, h) }) : json({ error: "Session not found." }, 404); }
