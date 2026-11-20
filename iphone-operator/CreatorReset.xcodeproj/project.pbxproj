@@ -16,6 +16,10 @@
 			fileRef = 148406B61563DB007D3B7B0C;
 			settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); };
 		};
+		26036617834D3275A6993B0C /* background.js */ = {
+			isa = PBXBuildFile;
+			fileRef = 6D2420B3EE16385092DD2ACF;
+		};
 		27192928A8C66ADE1131C099 /* OperatorModel.swift */ = {
 			isa = PBXBuildFile;
 			fileRef = 6BE94E7D538936F29809A33F;
@@ -48,6 +52,10 @@
 			isa = PBXBuildFile;
 			fileRef = D6FDF3499ADF79D68C7D78C3;
 		};
+		4087722B32E956D084853B2B /* plan-validator.js */ = {
+			isa = PBXBuildFile;
+			fileRef = B9A6F7A9F417FD54EC0007E2;
+		};
 		41F8A01E6062E166ABB838BF /* OnDeviceAssistant.swift */ = {
 			isa = PBXBuildFile;
 			fileRef = CF16C257C39B3B0252CB67E0;
@@ -76,10 +84,6 @@
 			isa = PBXBuildFile;
 			fileRef = 1B884C226763FBC601917932;
 		};
-		65E22AA407B6AB3BE64B8231 /* Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = 1BA5D933409CCACF86E9B126;
-		};
 		7075F15489C0E0936049A6FB /* WebPlan.swift */ = {
 			isa = PBXBuildFile;
 			fileRef = 0C2129467E62CB794701A4DB;
@@ -87,6 +91,14 @@
 		72209649B370990DDFE46F04 /* RiskPolicy.swift */ = {
 			isa = PBXBuildFile;
 			fileRef = 55E50CFC04C70FD6F45AA031;
+		};
+		8286E36F0B88223769B48A0F /* manifest.json */ = {
+			isa = PBXBuildFile;
+			fileRef = 8E20446AC81982B7B4CD601A;
+		};
+		8A77F41194BEA7521FEEF8C8 /* images */ = {
+			isa = PBXBuildFile;
+			fileRef = 220D55C134F3470D240A7F38;
 		};
 		9391327C8591756E433CCEFC /* TestPhotoFactory.swift */ = {
 			isa = PBXBuildFile;
@@ -104,9 +116,17 @@
 			isa = PBXBuildFile;
 			fileRef = 0C2129467E62CB794701A4DB;
 		};
+		A9C5128C4DDF54B6E70B0F2C /* popup.html */ = {
+			isa = PBXBuildFile;
+			fileRef = AE488722F280974E00CC67F2;
+		};
 		A9DF0205D8C6D4EA1B20C452 /* CreatorResetIntents.swift */ = {
 			isa = PBXBuildFile;
 			fileRef = 55A01928906E983ACAF42E7E;
+		};
+		C160B940467CA0BC00005043 /* content.js */ = {
+			isa = PBXBuildFile;
+			fileRef = 6474D3DE82FE0E575A672889;
 		};
 		C805F921B9A1C2798978A1BD /* SafariWebExtensionHandler.swift */ = {
 			isa = PBXBuildFile;
@@ -127,6 +147,10 @@
 		D15EEF67F6510BD6193E6CE4 /* DuplicateFinder.swift */ = {
 			isa = PBXBuildFile;
 			fileRef = 9A44D81A7212D499C2677549;
+		};
+		F1998103A034E33B1C0D8D3A /* popup.js */ = {
+			isa = PBXBuildFile;
+			fileRef = 95DA3BF98C3F113C7F87E524;
 		};
 		F9C3C1A1CC30B56B1AA23B88 /* Reports.swift */ = {
 			isa = PBXBuildFile;
@@ -178,16 +202,16 @@
 			path = Classifier.swift;
 			sourceTree = "<group>";
 		};
-		1BA5D933409CCACF86E9B126 /* Resources */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = folder;
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		202A521852FECB916A8FE56E /* HomeView.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = HomeView.swift;
+			sourceTree = "<group>";
+		};
+		220D55C134F3470D240A7F38 /* images */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder;
+			path = images;
 			sourceTree = "<group>";
 		};
 		22F5ACDF878D5D0AD50D658B /* StorageReporter.swift */ = {
@@ -256,6 +280,18 @@
 			path = RiskPolicy.swift;
 			sourceTree = "<group>";
 		};
+		58CF0427FE66F5D3F51D4EA7 /* START_HERE.md */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = START_HERE.md;
+			sourceTree = "<group>";
+		};
+		6474D3DE82FE0E575A672889 /* content.js */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.javascript;
+			path = content.js;
+			sourceTree = "<group>";
+		};
 		648FD65AF80C7F79BA29748B /* TestPhotoFactory.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
@@ -268,10 +304,22 @@
 			path = OperatorModel.swift;
 			sourceTree = "<group>";
 		};
+		6D2420B3EE16385092DD2ACF /* background.js */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.javascript;
+			path = background.js;
+			sourceTree = "<group>";
+		};
 		835D8071761C67A2C1F600A0 /* SafariWebExtensionHandler.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = SafariWebExtensionHandler.swift;
+			sourceTree = "<group>";
+		};
+		8E20446AC81982B7B4CD601A /* manifest.json */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.json;
+			path = manifest.json;
 			sourceTree = "<group>";
 		};
 		8F57A4FBA94DE17F54CDCF10 /* Info.plist */ = {
@@ -286,16 +334,34 @@
 			path = AppSettings.swift;
 			sourceTree = "<group>";
 		};
+		95DA3BF98C3F113C7F87E524 /* popup.js */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.javascript;
+			path = popup.js;
+			sourceTree = "<group>";
+		};
 		9A44D81A7212D499C2677549 /* DuplicateFinder.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = DuplicateFinder.swift;
 			sourceTree = "<group>";
 		};
+		AE488722F280974E00CC67F2 /* popup.html */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = popup.html;
+			sourceTree = "<group>";
+		};
 		B041A6CBB520501544BE24E9 /* OnDeviceAIStatus.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = OnDeviceAIStatus.swift;
+			sourceTree = "<group>";
+		};
+		B9A6F7A9F417FD54EC0007E2 /* plan-validator.js */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.javascript;
+			path = "plan-validator.js";
 			sourceTree = "<group>";
 		};
 		BF3EBA1FD7301F03B5240D69 /* Info.plist */ = {
@@ -442,6 +508,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7EC67C36D666E556E66A749F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6D2420B3EE16385092DD2ACF,
+				6474D3DE82FE0E575A672889,
+				220D55C134F3470D240A7F38,
+				8E20446AC81982B7B4CD601A,
+				B9A6F7A9F417FD54EC0007E2,
+				AE488722F280974E00CC67F2,
+				95DA3BF98C3F113C7F87E524,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8A2934BF8E67675297A3835F = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +529,7 @@
 				647E7164A06FF71518326D10,
 				93A47F34067A94BECEA0111E,
 				9D10A42589C8F5479091BEBD,
+				58CF0427FE66F5D3F51D4EA7,
 				71B6FF482B986799E916D014,
 			);
 			sourceTree = "<group>";
@@ -456,8 +537,8 @@
 		93A47F34067A94BECEA0111E /* SafariExtension */ = {
 			isa = PBXGroup;
 			children = (
+				7EC67C36D666E556E66A749F,
 				8F57A4FBA94DE17F54CDCF10,
-				1BA5D933409CCACF86E9B126,
 				835D8071761C67A2C1F600A0,
 			);
 			path = SafariExtension;
@@ -576,7 +657,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E22AA407B6AB3BE64B8231,
+				26036617834D3275A6993B0C,
+				C160B940467CA0BC00005043,
+				8286E36F0B88223769B48A0F,
+				4087722B32E956D084853B2B,
+				A9C5128C4DDF54B6E70B0F2C,
+				F1998103A034E33B1C0D8D3A,
+				8A77F41194BEA7521FEEF8C8,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

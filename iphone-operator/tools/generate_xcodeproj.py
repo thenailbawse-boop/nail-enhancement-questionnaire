@@ -44,6 +44,12 @@ ext_sources = ["SafariExtension/SafariWebExtensionHandler.swift"]
 app_target_sources = app_sources + shared_sources + core_sources
 ext_target_sources = ext_sources + ["Shared/OnDeviceAIStatus.swift", "Core/Sources/OperatorCore/WebPlan.swift"]
 
+# Web extension files are copied FLAT into the .appex (manifest.json at the bundle root).
+# Do not copy a folder named "Resources" into an iOS bundle: iOS then treats it as an
+# old-style bundle and can no longer find the extension's Info.plist.
+ext_web_resources = rel(p for p in glob.glob(os.path.join(ROOT, "SafariExtension/Resources/*"))
+                        if os.path.isfile(p)) + ["SafariExtension/Resources/images"]
+
 # Every file reference shown in the Xcode navigator.
 file_refs = {}  # path -> (id, fileType)
 
@@ -57,12 +63,17 @@ def ftype(path):
         return "folder.assetcatalog"
     if path.endswith(".md"):
         return "net.daringfireball.markdown"
+    if path.endswith(".js"):
+        return "sourcecode.javascript"
+    if path.endswith(".json"):
+        return "text.json"
+    if path.endswith(".html"):
+        return "text.html"
     return "folder"
 
 
-for p in sorted(set(app_target_sources + ext_target_sources + [
-        "App/Info.plist", "App/Assets.xcassets", "SafariExtension/Info.plist", "SafariExtension/Resources",
-        "START_HERE.md"])):
+for p in sorted(set(app_target_sources + ext_target_sources + ext_web_resources + [
+        "App/Info.plist", "App/Assets.xcassets", "SafariExtension/Info.plist", "START_HERE.md"])):
     if os.path.exists(os.path.join(ROOT, p)):
         file_refs[p] = (oid("ref", p), ftype(p))
 
@@ -105,7 +116,7 @@ def build_file(target, path):
 app_src_bf = [build_file(APP, p) for p in app_target_sources]
 ext_src_bf = [build_file(EXT, p) for p in ext_target_sources]
 app_res_bf = [build_file(APP, "App/Assets.xcassets")]
-ext_res_bf = [build_file(EXT, "SafariExtension/Resources")]
+ext_res_bf = [build_file(EXT, p) for p in ext_web_resources]
 embed_bf = oid("build", APP, "embed", EXT)
 add("PBXBuildFile", embed_bf, [("fileRef", ext_product), ("settings", "{ATTRIBUTES = (RemoveHeadersOnCopy, ); }")], EXT + ".appex")
 

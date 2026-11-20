@@ -136,6 +136,13 @@ def main():
                 errors.append("%s lacks %s" % (name, need))
         srcs = [p for p in targets[name]["buildPhases"] if objects[p]["isa"] == "PBXSourcesBuildPhase"][0]
         print("%-20s %2d source files" % (name, len(objects[srcs]["files"])))
+    # A folder literally named "Resources" copied into an iOS bundle breaks Info.plist lookup.
+    for o in objects.values():
+        if o.get("isa") == "PBXResourcesBuildPhase":
+            for bf in o.get("files", []):
+                ref = objects[objects[bf]["fileRef"]]
+                if ref.get("lastKnownFileType") == "folder" and ref.get("path") == "Resources":
+                    errors.append("a folder named Resources is copied into a bundle; copy its files instead")
     embed = [o for o in objects.values() if o.get("isa") == "PBXCopyFilesBuildPhase"]
     if not embed or embed[0].get("dstSubfolderSpec") != "13":
         errors.append("Safari extension is not embedded into the app (PlugIns)")
