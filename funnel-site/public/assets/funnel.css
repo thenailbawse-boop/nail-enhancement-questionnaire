@@ -328,3 +328,7 @@ details.more[open] summary::before{content:"–"}
 .signoff-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px}
 .signoff-row img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--pink)}
 .signoff-row .sig{font-size:1.7rem;margin:0}
+
+/* Appointment card graphic */
+.cardshot{margin:10px auto 6px;width:min(100%,330px);border-radius:22px;overflow:hidden;box-shadow:0 26px 44px -20px rgba(42,26,21,.55),0 0 0 6px var(--paper);transform:rotate(-1.5deg);animation:land .7s cubic-bezier(.2,1.3,.4,1)}
+.cardshot img{display:block;width:100%;height:auto;max-width:100%;-webkit-touch-callout:default}
