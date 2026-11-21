@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Onboarding Manager | The Nail Bawse</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3B2621">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="/webinar-assets/funnel.css">
+<style>
+.wrapx{max-width:560px;margin:0 auto;padding:22px max(16px,env(safe-area-inset-left,0px)) 60px max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rooms{display:flex;gap:8px;flex-wrap:wrap}
+.rooms label{display:flex;gap:6px;align-items:center;font-weight:700;font-size:.9rem;border:1.5px solid var(--espresso);border-radius:999px;padding:8px 12px;background:var(--paper)}
+.list{display:flex;flex-direction:column;gap:10px}
+.slot{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.slot b{font-size:.98rem}
+.slot small{color:var(--muted);font-size:.82rem;grid-column:1}
+.tag{font:800 .6rem var(--sans);letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:3px 8px;background:var(--tan);color:var(--muted);margin-left:6px}
+.tag.club{background:var(--blush);color:var(--rose)} .tag.shop{background:#E6EEF7;color:#2F4C6B}
+.slot.taken{border-color:var(--espresso);background:var(--blush)}
+.del{font:700 .78rem var(--sans);border:1.5px solid var(--rose);color:var(--rose);background:transparent;border-radius:999px;padding:6px 10px;cursor:pointer;grid-row:1/span 2;grid-column:2}
+.ok{color:var(--ok);font-weight:700}
+</style>
+</head>
+<body>
+<main class="wrapx">
+  <div class="brand"><span class="mono">NB</span><span>The Nail Bawse<small>Onboarding manager · private</small></span></div>
+  <h1 class="display">Your onboarding <em>times.</em></h1>
+  <p class="lead">Add the times you're open. Buyers see them on their booking page and pick one. <b>Keep this page's link private.</b></p>
+
+  <form id="add" novalidate>
+    <div class="form-head"><span class="label">Add an open time</span><span class="free">45 min</span></div>
+    <div class="row2">
+      <label class="field"><span>Date</span><input id="d" type="date" required></label>
+      <label class="field"><span>Time (Pacific)</span><input id="t" type="time" required step="900"></label>
+    </div>
+    <div class="rooms" role="group" aria-label="Who can book this time">
+      <label><input type="checkbox" id="rShop" checked> Shop buyers</label>
+      <label><input type="checkbox" id="rClub" checked> Club members</label>
+    </div>
+    <span class="err" id="addErr" role="alert"></span>
+    <button class="cta" type="submit" id="addBtn"><span>Add this time</span></button>
+    <p class="fine" id="addOk" aria-live="polite"></p>
+  </form>
+
+  <h2 class="display" style="font-size:1.8rem">Upcoming</h2>
+  <div class="list" id="list"><p class="lead">Loading…</p></div>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var K = location.pathname.split("/").filter(Boolean).pop();
+  function pt(iso) { var d = new Date(iso); return new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(d); }
+  function api(path, body) {
+    return fetch(path, { method: body ? "POST" : "GET", headers: body ? { "content-type": "application/json" } : {}, body: body ? JSON.stringify(Object.assign({ k: K }, body)) : undefined })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || "Something went wrong."); return j; }); });
+  }
+  function load() {
+    api("/api/onboarding/admin/list?k=" + encodeURIComponent(K)).then(function (d) {
+      var l = $("list"); l.textContent = "";
+      if (!d.slots.length) { l.innerHTML = '<p class="lead">No upcoming times yet. Add one above.</p>'; return; }
+      d.slots.forEach(function (s) {
+        var row = document.createElement("div"); row.className = "slot" + (s.booked_email ? " taken" : "");
+        var b = document.createElement("b"); b.textContent = pt(s.start_utc);
+        var tg = document.createElement("span"); tg.className = "tag " + s.room; tg.textContent = s.room === "club" ? "Club" : "Shop"; b.appendChild(tg);
+        var sm = document.createElement("small"); sm.textContent = s.booked_email ? "Booked by " + s.booked_name + " · " + s.booked_email : s.taken_elsewhere ? "Taken (booked by the other group at this time)" : "Open";
+        row.appendChild(b); row.appendChild(sm);
+        if (!s.booked_email && !s.taken_elsewhere) {
+          var x = document.createElement("button"); x.className = "del"; x.type = "button"; x.textContent = "Remove";
+          x.addEventListener("click", function () { x.disabled = true; api("/api/onboarding/admin/remove", { id: s.id }).then(load).catch(function (e) { alert(e.message); x.disabled = false; }); });
+          row.appendChild(x);
+        }
+        l.appendChild(row);
+      });
+    }).catch(function (e) { $("list").innerHTML = '<p class="lead">' + e.message + '</p>'; });
+  }
+  $("add").addEventListener("submit", function (e) {
+    e.preventDefault(); $("addErr").textContent = ""; $("addOk").textContent = "";
+    var rooms = []; if ($("rShop").checked) rooms.push("shop"); if ($("rClub").checked) rooms.push("club");
+    if (!$("d").value || !$("t").value) { $("addErr").textContent = "Pick a date and a time."; return; }
+    if (!rooms.length) { $("addErr").textContent = "Pick who can book this time."; return; }
+    $("addBtn").disabled = true;
+    api("/api/onboarding/admin/add", { date: $("d").value, time: $("t").value, rooms: rooms })
+      .then(function (r) { $("addOk").innerHTML = '<span class="ok">Added ✓</span> ' + pt(r.start_utc); load(); })
+      .catch(function (err) { $("addErr").textContent = err.message; })
+      .finally(function () { $("addBtn").disabled = false; });
+  });
+  load();
+})();
+</script>
+</body>
+</html>

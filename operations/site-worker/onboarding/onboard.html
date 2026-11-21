@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Schedule Your Onboarding | The Nail Bawse</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3B2621">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="/webinar-assets/funnel.css">
+<style>
+.days{display:flex;flex-direction:column;gap:14px}
+.day h3{font:800 .72rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.times{display:flex;flex-wrap:wrap;gap:8px}
+.times button{font:700 .95rem var(--sans);padding:11px 16px;border-radius:999px;border:1.5px solid var(--espresso);background:var(--paper);color:var(--espresso);cursor:pointer}
+.times button[aria-pressed="true"]{background:var(--espresso);color:var(--cream)}
+.chosen{background:var(--blush);border-radius:14px;padding:12px 14px;font-weight:700}
+.tzline{font-size:.82rem;color:var(--muted)}
+.booked{background:var(--paper);border:2px solid var(--espresso);border-radius:20px;padding:18px;box-shadow:10px 10px 0 var(--pink);display:flex;flex-direction:column;gap:10px}
+.booked .big{font:600 1.5rem/1.2 var(--serif)}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font:700 .82rem var(--sans);color:var(--espresso);text-decoration:none;border:1.5px solid var(--espresso);border-radius:999px;padding:9px 14px;background:var(--paper)}
+.wrapx{max-width:560px;margin:0 auto;padding:22px max(16px,env(safe-area-inset-left,0px)) 60px max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
+</style>
+</head>
+<body>
+<main class="wrapx">
+  <div class="brand"><span class="mono">NB</span><span>The Nail Bawse<small id="roomLabel">Live onboarding</small></span></div>
+  <p class="script">customers only</p>
+  <h1 class="display">Schedule your <em>live onboarding.</em></h1>
+  <p class="lead">A <b>45-minute live Q&amp;A on Zoom</b> with Anisia. Pick a time that works for you, add your name and email, and you're booked.</p>
+
+  <section id="pick" class="stack">
+    <p class="tzline" id="tzline"></p>
+    <div class="days" id="days"><p class="lead">Loading open times…</p></div>
+  </section>
+
+  <form id="bookForm" hidden novalidate>
+    <div class="form-head"><span class="label">Confirm your time</span><span class="free">45 min</span></div>
+    <p class="chosen" id="chosen"></p>
+    <label class="field"><span>First name</span><input id="name" autocomplete="given-name" required placeholder="Your first name"><span class="err" data-for="name"></span></label>
+    <label class="field"><span>Email (the one you paid with)</span><input id="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com"><span class="err" data-for="email"></span></label>
+    <span class="err" data-for="form" role="alert"></span>
+    <button class="cta" type="submit" id="bookBtn"><span id="bookText">Book my onboarding</span></button>
+  </form>
+
+  <section id="done" hidden class="stack">
+    <div class="booked">
+      <p class="label" style="color:var(--rose)">You're booked</p>
+      <p class="big" id="doneWhen"></p>
+      <p class="tzline" id="donePT"></p>
+      <a class="cta" id="zoomBtn" target="_blank" rel="noopener"><span>Open my Zoom room</span></a>
+      <div class="btnrow"><a class="pill" id="gcal" target="_blank" rel="noopener">Add to Google Calendar</a><a class="pill" id="ics">Apple / Outlook</a></div>
+    </div>
+    <p class="lead"><b>Save this page or screenshot it.</b> At your time, tap "Open my Zoom room". You'll wait in the waiting room until Anisia lets you in.</p>
+  </section>
+
+  <p class="fine">Need a different time? DM <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a> with the email you paid with.</p>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var K = location.pathname.split("/").filter(Boolean).pop();
+  var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+  var chosen = null;
+  function f(iso, zone, o) { return new Intl.DateTimeFormat("en-US", Object.assign({ timeZone: zone || undefined }, o)).format(new Date(iso)); }
+  function whenText(iso, zone) { return f(iso, zone, { weekday: "long", month: "long", day: "numeric" }) + " at " + f(iso, zone, { hour: "numeric", minute: "2-digit", timeZoneName: "short" }); }
+  $("tzline").textContent = tz ? "Times are shown in your time zone (" + tz.replace(/_/g, " ") + ")." : "";
+
+  fetch("/api/onboarding/slots?k=" + encodeURIComponent(K)).then(function (r) { return r.json(); }).then(function (d) {
+    if (d.label) $("roomLabel").textContent = d.label + " onboarding";
+    var days = $("days"); days.textContent = "";
+    if (!d.slots || !d.slots.length) {
+      var p = document.createElement("div"); p.className = "soon";
+      p.innerHTML = '<p class="script">new times coming soon</p><p>Anisia is adding new onboarding times. Check back soon, or DM <a href="https://www.instagram.com/thenailbawse/" target="_blank" rel="noopener">@thenailbawse</a>.</p>';
+      days.appendChild(p); return;
+    }
+    var groups = {};
+    d.slots.forEach(function (s) { var k = f(s.start, tz, { weekday: "long", month: "long", day: "numeric" }); (groups[k] = groups[k] || []).push(s); });
+    Object.keys(groups).forEach(function (k) {
+      var wrap = document.createElement("div"); wrap.className = "day";
+      var h = document.createElement("h3"); h.textContent = k; wrap.appendChild(h);
+      var t = document.createElement("div"); t.className = "times";
+      groups[k].forEach(function (s) {
+        var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-pressed", "false");
+        b.textContent = f(s.start, tz, { hour: "numeric", minute: "2-digit" });
+        b.addEventListener("click", function () {
+          document.querySelectorAll(".times button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+          chosen = s; $("chosen").textContent = whenText(s.start, tz); $("bookForm").hidden = false;
+          $("bookForm").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        t.appendChild(b);
+      });
+      wrap.appendChild(t); days.appendChild(wrap);
+    });
+  }).catch(function () { $("days").innerHTML = '<p class="lead">Couldn\'t load times. Refresh the page to try again.</p>'; });
+
+  $("bookForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    document.querySelectorAll(".err").forEach(function (x) { x.textContent = ""; });
+    var name = $("name").value.trim(), email = $("email").value.trim();
+    var bad = false;
+    if (!name) { document.querySelector('.err[data-for="name"]').textContent = "Please add your first name."; bad = true; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { document.querySelector('.err[data-for="email"]').textContent = "Please check your email address."; bad = true; }
+    if (bad || !chosen) return;
+    $("bookBtn").disabled = true; $("bookText").textContent = "Booking…";
+    fetch("/api/onboarding/book", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ k: K, id: chosen.id, name: name, email: email }) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) { document.querySelector('.err[data-for="form"]').textContent = res.j.error || "Something went wrong. Please try again."; return; }
+        var b = res.j, start = new Date(b.start), end = new Date(start.getTime() + 45 * 60000);
+        $("doneWhen").textContent = whenText(b.start, tz);
+        $("donePT").textContent = "That's " + whenText(b.start, "America/Los_Angeles") + " for Anisia.";
+        $("zoomBtn").href = b.zoom;
+        var z = function (d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); };
+        $("gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: "Live onboarding with Anisia (The Nail Bawse)", dates: z(start) + "/" + z(end), details: "Join on Zoom: " + b.zoom, location: b.zoom });
+        $("ics").href = "/api/onboarding/ics?k=" + encodeURIComponent(K) + "&id=" + b.id;
+        $("pick").hidden = true; $("bookForm").hidden = true; $("done").hidden = false; window.scrollTo(0, 0);
+      })
+      .catch(function () { document.querySelector('.err[data-for="form"]').textContent = "Couldn't reach the server. Check your connection and try again."; })
+      .finally(function () { $("bookBtn").disabled = false; $("bookText").textContent = "Book my onboarding"; });
+  });
+})();
+</script>
+</body>
+</html>
