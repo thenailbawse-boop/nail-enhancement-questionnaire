@@ -2,6 +2,7 @@
 _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
+- Nov 21: **Never Start Over (The AI Business Starter System)**: sales page live at thenailbawse.com/shop (shows "opens Nov 27", $97 Nov 27–30, $197 from Dec 1), private product page live and tested on iPhone size, welcome email + Dec 1 email saved as Brevo drafts. Paid content and setup steps are in the private Drive folder "Never Start Over (PRIVATE - do not share)", not in this repo. How it's built: `never-start-over/README.md`
 - Nov 20: **Elevate RTP talk submitted** by Anisia (results by Dec 21)
 - Nov 20: funnel rebuilt (v2) to match the 2 examples' craft, themed as her salon front desk; 16 tests pass, browser-checked
 - Rule: every webinar is called **Build Your AI Agent** (no branded phrase)
@@ -17,6 +18,7 @@ _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 - Social Club "No self-promotion" rule recorded so drafts never repeat the Oct 29 removal
 
 ## 👑 Pending your approval / decision (top first)
+0. **Never Start Over before Nov 26:** approve the product + emails; Claude in Chrome runs the private setup doc (Stripe product, code and 2 Payment Links, Cloudflare link variables, Brevo buyers list + automation draft, Zapier Zap, test purchase)
 1. ~~Funnel setup on Netlify~~ not needed: the page runs on your existing Cloudflare site
 2. **Klaviyo (you're leaving it):** export your contacts, turn off Auto-upgrade, downgrade to free before the next bill (~Nov 27)
 3. **Class page is live** at thenailbawse.com/webinar. Sign-ups are saved but no confirmation email goes out yet (the page shows the Zoom link + calendar instead). Say "send my sign-ups" anytime to get the list
