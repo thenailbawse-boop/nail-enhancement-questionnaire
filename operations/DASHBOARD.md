@@ -1,7 +1,9 @@
 # Operating dashboard: The Nail Bawse
-_Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
+_Updated Sat Nov 21, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
+- Nov 21: removed 5 personal email addresses from public repo files (opportunities.json, dashboard); older git history still has them
+- Nov 21: Brevo account validated (free plan)
 - Nov 21: Zoom = paid onboarding only (45-min live Q&A): club room 870 8458 9404 (pin in Skool), shop room 841 1824 1303 (on buyers' private page). Free class stays on Google Meet
 - Nov 21: next class **Tue Nov 24, 5 PM PT on Google Meet, 60 min**. Rule: a different day each week, set by Anisia (no repeating schedule)
 - Nov 20: **Elevate RTP talk submitted** by Anisia (results by Dec 21)
@@ -30,7 +32,7 @@ _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 |---|---|
 | Gmail | ✅ Working |
 | Google Calendar | ✅ Working (thenailbawse@gmail.com) |
-| Google Drive | ✅ Working, but signed in as asburroughs26@gmail.com (sees files shared from thenailbawse) |
+| Google Drive | ✅ Working, but signed in as a second personal Google account (sees files shared from thenailbawse) |
 | Zoom | ✅ Working (weekly meeting renamed "Build Your AI Agent \| The Nail Bawse™" on Nov 20; same join link) |
 | Wix | ✅ Working (4 sites, incl. "The Nail Bawse") |
 

@@ -1,5 +1,5 @@
 {
-  "note": "Speaking, workshop and collaboration contacts. Dedupe by org+email before any new outreach. Nothing is sent without Anisia's approval.",
+  "note": "Speaking, workshop and collaboration contacts. Dedupe by org+email before any new outreach. Nothing is sent without Anisia's approval. This repo is PUBLIC: never store personal email addresses or phone numbers here; business role addresses only.",
   "updated": "2026-11-20",
   "items": [
     {
@@ -40,7 +40,7 @@
     },
     {
       "org": "Nia Costello (guest educator)",
-      "contact": "niacostello@yahoo.com",
+      "contact": "personal email (in Gmail; search the name)",
       "status": "awaiting_reply",
       "last_outbound": "2026-11-09",
       "next": "No reply to the no-fee reciprocal offer. Don't chase more than once.",
@@ -141,13 +141,13 @@
     },
     {
       "org": "Jordyn (beautybyjrdyn)",
-      "contact": "beautybyjrdyn@gmail.com",
+      "contact": "personal email (in Gmail; search the name)",
       "status": "no_reply",
       "last_outbound": "2026-11-05"
     },
     {
       "org": "Academy of Beauty",
-      "contact": "timnguyen114@msn.com",
+      "contact": "personal email (in Gmail; search the name)",
       "status": "no_reply",
       "last_outbound": "2026-11-06"
     },
@@ -159,13 +159,13 @@
     },
     {
       "org": "Tappy Tips (bootcamp)",
-      "contact": "tappytipsnailbar@gmail.com",
+      "contact": "personal email (in Gmail; search the name)",
       "status": "no_reply",
       "last_outbound": "2026-11-06"
     },
     {
       "org": "The Nail Club (Tah)",
-      "contact": "tahbeauty@hotmail.com",
+      "contact": "personal email (in Gmail; search the name)",
       "status": "no_reply",
       "last_outbound": "2026-11-06"
     },

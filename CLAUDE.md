@@ -18,6 +18,8 @@ check this file first.
    links fully before designing; never copy other brands' text, images or exact designs.
 
 ## Where the links live
+- **This repo is PUBLIC.** Never write personal email addresses, phone numbers, sign-up lists, payment or
+  billing details into it (business role addresses like info@ are OK). Keep those in Gmail, D1 or Drive.
 - **This repo is PUBLIC.** Private links (Zoom onboarding rooms, passcodes) are stored ONLY in the private Cloudflare D1
   database `thenailbawse-official` DB (id 82c09758-…), table **`links`**:
   `club_onboarding_zoom`, `shop_onboarding_zoom`, `free_class_meet`, `skool_club`, `club_sales_page`, `class_signup_page`.
