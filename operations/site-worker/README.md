@@ -22,3 +22,10 @@ Rebuild after changing the page: `python3 build.py`, then redeploy both modules 
   (link, 60-min calendar slot). The one sign-up (id 3) was moved to the Tuesday Nov 24 session; no emails had gone out.
 - Note: `tnb-email-automation` has no `BREVO_API_KEY` secret yet, so it sends nothing until that's added.
 - The old Zoom series (Mondays) still exists in Zoom; not used by the site.
+
+## ⚠️ Nov 21, 2026: NO repeating schedule (Anisia's rule)
+Classes are weekly, but **on a different day each week, chosen by Anisia**. Never set a recurring day/time.
+- The Worker reads a plain list: `const SESS_LIST = [...]` (UTC ms) in worker.js. Add each new date when she gives it
+  (patch that one line on Cloudflare, keep all other modules/bindings). With no upcoming date, the page shows "next date drops soon".
+- Google Calendar: one single event per class (no recurrence), Meet link https://meet.google.com/nsq-ppfu-iqz.
+- Current list: Tue Nov 24, 2026 5:00–6:00 PM PT (1795568400000).
