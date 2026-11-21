@@ -8,8 +8,10 @@ communities:
     host: Tiffany Pellot
     priority: highest
     content_angle: "AI implementation; personalizing Tiffany's systems; meaningful wins; mentor credit"
-    suggested_category: "Wins + Results — verify current categories and posting rules before publishing"
-    moderation_rules: unverified_current
+    suggested_category: "Wins + Results — verify current categories before publishing"
+    moderation_rules: partially_verified
+    verified_rules:
+      - "Visual results are welcome, and Tiff asks members to add links so she can SEE the work (per Anisia, Nov 20, 2026). Links to Anisia's own pages and results are fine here, as proof of work, not a sales pitch."
     notes: "Past posts about Wix, AI Business Starter System, networking dashboard. Tiffany mentors user. User personalized Tiffany's ContentMadeEasy workflow for iPhone."
   - name: The Social Club
     url: https://www.skool.com/the-social-club-2696
@@ -48,8 +50,15 @@ communities:
   - name: Beauty Bawse Club
     url: https://www.skool.com/legacy-over-likes-2460/about
     role: owner
-    status: active_selling_page_in_progress
-    notes: "Confirmed by Anisia Nov 21, 2026: this is the Beauty Bawse Club join link (same Skool group URL as the old Legacy Over Likes entry). Members pay through Stripe ($37/mo, $97 first 3 months, $470/yr, $597 lifetime). Paid members get a 45-min live Q&A onboarding on Zoom; that link is pinned inside the club and stored privately in the D1 `links` table (club_onboarding_zoom). Never post it publicly."
+    status: building_now
+    managed_by_claude: true
+    priority: highest
+    notes: "Anisia's own community and main product. Confirmed by Anisia Nov 21, 2026: this URL is the Beauty Bawse Club join link (same Skool group as the old Legacy Over Likes entry). Members pay through Stripe ($37/mo, $97 first 3 months then $37/mo, $470/yr, $597 lifetime). Paid members get a 45-min live Q&A onboarding on Zoom; that link is pinned inside the club and stored privately in the D1 `links` table (club_onboarding_zoom). Never post it publicly."
+    skool_plan: "Hobby ($9/mo). No Pro features. Budget: free tools only."
+    automation:
+      zapier_skool_app: "NOT USABLE: Skool's Zapier plugin needs the $99 Pro plan. Dropped Nov 20."
+      free_path: "Gmail notifications -> daily digest with copy-paste welcomes/replies/posts; join link on her site and emails; pinned Start Here post + lesson."
+      rule: "Never browser-automate Skool or post/DM as her (Skool platform policy)."
   - name: The Bawse Club / The Bawse Collective
     url: null
     role: planned

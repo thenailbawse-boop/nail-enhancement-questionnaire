@@ -210,6 +210,20 @@
       "contact": "partnerships@theblackbeautyclub.com",
       "status": "bounced_address_not_found",
       "next": "Find a working contact before any resend"
+    },
+    {
+      "org": "Vicinity (Visceral Studio podcast)",
+      "contact": "vicinity@viscerastudio.com",
+      "status": "bounced_address_not_found",
+      "last_outbound": "2026-11-20",
+      "next": "Find a working contact before any resend"
+    },
+    {
+      "org": "OC Talk Radio (Paul Robert)",
+      "contact": "paul.robert@octalkradio.net",
+      "status": "bounced_address_not_found",
+      "last_outbound": "2026-11-20",
+      "next": "Find a working contact before any resend"
     }
   ]
 }

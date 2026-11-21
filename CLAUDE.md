@@ -4,6 +4,8 @@ Anisia has ADHD and reads on her phone. Keep replies short, plain and step by st
 check this file first.
 
 ## Her standing rules
+0. **Budget: free tools only.** She's on Skool's $9 Hobby plan (no Pro, no Skool Zapier plugin) and can't pay for other tools.
+   Check a feature works on a free plan before suggesting it.
 1. **The free class ("Build Your AI Agent") is weekly, but on a DIFFERENT day each week, chosen by Anisia.**
    Never set a repeating day/time. The site reads a list of dates (`SESS_LIST` in the thenailbawse-official Worker).
 2. **The free class is for anyone in beauty:** beauty pros, salon/suite owners, beauty creators, DIY beauty creators.

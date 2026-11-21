@@ -4,8 +4,8 @@
   "timezone": "America/Los_Angeles",
   "created_at": "2026-11-19",
   "canonical_state_branch": "claude/skool-setup-3dza76",
-  "last_successful_run_utc": "2026-11-19T17:16:06Z",
-  "last_successful_run_note": "First live Gmail read (from:skool.com, last 3 days) in the finish-setup session.",
+  "last_successful_run_utc": "2026-11-20T19:35:17Z",
+  "last_successful_run_note": "Daily run Nov 20 (fired 8:41 AM PT, ran late after a worker restart). Gmail read.",
   "runs": [
     {
       "at": "2026-11-19T17:10:00Z",
@@ -63,6 +63,17 @@
       ],
       "external_actions": "none (daily task prompt updated to add operations sweep)",
       "result": "operations/AUDIT-2026-11-19.md (17 findings), WEBINAR_WORKFLOW.md, DASHBOARD.md, opportunities.json (32), 3 drafts"
+    },
+    {
+      "at": "2026-11-20T19:35:17Z",
+      "kind": "daily (scheduled 08:41 PT, ran late after worker restart)",
+      "sources_read": [
+        "gmail from:skool.com after 2026-11-18 (2 new)",
+        "gmail ops sweep: bounces, tracked contacts, Klaviyo, Zoom, Wix forms",
+        "zoom: meeting 87084589404 occurrences (read-only)"
+      ],
+      "external_actions": "none",
+      "result": "1 draft (D-007); today's AI Automation Club Q&A flagged; 2 new pitch bounces; Zoom Dec 21/28 occurrences deleted (series intact)"
     }
   ],
   "sources": {
@@ -139,7 +150,9 @@
   "processed_source_ids": [
     "1a1ea5e2c04781a1",
     "1a1ef934ae34d0e7",
-    "1a1efd1753b60a27"
+    "1a1efd1753b60a27",
+    "1a1f5db57a85430d",
+    "1a1f51c12a70e624"
   ],
   "draft_queue": [
     {
@@ -238,17 +251,93 @@
       "publish_confirmation": null,
       "history": [],
       "note": "Email shows only the start of her comment. Read the full comment before replying and adjust if the rest asks a question."
+    },
+    {
+      "id": "D-006",
+      "dedupe_key": "ai automation club|progress update 2026-11-20|anisia burroughs|user-request-2026-11-20",
+      "created_at": "2026-11-20T15:54:02Z",
+      "community": "AI Automation Club",
+      "source_type": "user_request",
+      "kind": "post",
+      "source_ref": "Anisia's recap Nov 20 + verified repo work (Elevate submitted, thenailbawse.com/webinar live, connectors)",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "author": "Anisia Burroughs (own post)",
+      "conversation": "New post: progress update since last night's final session",
+      "snippet": "Her recap list",
+      "priority": 1,
+      "reply_status": "not_applicable",
+      "status": "published_confirmed",
+      "draft_text": "TIFF!! I \"COPIED THE RIGHT CAT\" AND MY WEBINAR PAGE IS LIVE 😭💗\n\nY'all, here's what I got done between last night's final work session and this morning's first one:\n\n✅ Moved my speaking engagement work from ChatGPT into Claude on my iPhone, revised my pitches, and submitted my first conference talk proposal\n✅ Finished my domain setup. Every link now lives under ONE address, thenailbawse.com, just like Tiff recommends\n✅ Revised my email marketing system to fit where my business actually is right now, instead of paying for more than I need\n✅ \"Copied the right cat\" 🐈 My webinar landing page and thank-you page are live on my own domain, and sign-ups save straight to my site\n✅ Connected Gmail, Calendar, Zoom and Wix to Claude, so my daily community and webinar check-ins run without me copying and pasting between apps\n\nSee it here 👉🏽 https://thenailbawse.com/webinar\n(Screenshots of the landing page, thank-you page and my appointment card graphic below 👇🏽)\n\nStill in progress: my two-step checkout form and my confirmation email. I'm not calling those done until I test them.\n\nBiggest lesson: one home base changes everything. When every link points to the same place, I stop rebuilding and start building.\n\nTiff keeps handing us the blueprint. I'm building it to fit my life.\n\nFor those of you already running webinars: what's the one thing in your confirmation email that actually gets people to show up live?",
+      "user_edit": null,
+      "publish_confirmation": {
+        "confirmed_by": "Anisia",
+        "at": "2026-11-20T16:12:31Z",
+        "note": "Anisia: posted D-006 (Nov 20) in AI Automation Club"
+      },
+      "history": [
+        {
+          "at": "2026-11-20T16:01:04Z",
+          "from": "queued_for_user",
+          "to": "queued_for_user",
+          "note": "Anisia: Tiff allows visual results and requests links. Added thenailbawse.com/webinar + screenshot line."
+        },
+        {
+          "at": "2026-11-20T16:12:31Z",
+          "from": "queued_for_user",
+          "to": "published_confirmed",
+          "note": "Anisia: posted D-006 (Nov 20) in AI Automation Club"
+        }
+      ],
+      "note": "Links + visuals added Nov 20: Tiff allows visual results and asks for links (Anisia)."
+    },
+    {
+      "id": "D-007",
+      "dedupe_key": "ai automation club|youtube video: how to turn your followers into clients with one link|tiffany pellot|1a1f5db57a85430d",
+      "created_at": "2026-11-20T19:35:17Z",
+      "community": "AI Automation Club",
+      "source_type": "gmail_skool_notification",
+      "source_ref": "gmail 1a1f5db57a85430d (Nov 19)",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "author": "Tiffany Pellot",
+      "conversation": "YOUTUBE VIDEO: How To Turn Your Followers Into Clients With One Link (Tiff's post)",
+      "snippet": "\"Make sure ALL your content points people to ONE…\" (email cuts off)",
+      "priority": 2,
+      "reply_status": "needs_verification",
+      "status": "queued_for_user",
+      "draft_text": "This landed right on time, Tiff! I just moved every link I have under thenailbawse.com this week, and it already feels easier to tell people exactly where to go. One link, one home base. Saving this one 💗",
+      "user_edit": null,
+      "publish_confirmation": null,
+      "history": [],
+      "note": "Optional comment on Tiff's post; ties to D-006. Video not watched."
     }
   ],
-  "publish_log": [],
-  "feedback_log": [],
+  "publish_log": [
+    {
+      "draft_id": "D-006",
+      "at": "2026-11-20T16:12:31Z",
+      "community": "AI Automation Club",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "text": "TIFF!! I \"COPIED THE RIGHT CAT\" AND MY WEBINAR PAGE IS LIVE 😭💗\n\nY'all, here's what I got done between last night's final work session and this morning's first one:\n\n✅ Moved my speaking engagement work from ChatGPT into Claude on my iPhone, revised my pitches, and submitted my first conference talk proposal\n✅ Finished my domain setup. Every link now lives under ONE address, thenailbawse.com, just like Tiff recommends\n✅ Revised my email marketing system to fit where my business actually is right now, instead of paying for more than I need\n✅ \"Copied the right cat\" 🐈 My webinar landing page and thank-you page are live on my own domain, and sign-ups save straight to my site\n✅ Connected Gmail, Calendar, Zoom and Wix to Claude, so my daily community and webinar check-ins run without me copying and pasting between apps\n\nSee it here 👉🏽 https://thenailbawse.com/webinar\n(Screenshots of the landing page, thank-you page and my appointment card graphic below 👇🏽)\n\nStill in progress: my two-step checkout form and my confirmation email. I'm not calling those done until I test them.\n\nBiggest lesson: one home base changes everything. When every link points to the same place, I stop rebuilding and start building.\n\nTiff keeps handing us the blueprint. I'm building it to fit my life.\n\nFor those of you already running webinars: what's the one thing in your confirmation email that actually gets people to show up live?",
+      "note": "Anisia: posted D-006 (Nov 20) in AI Automation Club"
+    }
+  ],
+  "feedback_log": [
+    {
+      "at": "2026-11-20T16:01:04Z",
+      "draft_id": "D-006",
+      "action": "correction",
+      "original": null,
+      "user_edit": null,
+      "note": "AI Automation Club: visual results allowed; Tiff requests links so she can see. Include links/visuals in AI Automation Club wins posts."
+    }
+  ],
   "post_ideas": [
     {
       "id": "P-001",
       "community": "AI Automation Club / The Social Club",
       "topic": "ContentMadeEasy follow-up once captioning + final delivery are verified",
       "status": "waiting_on_real_result",
-      "note": "Both original ContentMadeEasy posts already went out (see VOICE_GUIDE). Only propose a follow-up when there is a new, verified result. Do not repost."
+      "note": "Both original ContentMadeEasy posts already went out (see VOICE_GUIDE). Only propose a follow-up when there is a new, verified result. Do not repost. Nov 20: AI Automation Club progress update posted (D-006): domain, webinar page live, links + screenshots. Next update only with a new verified result (e.g. checkout form or confirmation email tested)."
     }
   ],
   "blockers": [
