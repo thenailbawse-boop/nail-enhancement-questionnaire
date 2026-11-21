@@ -37,3 +37,9 @@ Classes are weekly, but **on a different day each week, chosen by Anisia**. Neve
     This link was public on the site Nov 20–21, so the waiting room is the gate.
   - **/shop customers (Never Start Over):** Zoom 841 1824 1303. Shown only on the private hub page (NSO_KV `hub.html`, card id="onboarding", heading "Schedule your live onboarding with Anisia").
     Backup of the page before this edit: NSO_KV `hub.backup-2026-11-21.html`. If hub.html is rebuilt from its source, keep that card.
+
+## Onboarding booking pages (live Nov 21, 2026)
+- Module `onboarding.js` (built by `onboarding/build.py`, pages pinned at commit 5ca5dde). Routes `/onboarding/<code>` and `/api/onboarding/*`.
+- D1 table `onboarding_slots`. Codes live ONLY in D1 `links` (`onb_shop_token`, `onb_club_token`, `onb_admin_token`).
+- Anisia adds open times on her manager page (admin code). A time offered to both groups can only be booked once.
+- Shop hub card now has "Pick my onboarding time →". Backup before that edit: NSO_KV `hub.backup-2026-11-21b.html`.

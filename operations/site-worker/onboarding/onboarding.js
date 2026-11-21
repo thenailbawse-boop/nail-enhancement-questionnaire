@@ -1,12 +1,12 @@
 // The Nail Bawse paid onboarding scheduler (Zoom), served by the thenailbawse-official Worker. No outside tools.
 // Built by onboarding/build.py. Pages live in the repo at a pinned commit (onboarding/dist/), checked by SHA-256 and
-// kept in the NB_WEBINAR KV namespace. Private values (page codes, Zoom links) are read from D1 table `links`:
+// kept in the NB_WEBINAR KV namespace. Private values (page codes, Zoom links) are read from D1 table "links":
 //   onb_shop_token, onb_club_token, onb_admin_token, shop_onboarding_zoom, club_onboarding_zoom.  Never put them in this file.
 // Routes: /onboarding/<code>  (booking page for shop or club buyers, or the manager page for Anisia)
 //         /api/onboarding/slots | book | ics | admin/list | admin/add | admin/remove
 // Slots: D1 table onboarding_slots (one row per room per time). A time offered to both rooms can only be booked once.
 const MANIFEST = {"onboard":{"f":"onboard.html","s":"4d101547f0825e0e705688438d70fc15a7830123b676cf12be6d328878f76e42"},"manage":{"f":"manage.html","s":"36360940cdbc4350c0e71be9afd22a33f73ed0f88d84a4794925e15da5e2f459"}};
-const COMMIT = "PENDING";
+const COMMIT = "5ca5dde957b2c8ab12385cd86b137f4884f3ac9d";
 const SOURCES = ["https://cdn.jsdelivr.net/gh/thenailbawse-boop/nail-enhancement-questionnaire@" + COMMIT + "/operations/site-worker/onboarding/dist/",
                  "https://raw.githubusercontent.com/thenailbawse-boop/nail-enhancement-questionnaire/" + COMMIT + "/operations/site-worker/onboarding/dist/"];
 const DUR = 45 * 60000, TZ = "America/Los_Angeles";

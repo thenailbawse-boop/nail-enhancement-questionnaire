@@ -20,13 +20,16 @@ check this file first.
 ## Where the links live
 - **This repo is PUBLIC.** Private links (Zoom onboarding rooms, passcodes) are stored ONLY in the private Cloudflare D1
   database `thenailbawse-official` DB (id 82c09758-…), table **`links`**:
-  `club_onboarding_zoom`, `shop_onboarding_zoom`, `free_class_meet`, `skool_club`, `club_sales_page`, `class_signup_page`.
+  `club_onboarding_zoom`, `shop_onboarding_zoom`, `free_class_meet`, `skool_club`, `club_sales_page`, `class_signup_page`,
+  plus the private booking-page codes `onb_shop_token`, `onb_club_token`, `onb_admin_token` (never write them in this repo).
   Read it with the Cloudflare ("website") connector: `SELECT key, url, who_gets_it, note FROM links`.
 - Public links: free class sign-up https://thenailbawse.com/webinar · Skool club https://www.skool.com/legacy-over-likes-2460/about
   · club sales page (pending Stripe links) https://thenailbawse.com/community · free class room https://meet.google.com/nsq-ppfu-iqz
 - Zoom meeting IDs (no passcodes here): club onboarding 870 8458 9404 · shop onboarding 841 1824 1303.
 
 ## Where the work lives
+- Onboarding booking (her own, free): thenailbawse.com/onboarding/<code>. Shop code → /shop buyers (button on their access page),
+  club code → pin in Skool, admin code → Anisia's manager page to add open times. Code: `operations/site-worker/onboarding/`.
 - Website: Cloudflare Worker `thenailbawse-official` → `operations/site-worker/README.md`
 - Emails: Worker `tnb-email-automation` + Brevo (needs the `BREVO_API_KEY` secret)
 - Skool Manager: `skool-manager/` (its own chat: 🏫 SKOOL MANAGER)

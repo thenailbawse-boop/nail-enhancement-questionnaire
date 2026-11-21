@@ -1,6 +1,6 @@
 // The Nail Bawse paid onboarding scheduler (Zoom), served by the thenailbawse-official Worker. No outside tools.
 // Built by onboarding/build.py. Pages live in the repo at a pinned commit (onboarding/dist/), checked by SHA-256 and
-// kept in the NB_WEBINAR KV namespace. Private values (page codes, Zoom links) are read from D1 table `links`:
+// kept in the NB_WEBINAR KV namespace. Private values (page codes, Zoom links) are read from D1 table "links":
 //   onb_shop_token, onb_club_token, onb_admin_token, shop_onboarding_zoom, club_onboarding_zoom.  Never put them in this file.
 // Routes: /onboarding/<code>  (booking page for shop or club buyers, or the manager page for Anisia)
 //         /api/onboarding/slots | book | ics | admin/list | admin/add | admin/remove
