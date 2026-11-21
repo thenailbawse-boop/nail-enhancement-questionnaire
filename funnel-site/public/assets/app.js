@@ -88,7 +88,7 @@
     tick(); if (!timer) timer = setInterval(tick, 1000);
   }
 
-  setTicker(["Free live class", "Build Your AI Agent", "For beauty pros", "Live on Google Meet", "Bring your DMs"]);
+  setTicker(["Free live class", "Build Your AI Agent", "For anyone in beauty", "Live on Google Meet", "Bring your DMs"]);
 
   fetch("/api/events").then(function (r) { return r.json(); }).then(function (data) {
     events = (data && data.events) || [];
