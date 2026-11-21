@@ -48,6 +48,9 @@ PATCH = [
   ['Free Webinar: Booked, Burnt Out & Underpaid | The Nail Bawse', 'Free Class: Build Your AI Agent | The Nail Bawse', 1],
   ['Booked, Burnt Out &amp; Underpaid — free live', 'Build Your AI Agent — free live', 1],
   ['SUMMARY:Booked\\\\, Burnt Out & Underpaid — The Nail Bawse (free Zoom webinar)', 'SUMMARY:Build Your AI Agent — The Nail Bawse (free live class on Zoom)', 1],
+  # Never Start Over: /shop sales page, /shop/buy and the private product (module shop.js, built by never-start-over/build_shop.py)
+  ['import { funnel } from "./funnel.js";', 'import { funnel } from "./funnel.js";\nimport { shop } from "./shop.js";', 1],
+  ['    const fr = await funnel(', '    const sr = await shop(request, env, { key: key, path: path, page: page, html: html, respond: respond, SESSION_URL: SESSION_URL }); if (sr) return sr;\n    const fr = await funnel(', 1],
 ]
 src = open(os.path.join(here, 'worker.original.js')).read()
 for a, b, n in PATCH:

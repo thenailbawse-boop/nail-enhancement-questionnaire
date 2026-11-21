@@ -22,3 +22,6 @@ _old/
 # Local Netlify folder
 .netlify
 funnel-site/node_modules/
+
+# Paid product files (served from Cloudflare KV, backed up to Google Drive). Never commit: this repo is public.
+operations/never-start-over/private/
