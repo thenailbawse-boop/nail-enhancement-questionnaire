@@ -2,6 +2,7 @@
 _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
+- Nov 21: class moved to **Tuesdays 5 PM PT on Google Meet, 60 min** (website, calendar file, emails, Google Calendar event)
 - Nov 20: **Elevate RTP talk submitted** by Anisia (results by Dec 21)
 - Nov 20: funnel rebuilt (v2) to match the 2 examples' craft, themed as her salon front desk; 16 tests pass, browser-checked
 - Rule: every webinar is called **Build Your AI Agent** (no branded phrase)

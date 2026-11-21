@@ -4,7 +4,7 @@
 // Page files live in the repo at a pinned commit (dist/). The first request fetches each one, checks its
 // SHA-256 against MANIFEST, and keeps it in the NB_WEBINAR KV namespace; later requests are served from KV.
 const MANIFEST = {"index":{"f":"index.html","t":"text/html; charset=utf-8","s":"1b7a3b77cb11173887cc8bb18a48f798133e0e26d7a7c4944edcd839772ec491"},"thanks":{"f":"thanks.html","t":"text/html; charset=utf-8","s":"b05817b037587b1a8585893b5f0b948aaad2ace45dd646342301accffc785479"},"funnel.css":{"f":"funnel.css","t":"text/css; charset=utf-8","s":"76bbd3479a2fcf1fb942321f528076b594d4ea5f290e5c9d3d75aff210399fa2"},"app.js":{"f":"app.js","t":"text/javascript; charset=utf-8","s":"0e1f956c8ab65267560c34d6271f6f563913906b40952c76e5349eef70be8de5"},"card.js":{"f":"card.js","t":"text/javascript; charset=utf-8","s":"381d20f6ffe37b61faccd6995f920c76bfe9f4fdc0ed6ab47c10742e932c2ca9"}};
-const COMMIT = "PENDING";
+const COMMIT = "86205f9d5a85d31fb820e19d0e3794644474c468";
 const SOURCES = ["https://cdn.jsdelivr.net/gh/thenailbawse-boop/nail-enhancement-questionnaire@" + COMMIT + "/operations/site-worker/dist/",
                  "https://raw.githubusercontent.com/thenailbawse-boop/nail-enhancement-questionnaire/" + COMMIT + "/operations/site-worker/dist/"];
 const TITLE = "Build Your AI Agent";

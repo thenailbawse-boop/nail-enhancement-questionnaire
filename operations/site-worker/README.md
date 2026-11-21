@@ -13,3 +13,12 @@ Your domain is served by the Cloudflare Worker **thenailbawse-official** (D1 dat
   (confirmation, day-before, hour-before, opted-in follow-up). It needs the Worker secret `BREVO_API_KEY`. Don't add email sending to this Worker.
 
 Rebuild after changing the page: `python3 build.py`, then redeploy both modules (worker.js + funnel.js).
+
+## Nov 21, 2026: moved to Tuesdays on Google Meet
+- Class: **Tuesdays 5:00–6:00 PM PT** (45 min class + 15 min live Q&A) from Nov 24, 2026 through Mar 9, 2027; skips Dec 22 and Dec 29.
+- Room: **Google Meet https://meet.google.com/nsq-ppfu-iqz** (recurring event on thenailbawse@gmail.com's Google Calendar). The `ZOOM` constant
+  in both Workers now holds this Meet link (name kept to keep edits small). `DUR` = 60 min.
+- Updated live: `thenailbawse-official` (worker.js schedule/text, funnel.js pinned to commit 86205f9) and `tnb-email-automation`
+  (link, 60-min calendar slot). The one sign-up (id 3) was moved to the Tuesday Nov 24 session; no emails had gone out.
+- Note: `tnb-email-automation` has no `BREVO_API_KEY` secret yet, so it sends nothing until that's added.
+- The old Zoom series (Mondays) still exists in Zoom; not used by the site.
