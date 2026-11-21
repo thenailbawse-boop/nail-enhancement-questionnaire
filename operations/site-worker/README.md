@@ -29,3 +29,11 @@ Classes are weekly, but **on a different day each week, chosen by Anisia**. Neve
   (patch that one line on Cloudflare, keep all other modules/bindings). With no upcoming date, the page shows "next date drops soon".
 - Google Calendar: one single event per class (no recurrence), Meet link https://meet.google.com/nsq-ppfu-iqz.
 - Current list: Tue Nov 24, 2026 5:00–6:00 PM PT (1795568400000).
+
+## ⚠️ Nov 21, 2026: Zoom is for PAID buyers only (Anisia's rule)
+- Free class = **Google Meet** (meet.google.com/nsq-ppfu-iqz). Never put a Zoom link on a public page, email or the free-class flow.
+- Paid onboarding = **45-min live Q&A on Zoom**, two separate rooms (no fixed day; waiting room on):
+  - **Beauty Bawse Club members:** Zoom 870 8458 9404 (the old class link, renamed). Delivered only inside Skool (pinned post) and the club welcome email.
+    This link was public on the site Nov 20–21, so the waiting room is the gate.
+  - **/shop customers (Never Start Over):** Zoom 841 1824 1303. Shown only on the private hub page (NSO_KV `hub.html`, card id="onboarding").
+    Backup of the page before this edit: NSO_KV `hub.backup-2026-11-21.html`. If hub.html is rebuilt from its source, keep that card.

@@ -2,6 +2,7 @@
 _Updated Fri Nov 20, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
+- Nov 21: Zoom = paid onboarding only (45-min live Q&A): club room 870 8458 9404 (pin in Skool), shop room 841 1824 1303 (on buyers' private page). Free class stays on Google Meet
 - Nov 21: next class **Tue Nov 24, 5 PM PT on Google Meet, 60 min**. Rule: a different day each week, set by Anisia (no repeating schedule)
 - Nov 20: **Elevate RTP talk submitted** by Anisia (results by Dec 21)
 - Nov 20: funnel rebuilt (v2) to match the 2 examples' craft, themed as her salon front desk; 16 tests pass, browser-checked
