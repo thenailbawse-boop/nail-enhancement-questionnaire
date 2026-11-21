@@ -24,8 +24,8 @@ function asOf(url) {
   return isNaN(t) ? null : t;
 }
 function priceBlock(ph) {
-  if (ph === "soon") return '<div class="nso-price"><span class="nso-tag">Black Friday · Opens Fri, Nov 27 · 12 AM PT</span><p class="nso-amt"><s>$197</s>$97</p><span class="nso-btn is-off" aria-disabled="true">Doors open Friday</span><p class="nso-small">4 days only, Nov 27–30. Back to $197 December 1.</p></div>';
-  if (ph === "bf") return '<div class="nso-price"><span class="nso-tag">Black Friday · Ends Mon, Nov 30 · 11:59 PM PT</span><p class="nso-amt"><s>$197</s>$97</p><a class="nso-btn" href="/shop/buy">Get Never Start Over · $97</a><p class="nso-small">Instant access on your phone. Back to $197 December 1.</p></div>';
+  if (ph === "soon") return '<div class="nso-price"><span class="nso-tag"><span>Black Friday</span> · <span>Opens Fri, Nov 27</span> · <span>12 AM PT</span></span><p class="nso-amt"><s>$197</s>$97</p><span class="nso-btn is-off" aria-disabled="true">Doors open Friday</span><p class="nso-small">4 days only, Nov 27–30.<br>Back to $197 on December&nbsp;1.</p></div>';
+  if (ph === "bf") return '<div class="nso-price"><span class="nso-tag"><span>Black Friday</span> · <span>Ends Mon, Nov 30</span> · <span>11:59 PM PT</span></span><p class="nso-amt"><s>$197</s>$97</p><a class="nso-btn" href="/shop/buy">Get Never Start Over · $97</a><p class="nso-small">Instant access on your phone.<br>Back to $197 on December&nbsp;1.</p></div>';
   return '<div class="nso-price"><span class="nso-tag">Instant access</span><p class="nso-amt">$197</p><a class="nso-btn" href="/shop/buy">Get Never Start Over</a><p class="nso-small">Have a promo code? Add it at checkout.</p></div>';
 }
 function plain(status, text) { return new Response(text, { status: status, headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "no-store" } }); }
