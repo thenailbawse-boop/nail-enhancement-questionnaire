@@ -71,7 +71,7 @@
 
       // footer
       g.fillStyle = C.ink; g.font = "800 25px " + SANS;
-      caps(g, "LIVE ON ZOOM", X + P + 4, H - 56, 6); caps(g, "@THENAILBAWSE", -X - P - 4, H - 56, 6, "right");
+      caps(g, "LIVE ON GOOGLE MEET", X + P + 4, H - 56, 6); caps(g, "@THENAILBAWSE", -X - P - 4, H - 56, 6, "right");
 
       // stamp
       g.save(); g.translate(-X - P - 190, H - 200); g.rotate(-0.24); g.globalAlpha = .88;

@@ -67,11 +67,11 @@
     $("calDay").textContent = fmtParts(ev.startUtc, zone, { day: "numeric" });
     $("calWeekday").textContent = fmtParts(ev.startUtc, zone, { weekday: "long" });
     $("calTime").textContent = time(ev.startUtc, zone);
-    $("when").textContent = fmt(ev.startUtc, ev.tz, true) + " · " + (ev.durationMin || 45) + " min on Zoom";
+    $("when").textContent = fmt(ev.startUtc, ev.tz, true) + " · " + (ev.durationMin || 45) + " min on Google Meet";
     $("localwhen").textContent = mine && mine !== ev.tz ? "That's " + fmt(ev.startUtc, mine, true) + " where you are" : "";
     $("whenline").hidden = false;
     $("finalWhen").textContent = fmt(ev.startUtc, zone, true);
-    $("menuFoot").textContent = (ev.durationMin || 45) + " min · live on Zoom · bring your phone";
+    $("menuFoot").textContent = "45 min class + 15 min live Q&A · Google Meet";
     $("desc").textContent = ev.description || "";
     var zones = $("zones"); zones.textContent = "";
     [["America/Los_Angeles", "PT"], ["America/Denver", "MT"], ["America/Chicago", "CT"], ["America/New_York", "ET"]].forEach(function (z) {
@@ -82,13 +82,13 @@
       zones.appendChild(s);
     });
     $("final").hidden = false; $("clockbar").hidden = false;
-    setTicker(["Free live class", ev.title, fmtParts(ev.startUtc, ev.tz, { weekday: "short", month: "short", day: "numeric" }), time(ev.startUtc, ev.tz), "Live on Zoom", "Bring your DMs"]);
+    setTicker(["Free live class", ev.title, fmtParts(ev.startUtc, ev.tz, { weekday: "short", month: "short", day: "numeric" }), time(ev.startUtc, ev.tz), "Live on Google Meet", "Bring your DMs"]);
     document.title = ev.title + " | Free Live Class with The Nail Bawse";
     Array.prototype.forEach.call($("picker").children, function (b) { b.setAttribute("aria-pressed", String(b.dataset.id === ev.id)); });
     tick(); if (!timer) timer = setInterval(tick, 1000);
   }
 
-  setTicker(["Free live class", "Build Your AI Agent", "For beauty pros", "Live on Zoom", "Bring your DMs"]);
+  setTicker(["Free live class", "Build Your AI Agent", "For beauty pros", "Live on Google Meet", "Bring your DMs"]);
 
   fetch("/api/events").then(function (r) { return r.json(); }).then(function (data) {
     events = (data && data.events) || [];

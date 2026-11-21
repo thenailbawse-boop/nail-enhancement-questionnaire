@@ -24,7 +24,7 @@
     <div class="appt-row"><span>Date</span><b id="aDate"></b></div>
     <div class="appt-row"><span>Time</span><b id="aTime"></b></div>
     <div class="appt-row"><span>With</span><b>Anisia</b></div>
-    <div class="appt-foot"><span>Live on Zoom</span><span>@thenailbawse</span></div>
+    <div class="appt-foot"><span>Live on Google Meet</span><span>@thenailbawse</span></div>
     <div class="stamp" aria-hidden="true">Confirmed</div>
   </div>
   <button class="cta" type="button" id="story" hidden><span id="storyText">Download my card</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>
@@ -39,13 +39,13 @@
   <article class="step-card">
     <span class="step-n">01</span>
     <div><h3>Check your inbox</h3>
-    <p id="inbox">Your Zoom link and calendar invite are on the way. Not there in a few minutes? Check Promotions or Spam and move it to your inbox so your reminders land.</p></div>
+    <p id="inbox">Your Google Meet link and calendar invite are on the way. Not there in a few minutes? Check Promotions or Spam and move it to your inbox so your reminders land.</p></div>
   </article>
 
   <article class="step-card" id="calStep" hidden>
     <span class="step-n">02</span>
     <div><h3>Add it to your calendar</h3>
-    <p>So your Zoom link is right there when it's time.</p>
+    <p>So your Google Meet link is right there when it's time.</p>
     <div class="cal-btns"><a class="pill" id="gcal" target="_blank" rel="noopener">Google Calendar</a><a class="pill" id="ics">Apple / iPhone</a><a class="pill" id="ics2">Outlook</a></div></div>
   </article>
 
@@ -117,14 +117,14 @@
     $("appt").hidden = false; $("story").hidden = false; $("saveHint").hidden = false; $("tagline").hidden = false;
     ticker(["You're booked", ev.title, f({ weekday: "short", month: "short", day: "numeric" }), f({ hour: "numeric", minute: "2-digit", timeZoneName: "short" }), "Tag @thenailbawse"]);
     var z = function (d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); };
-    $("gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates: z(start) + "/" + z(end), details: "Your Zoom link is in your confirmation email.", location: "Online (Zoom)" });
+    $("gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates: z(start) + "/" + z(end), details: ev.joinUrl ? "Join on Google Meet: " + ev.joinUrl : "Your Google Meet link is in your confirmation email.", location: ev.joinUrl || "Online (Google Meet)" });
     $("ics").href = $("ics2").href = "/api/ics?id=" + encodeURIComponent(ev.id);
     $("calStep").hidden = false;
     if (ev.joinUrl) {
       var st = $("inbox").parentNode;
-      st.querySelector("h3").textContent = "Save your Zoom link";
+      st.querySelector("h3").textContent = "Save your Google Meet link";
       $("inbox").textContent = "This is your room for class. It's also in your calendar invite.";
-      var a = document.createElement("a"); a.className = "pill"; a.href = ev.joinUrl; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Open my Zoom link";
+      var a = document.createElement("a"); a.className = "pill"; a.href = ev.joinUrl; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Open my Google Meet link";
       var row = document.createElement("div"); row.className = "cal-btns"; row.appendChild(a); st.appendChild(row);
     }
   }).catch(function () { $("n3").textContent = "02"; });
