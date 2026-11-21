@@ -179,3 +179,9 @@ new `operations/AUDIT-<date>.md`, move resolved items on DASHBOARD.md, close B-0
 Change nothing in Klaviyo/Zoom/Wix without Anisia's explicit OK.
 Also in that session: submit the Elevate RTP talk (approved), and open all 4 funnel design references in
 `operations/funnel/REFERENCES.md` BEFORE touching the funnel design (her rule: look at every link first).
+
+## Beauty Bawse Club onboarding (Nov 21, 2026)
+- Anisia's own club: Beauty Bawse Club, https://www.skool.com/legacy-over-likes-2460/about (see COMMUNITIES.yaml).
+- Paid members get a **45-min live Q&A onboarding on Zoom** (meeting 870 8458 9404). Anisia pins the full link inside the club.
+  The full link is private: D1 table `links`, key `club_onboarding_zoom`. Never put it in digests, drafts or public posts.
+- Remind Anisia (once) if the onboarding link isn't pinned in the club yet. Free class stays on Google Meet; shop buyers have their own Zoom room.

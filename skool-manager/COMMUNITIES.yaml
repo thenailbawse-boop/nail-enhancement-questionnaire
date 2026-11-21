@@ -39,16 +39,17 @@ communities:
   - name: Legacy Over Likes
     url: https://www.skool.com/legacy-over-likes-2460
     role: owner
-    status: retired_do_not_promote
+    status: renamed_now_beauty_bawse_club
+    notes: "Same Skool group as Beauty Bawse Club (per Anisia, Nov 21, 2026). Promote it as Beauty Bawse Club."
   - name: The Nail Bawse Academy
     url: https://www.skool.com/the-nail-bawse-academy-6145
     role: owner
     status: inactive_do_not_promote
   - name: Beauty Bawse Club
-    url: null
-    role: creator_ecosystem
-    status: evolving_unverified_active_group
-    notes: "Do not conflate with Legacy Over Likes; verify exact live URL and status."
+    url: https://www.skool.com/legacy-over-likes-2460/about
+    role: owner
+    status: active_selling_page_in_progress
+    notes: "Confirmed by Anisia Nov 21, 2026: this is the Beauty Bawse Club join link (same Skool group URL as the old Legacy Over Likes entry). Members pay through Stripe ($37/mo, $97 first 3 months, $470/yr, $597 lifetime). Paid members get a 45-min live Q&A onboarding on Zoom; that link is pinned inside the club and stored privately in the D1 `links` table (club_onboarding_zoom). Never post it publicly."
   - name: The Bawse Club / The Bawse Collective
     url: null
     role: planned
