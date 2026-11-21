@@ -35,5 +35,5 @@ Classes are weekly, but **on a different day each week, chosen by Anisia**. Neve
 - Paid onboarding = **45-min live Q&A on Zoom**, two separate rooms (no fixed day; waiting room on):
   - **Beauty Bawse Club members:** Zoom 870 8458 9404 (the old class link, renamed). Delivered only inside Skool (pinned post) and the club welcome email.
     This link was public on the site Nov 20–21, so the waiting room is the gate.
-  - **/shop customers (Never Start Over):** Zoom 841 1824 1303. Shown only on the private hub page (NSO_KV `hub.html`, card id="onboarding").
+  - **/shop customers (Never Start Over):** Zoom 841 1824 1303. Shown only on the private hub page (NSO_KV `hub.html`, card id="onboarding", heading "Schedule your live onboarding with Anisia").
     Backup of the page before this edit: NSO_KV `hub.backup-2026-11-21.html`. If hub.html is rebuilt from its source, keep that card.
