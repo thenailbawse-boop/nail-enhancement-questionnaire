@@ -33,6 +33,7 @@ check this file first.
 - Onboarding booking (her own, free): thenailbawse.com/onboarding/<code>. Shop code → /shop buyers (button on their access page),
   club code → pin in Skool, admin code → Anisia's manager page to add open times. Code: `operations/site-worker/onboarding/`.
 - Website: Cloudflare Worker `thenailbawse-official` → `operations/site-worker/README.md`
-- Emails: Worker `tnb-email-automation` + Brevo (needs the `BREVO_API_KEY` secret)
+- Emails: Worker `tnb-email-automation` + Brevo free plan. CONNECTED Nov 22 2026 (secret BREVO_API_KEY set). Sender hello@send.thenailbawse.com
+  (domain send.thenailbawse.com authenticated), replies to hello@thenailbawse.com (forwards to her Gmail). Templates 1-3 say Google Meet; club = $37/month.
 - Skool Manager: `skool-manager/` (its own chat: 🏫 SKOOL MANAGER)
 - Dashboard of open items: `operations/DASHBOARD.md`
