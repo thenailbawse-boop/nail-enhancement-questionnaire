@@ -43,3 +43,8 @@ Classes are weekly, but **on a different day each week, chosen by Anisia**. Neve
 - D1 table `onboarding_slots`. Codes live ONLY in D1 `links` (`onb_shop_token`, `onb_club_token`, `onb_admin_token`).
 - Anisia adds open times on her manager page (admin code). A time offered to both groups can only be booked once.
 - Shop hub card now has "Pick my onboarding time →". Backup before that edit: NSO_KV `hub.backup-2026-11-21b.html`.
+
+## Free resources + digital business card (live Nov 22, 2026)
+- Ported from her Wix headless pages. Files: `pages/site/` (resources/*, card/*), module `pages.js` built by `pages/build.py <commit>`.
+- Routes come before worker.js's old /resources placeholder. Pinned commit 7b972b7. Headshot: card/anisia.jpg (from funnel-site/public/assets/anisia.jpg).
+- To change a page: edit pages/site/..., commit + push, run build.py with that commit, redeploy pages.js (same method as onboarding.js).
