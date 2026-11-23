@@ -4,8 +4,8 @@
   "timezone": "America/Los_Angeles",
   "created_at": "2026-11-19",
   "canonical_state_branch": "claude/skool-setup-3dza76",
-  "last_successful_run_utc": "2026-11-21T16:42:48Z",
-  "last_successful_run_note": "Daily run Nov 21 (8:41 AM PT). Gmail read.",
+  "last_successful_run_utc": "2026-11-23T00:43:51Z",
+  "last_successful_run_note": "Sun Nov 22 daily (ran late) + weekly review. Gmail and Calendar read.",
   "runs": [
     {
       "at": "2026-11-19T17:10:00Z",
@@ -84,6 +84,28 @@
       ],
       "external_actions": "none",
       "result": "2 drafts (D-008 Karen on her post, D-009 Tiff); redacted 5 personal emails from public repo files"
+    },
+    {
+      "at": "2026-11-23T00:43:51Z",
+      "kind": "daily (scheduled 08:41 PT Nov 22, ran late)",
+      "sources_read": [
+        "gmail from:skool.com after 2026-11-20 (3 new)",
+        "gmail ops sweep",
+        "google calendar Nov 22-30 (read-only)"
+      ],
+      "external_actions": "none",
+      "result": "D-010, D-011 queued; B-002/B-004 closed (connectors working)"
+    },
+    {
+      "at": "2026-11-23T00:43:51Z",
+      "kind": "weekly review (Sun Nov 22)",
+      "sources_read": [
+        "gmail from:skool.com after 2026-11-20 (3 new)",
+        "gmail ops sweep",
+        "google calendar Nov 22-30 (read-only)"
+      ],
+      "external_actions": "none",
+      "result": "D-010, D-011 queued; B-002/B-004 closed (connectors working)"
     }
   ],
   "sources": {
@@ -164,7 +186,10 @@
     "1a1f5db57a85430d",
     "1a1f51c12a70e624",
     "1a1fe863cfceee8a",
-    "1a1fb7e54304ceac"
+    "1a1fb7e54304ceac",
+    "1a2048451a0d73cd",
+    "1a20465cb44a66d6",
+    "1a2010e685125745"
   ],
   "draft_queue": [
     {
@@ -361,6 +386,46 @@
       "priority": 3,
       "draft_text": "Thank you for always making room for us, Tiff 💗",
       "note": "Event already happened. If you attended, add one thing you took from the workflow walkthrough. Otherwise this short thank-you is enough, or skip."
+    },
+    {
+      "id": "D-010",
+      "created_at": "2026-11-23T00:43:51Z",
+      "community": "The Social Club",
+      "source_type": "gmail_skool_notification",
+      "dedupe_key": "the social club|sharing my wins|jeliza nudo|1a20465cb44a66d6",
+      "source_ref": "gmail 1a20465cb44a66d6 (Nov 22)",
+      "source_url": "https://www.skool.com/the-social-club-2696",
+      "author": "Jeliza Nudo",
+      "conversation": "Comment on Anisia's own post: Sharing my Wins 💗",
+      "snippet": "\"That's what community is all about - growing together, sharing knowledge, and…\" (email cuts off)",
+      "priority": 1,
+      "reply_status": "needs_verification",
+      "status": "queued_for_user",
+      "draft_text": "Exactly, Jeliza! Growing together is the whole point. Thank you for showing up for me in the comments 💗",
+      "user_edit": null,
+      "publish_confirmation": null,
+      "history": [],
+      "note": "Read her full comment first. No links here (Social Club rule 2)."
+    },
+    {
+      "id": "D-011",
+      "created_at": "2026-11-23T00:43:51Z",
+      "community": "AI Automation Club",
+      "source_type": "gmail_skool_notification",
+      "dedupe_key": "ai automation club|5 minute upgrade: check your speaking engagements|tiffany pellot|1a2010e685125745",
+      "source_ref": "gmail 1a2010e685125745 (Nov 22)",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "author": "Tiffany Pellot",
+      "conversation": "Tiff's post: ⭐5 MINUTE UPGRADE: Check Your Speaking Engagements",
+      "snippet": "\"You don't need more pitches. You need more of what's working.\"",
+      "priority": 2,
+      "reply_status": "not_applicable",
+      "status": "queued_for_user",
+      "draft_text": "Did this check on mine 👀 About 30 pitches in the last few weeks. The real conversations came from groups with an open speaker application, plus people I already knew. My cold \"let me teach your members\" emails to individual educators and salon suites? About 20 sent, zero real replies, and 5 more bounced. So I'm sending fewer of those and putting that energy into applications and warm intros. Thank you for this one, Tiff 💗",
+      "user_edit": null,
+      "publish_confirmation": null,
+      "history": [],
+      "note": "Numbers from operations/opportunities.json (Nov 22). No organizations named."
     }
   ],
   "publish_log": [
@@ -409,8 +474,10 @@
       "opened": "2026-11-19",
       "what": "Google Calendar sign-in expired (optional; used for class times).",
       "fix": "Reconnect Google Calendar on the same connectors page.",
-      "status": "open",
-      "asked_user": "2026-11-19"
+      "status": "closed",
+      "asked_user": "2026-11-19",
+      "closed": "2026-11-23T00:43:51Z",
+      "resolution": "Gmail, Calendar, Zoom, Wix and Drive connected (verified Nov 20-22); Klaviyo retired by Anisia."
     },
     {
       "id": "B-003",
@@ -427,8 +494,10 @@
       "opened": "2026-11-19",
       "what": "Klaviyo, Zoom and Wix connectors not installed; Drive/Calendar sign-in expired. Flows (RqqwPF, old event flows), list WhYD4m wiring, Zoom plan and attendance can't be audited.",
       "fix": "Anisia: claude.ai/customize/connectors → connect Klaviyo, Zoom for Claude, Wix; reconnect Google Drive + Calendar. Then start a new session and say 'finish ops setup'.",
-      "status": "open",
-      "asked_user": "2026-11-19"
+      "status": "closed",
+      "asked_user": "2026-11-19",
+      "closed": "2026-11-23T00:43:51Z",
+      "resolution": "Gmail, Calendar, Zoom, Wix and Drive connected (verified Nov 20-22); Klaviyo retired by Anisia."
     }
   ],
   "previous_state_branches": [

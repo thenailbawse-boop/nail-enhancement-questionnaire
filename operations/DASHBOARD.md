@@ -1,5 +1,5 @@
 # Operating dashboard: The Nail Bawse
-_Updated Sat Nov 21, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
+_Updated Sun Nov 22, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
 - Nov 21: removed 5 personal email addresses from public repo files (opportunities.json, dashboard); older git history still has them
