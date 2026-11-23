@@ -1,5 +1,5 @@
 # Operating dashboard: The Nail Bawse
-_Updated Sun Nov 22, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
+_Updated Mon Nov 23, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
 - Nov 21: removed 5 personal email addresses from public repo files (opportunities.json, dashboard); older git history still has them
@@ -45,4 +45,4 @@ All connected. Manage them at claude.ai/customize/connectors.
 - Klaviyo paid plan + Auto-upgrade still on until you change them; next charge is likely around Nov 27
 - Old Klaviyo contacts: export them before downgrading, then send me the CSV and I'll add an import to the funnel
 - Zoom: confirm your plan (free meetings stop at 40 min; the funnel defaults to 40)
-- 5 bounced pitch addresses need correct contacts before any resend (new Nov 20: Vicinity podcast, OC Talk Radio)
+- 7 bounced pitch addresses need correct contacts before any resend (new Nov 23: Santiago Canyon College, Chaffey WTI)

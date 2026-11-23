@@ -4,8 +4,8 @@
   "timezone": "America/Los_Angeles",
   "created_at": "2026-11-19",
   "canonical_state_branch": "claude/skool-setup-3dza76",
-  "last_successful_run_utc": "2026-11-23T00:43:51Z",
-  "last_successful_run_note": "Sun Nov 22 daily (ran late) + weekly review. Gmail and Calendar read.",
+  "last_successful_run_utc": "2026-11-23T16:42:16Z",
+  "last_successful_run_note": "Mon Nov 23 daily. Gmail read; no new Skool notifications.",
   "runs": [
     {
       "at": "2026-11-19T17:10:00Z",
@@ -106,6 +106,16 @@
       ],
       "external_actions": "none",
       "result": "D-010, D-011 queued; B-002/B-004 closed (connectors working)"
+    },
+    {
+      "at": "2026-11-23T16:42:16Z",
+      "kind": "daily (scheduled 08:41 PT)",
+      "sources_read": [
+        "gmail from:skool.com after 2026-11-22 (0 new)",
+        "gmail ops sweep (2 bounces; ~45 outreach emails sent Nov 22-23 from another chat)"
+      ],
+      "external_actions": "none",
+      "result": "no new drafts; 2 bounces logged"
     }
   ],
   "sources": {

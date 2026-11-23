@@ -1,6 +1,6 @@
 {
   "note": "Speaking, workshop and collaboration contacts. Dedupe by org+email before any new outreach. Nothing is sent without Anisia's approval. This repo is PUBLIC: never store personal email addresses or phone numbers here; business role addresses only.",
-  "updated": "2026-11-20",
+  "updated": "2026-11-23",
   "items": [
     {
       "org": "Elevate RTP 2027",
@@ -223,6 +223,20 @@
       "contact": "paul.robert@octalkradio.net",
       "status": "bounced_address_not_found",
       "last_outbound": "2026-11-20",
+      "next": "Find a working contact before any resend"
+    },
+    {
+      "org": "Santiago Canyon College (workshop idea)",
+      "contact": "staff address (in Gmail sent mail)",
+      "status": "bounced_address_not_found",
+      "last_outbound": "2026-11-23",
+      "next": "Find a working contact before any resend"
+    },
+    {
+      "org": "Chaffey College Workforce Training Institute (workshop idea)",
+      "contact": "staff address (in Gmail sent mail)",
+      "status": "bounced_address_not_found",
+      "last_outbound": "2026-11-23",
       "next": "Find a working contact before any resend"
     }
   ]
