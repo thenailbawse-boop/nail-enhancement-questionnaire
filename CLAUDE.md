@@ -34,7 +34,9 @@ check this file first.
   club code → pin in Skool, admin code → Anisia's manager page to add open times. Code: `operations/site-worker/onboarding/`.
 - Free resources page thenailbawse.com/resources (+ /resources/learn, /free, /sessions) and digital business card
   thenailbawse.com/card: ported from her Wix pages, files in `operations/site-worker/pages/site/`, served by module pages.js
-  (edit files, commit, `python3 build.py <commit>`, redeploy). Contact email on them: hello@thenailbawse.com.
+  Restyled Nov 24 to MATCH the main site: /resources pages are body fragments wrapped in worker.js page() (same header/footer/CSS);
+  /card is standalone with the NB mark + main-site tokens. Edit `pages/gen.py` (source = `pages/wix-src/`), run it, commit,
+  `python3 build.py <commit>`, redeploy pages.js. Worker var CONTACT_EMAIL = hello@thenailbawse.com (fixes site Email links).
 - Website: Cloudflare Worker `thenailbawse-official` → `operations/site-worker/README.md`
 - Emails: Worker `tnb-email-automation` + Brevo free plan. CONNECTED Nov 22 2026 (secret BREVO_API_KEY set). Sender hello@send.thenailbawse.com
   (domain send.thenailbawse.com authenticated), replies to hello@thenailbawse.com (forwards to her Gmail). Templates 1-3 say Google Meet; club = $37/month.
