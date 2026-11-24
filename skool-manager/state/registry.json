@@ -4,7 +4,7 @@
   "timezone": "America/Los_Angeles",
   "created_at": "2026-11-19",
   "canonical_state_branch": "claude/skool-setup-3dza76",
-  "last_successful_run_utc": "2026-11-23T16:42:16Z",
+  "last_successful_run_utc": "2026-11-24T16:45:00Z",
   "last_successful_run_note": "Mon Nov 23 daily. Gmail read; no new Skool notifications.",
   "runs": [
     {
@@ -116,6 +116,16 @@
       ],
       "external_actions": "none",
       "result": "no new drafts; 2 bounces logged"
+    },
+    {
+      "at": "2026-11-24T16:45:00Z",
+      "kind": "daily (scheduled 08:41 PT)",
+      "sources_read": [
+        "gmail from:skool.com after 2026-11-22 (5 new: Social Club moderation notice, Tiff post, 2 digests, event reminder)",
+        "gmail ops sweep (Klaviyo renews Nov 27; 2 new bounces; OPB declined; 4 auto-replies)"
+      ],
+      "external_actions": "none",
+      "result": "no new reply drafts; Social Club removed her recap post (rule 2); D-013 flagged"
     }
   ],
   "sources": {
@@ -199,7 +209,12 @@
     "1a1fb7e54304ceac",
     "1a2048451a0d73cd",
     "1a20465cb44a66d6",
-    "1a2010e685125745"
+    "1a2010e685125745",
+    "1a20d92b7724b50f",
+    "1a20e3b6f87f6292",
+    "1a20dd251cb77cb9",
+    "1a20ad611afd9920",
+    "1a20abafde26acac"
   ],
   "draft_queue": [
     {
@@ -484,7 +499,7 @@
       "source_ref": "user request Nov 24 + Gmail invitations",
       "conversation": "New post: BIG WINS, two remote speaking engagements",
       "draft_text": "BIG WIN: I got booked for TWO speaking engagements this week 😭💗 (both remote!)\n\nY'all, I had to come share this with my Social Club family.\n\nTwo yeses this week: a podcast conversation and a radio interview, both about how beauty pros can use AI without losing their judgment or their voice.\n\nA few weeks ago I was sending the same pitch everywhere and hearing nothing. What finally worked was getting specific: I listened to what each show had already talked about, then offered one real client question I'd break down for their audience.\n\nThank you for cheering me on in here while I figured this out. Still pinching myself!\n\nWhat's a win you're celebrating this week? Drop it below so I can celebrate you too 💗",
-      "note": "No links or invites (Social Club rule 2: no self-promotion). Suggested category: BIG WINS IN THE CLUB."
+      "note": "No links or invites (Social Club rule 2: no self-promotion). Suggested category: BIG WINS IN THE CLUB. | Nov 24: The Social Club admin removed her \"Since September\" recap post (rule 2, no self-promotion). Keep D-013 link-free and product-free; consider waiting a few days before posting another personal-win post there."
     }
   ],
   "publish_log": [

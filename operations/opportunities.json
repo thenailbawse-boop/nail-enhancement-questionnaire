@@ -273,6 +273,76 @@
       "status": "declined_not_a_fit",
       "last_inbound": "2026-11-23",
       "next": "Tip from them: try colleges with cosmetology programs, workforce boards, supply companies."
+    },
+    {
+      "org": "YWCA Greater LA (Economic Empowerment)",
+      "contact": "program inbox",
+      "status": "bounced_address_not_found",
+      "last_inbound": "2026-11-24",
+      "deadline": null,
+      "next": "find a working program contact before any resend",
+      "owner": "Claude",
+      "submitted": "2026-11-23"
+    },
+    {
+      "org": "Antelope Valley College (workshop idea)",
+      "contact": "college inbox",
+      "status": "bounced_address_not_found",
+      "last_inbound": "2026-11-23",
+      "deadline": null,
+      "next": "find a working contact before any resend",
+      "owner": "Claude",
+      "submitted": "2026-11-23"
+    },
+    {
+      "org": "OPB Think Out Loud",
+      "contact": "Sheraz (producer)",
+      "status": "declined_not_in_region",
+      "last_inbound": "2026-11-23",
+      "deadline": null,
+      "next": "none: they only book Oregon/SW Washington guests",
+      "owner": "-",
+      "submitted": "2026-11-21"
+    },
+    {
+      "org": "Clearview Library District (program request)",
+      "contact": "programming team",
+      "status": "request_received",
+      "last_inbound": "2026-11-23",
+      "deadline": null,
+      "next": "wait for their programming team",
+      "owner": "them",
+      "submitted": "2026-11-23"
+    },
+    {
+      "org": "Tower 28 (paid UGC)",
+      "contact": "partnerships team",
+      "status": "auto_reply_only",
+      "last_inbound": "2026-11-23",
+      "deadline": null,
+      "next": "wait; they reply only if interested",
+      "owner": "them",
+      "submitted": "2026-11-23"
+    },
+    {
+      "org": "cocokind (paid UGC)",
+      "contact": "influencer team",
+      "status": "auto_reply_only",
+      "last_inbound": "2026-11-23",
+      "deadline": null,
+      "next": "wait; forwarded to their team",
+      "owner": "them",
+      "submitted": "2026-11-23"
+    },
+    {
+      "org": "It's Your Break (podcast)",
+      "contact": "interview requests",
+      "status": "auto_reply_only",
+      "last_inbound": "2026-11-22",
+      "deadline": null,
+      "next": "wait; high volume of submissions",
+      "owner": "them",
+      "submitted": "2026-11-22"
     }
   ]
 }
