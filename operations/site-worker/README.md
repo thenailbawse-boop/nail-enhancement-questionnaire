@@ -48,3 +48,7 @@ Classes are weekly, but **on a different day each week, chosen by Anisia**. Neve
 - Ported from her Wix headless pages. Files: `pages/site/` (resources/*, card/*), module `pages.js` built by `pages/build.py <commit>`.
 - Routes come before worker.js's old /resources placeholder. Pinned commit 7b972b7. Headshot: card/anisia.jpg (from funnel-site/public/assets/anisia.jpg).
 - To change a page: edit pages/site/..., commit + push, run build.py with that commit, redeploy pages.js (same method as onboarding.js).
+
+## /today (Nov 24, 2026)
+- worker.js route `/today` → Whop $97 Never Start Over checkout (plan_Sml43bcCUIPzW, the link first made for Tiff) until
+  Nov 24 11:59 PM PT, then redirects to /shop. Safe to delete the route after that date.
