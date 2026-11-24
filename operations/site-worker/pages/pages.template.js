@@ -1,6 +1,7 @@
 // The Nail Bawse: free resources pages (/resources...) and digital business card (/card...), served by thenailbawse-official.
 // Built by pages/build.py. Files live in the repo at a pinned commit (operations/site-worker/pages/site/), are checked by
-// SHA-256 and kept in the NB_WEBINAR KV namespace.
+// SHA-256 and kept in the NB_WEBINAR KV namespace. /resources files are body fragments (first line <!--page {title,desc}-->)
+// wrapped in the main site's header/footer/styles by worker.js page(); the /card files are standalone pages.
 const MANIFEST = __MANIFEST__;
 const COMMIT = "__COMMIT__";
 const SOURCES = ["https://cdn.jsdelivr.net/gh/thenailbawse-boop/nail-enhancement-questionnaire@" + COMMIT + "/operations/site-worker/pages/site/",
@@ -18,5 +19,10 @@ export async function pages(request, env, h) {
   }
   if (body === null) return new Response("This page is updating. Please refresh in a minute.", { status: 503, headers: { "content-type": "text/plain; charset=utf-8" } });
   const isHtml = m.t.indexOf("text/html") === 0;
+  if (isHtml && h.page && h.html) {
+    const text = new TextDecoder().decode(body);
+    const mm = /^<!--page (\{.*?\})-->\n/.exec(text);
+    if (mm) { const meta = JSON.parse(mm[1]); return h.html(h.page(meta.title, meta.desc, h.key, text.slice(mm[0].length)), 200, env); }
+  }
   return new Response(request.method === "HEAD" ? null : body, { headers: { "content-type": m.t, "cache-control": isHtml ? "public, max-age=300" : "public, max-age=86400", "x-content-type-options": "nosniff" } });
 }
