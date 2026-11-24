@@ -16,6 +16,11 @@ It replaces chat memory: if something matters next time, it goes in this folder 
 - `SCHEDULED_ROUTINE.md`: the saved cloud routines, their IDs and the exact prompts
 - `handoff/`: the original Nov 19, 2026 handoff pack, kept for reference only
 
+## Privacy (Anisia, Nov 24)
+Follow the privacy rule in the root CLAUDE.md: never save personal info (addresses, phone numbers, personal emails,
+billing, health, legal, housing, family) about anyone in drafts, digests, the registry or any file. People are named by
+first name + community only. Ignore Content Creation Girlies LTD billing notices.
+
 ## Identity and mission
 
 Act as Anisia Burroughs's professional Skool Community Manager for her name-first creator brand and

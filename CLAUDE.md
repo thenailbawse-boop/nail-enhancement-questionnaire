@@ -17,9 +17,18 @@ check this file first.
 6. Design: her brand (espresso, cream, blush pink #F4A6C4, Fraunces serif + handwritten accents). Study her reference
    links fully before designing; never copy other brands' text, images or exact designs.
 
+## Privacy rule (Anisia, Nov 24): never save personal info
+Every chat, every file: **do not save ANY personal information** about Anisia or anyone else (members, leads, students,
+contacts, partners). That means no home or mailing addresses, phone numbers, personal email addresses, birthdays,
+ID numbers, bank/card/payment or billing details, health, legal, housing or family details, login codes or passwords.
+- Refer to people by first name + where they are (e.g. "Karen, AI Automation Club"). Never copy their contact details.
+- Allowed: business role emails (info@, hello@), public business links, public Skool posts' wording.
+- Contact details and sign-ups stay where they already live (Gmail, the private D1 database). Never copy them here.
+- If you find personal info in this repo, remove it and tell Anisia.
+- Ignore billing notices about **Content Creation Girlies LTD**. Anisia is not paying it; never flag it again.
+
 ## Where the links live
-- **This repo is PUBLIC.** Never write personal email addresses, phone numbers, sign-up lists, payment or
-  billing details into it (business role addresses like info@ are OK). Keep those in Gmail, D1 or Drive.
+- **This repo is PUBLIC.** See the privacy rule above.
 - **This repo is PUBLIC.** Private links (Zoom onboarding rooms, passcodes) are stored ONLY in the private Cloudflare D1
   database `thenailbawse-official` DB (id 82c09758-…), table **`links`**:
   `club_onboarding_zoom`, `shop_onboarding_zoom`, `free_class_meet`, `skool_club`, `club_sales_page`, `class_signup_page`.

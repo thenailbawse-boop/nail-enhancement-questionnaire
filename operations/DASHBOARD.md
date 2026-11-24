@@ -2,6 +2,7 @@
 _Updated Mon Nov 23, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
+- Nov 24: privacy rule added for every chat (no personal info saved anywhere); repo scan found none left
 - Nov 21: removed 5 personal email addresses from public repo files (opportunities.json, dashboard); older git history still has them
 - Nov 21: Brevo account validated (free plan)
 - Nov 21: Zoom = paid onboarding only (45-min live Q&A): club room 870 8458 9404 (pin in Skool), shop room 841 1824 1303 (on buyers' private page). Free class stays on Google Meet
@@ -22,7 +23,7 @@ _Updated Mon Nov 23, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 
 ## 👑 Pending your approval / decision (top first)
 1. ~~Funnel setup on Netlify~~ not needed: the page runs on your existing Cloudflare site
-2. **Klaviyo (you're leaving it):** export your contacts, turn off Auto-upgrade, downgrade to free before the next bill (~Nov 27)
+2. **Klaviyo: cancel/downgrade in the Klaviyo website before ~Nov 27** (the connector can't change billing; requested Nov 24)
 3. **Class page is live** at thenailbawse.com/webinar. Sign-ups are saved but no confirmation email goes out yet (the page shows the Zoom link + calendar instead). Say "send my sign-ups" anytime to get the list
 4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
