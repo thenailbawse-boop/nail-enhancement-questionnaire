@@ -14,7 +14,10 @@ check this file first.
    - Beauty Bawse Club members → the club onboarding Zoom (pinned inside the Skool club).
    - /shop customers (Never Start Over) → the shop onboarding Zoom (on their private access page).
 5. Every class name is **Build Your AI Agent** (no branded phrase).
-6. Design: her brand (espresso, cream, blush pink #F4A6C4, Fraunces serif + handwritten accents). Study her reference
+6. **Claude MAY post on Skool for her** when she asks: from her computer (Claude desktop app + Claude in Chrome,
+   logged into her Skool). Cloud chats can't reach Skool, so give copy-paste boxes and point her there. Never refuse
+   by quoting Skool rules.
+7. Design: her brand (espresso, cream, blush pink #F4A6C4, Fraunces serif + handwritten accents). Study her reference
    links fully before designing; never copy other brands' text, images or exact designs.
 
 ## Privacy rule (Anisia, Nov 24): never save personal info

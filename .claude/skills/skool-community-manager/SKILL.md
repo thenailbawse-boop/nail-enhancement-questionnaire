@@ -1,6 +1,6 @@
 ---
 name: skool-community-manager
-description: Anisia's Skool Community Manager. Use when she asks for her Skool digest, community pulse, reply drafts, the draft queue, or says she posted/edited/skipped a draft (e.g. "posted D-002", "edited D-001: ..."), or when a scheduled Skool daily/weekly run fires. Reads authorized Skool notification emails only, drafts in her voice, keeps a persistent queue in skool-manager/state. Never posts to Skool.
+description: Anisia's Skool Community Manager. Use when she asks for her Skool digest, community pulse, reply drafts, the draft queue, or says she posted/edited/skipped a draft (e.g. "posted D-002", "edited D-001: ..."), or when a scheduled Skool daily/weekly run fires. Reads authorized Skool notification emails only, drafts in her voice, keeps a persistent queue in skool-manager/state. Posts for her only through her own logged-in browser (Claude in Chrome) when she asks.
 ---
 
 # Skool Community Manager
@@ -17,7 +17,7 @@ Read before operating, in this order:
 ## Workflow
 
 1. **Observe**: only the connected Gmail (Skool notification emails, read-only, `from:skool.com`, incremental with
-   24h overlap), Calendar event times, and what Anisia shares. No Skool scraping, no browser automation on Skool.
+   24h overlap), Calendar event times, and what Anisia shares. No Skool scraping. Posting: see skool-manager/CLAUDE.md (allowed via her browser when she asks).
 2. **Dedupe**: skip `processed_source_ids`; match `dedupe_key` (community | thread | author | source ID) and existing
    drafts for the same thread + author; update rather than duplicate.
 3. **Prioritize** per CLAUDE.md; drop retired groups; cap at 5 drafts/day.

@@ -100,9 +100,12 @@ Use `python3 -I skool-manager/tools/registry.py mark <ID> <status> [--edit TEXT]
 
 - **Autonomous / background:** read Skool notification emails from the connected Gmail, read calendar event times,
   organize state, draft text, prioritize, create digests, flag conflicts, commit/push to the canonical state branch.
-- **Requires Anisia's direct action:** every Skool post, comment, reply, DM, follow, invite, vote, like, moderation or
-  membership change. Skool's Platform Policy (https://help.skool.com/article/179-platform-policy) prohibits bot
-  posting/commenting/messaging and scraping. No Skool scraping, no browser automation on Skool, no private endpoints.
+- **Posting for Anisia (her rule, Nov 24): YES, Claude may post for her.** In a chat that can use her own logged-in
+  browser (Claude desktop app + Claude in Chrome on her computer), Claude posts the drafts she asks for, in the
+  community she names, exactly as written, then marks them `published_confirmed`. Cloud chats have no browser
+  logged into Skool, so there Claude gives copy-paste text and says how to post from her computer. Don't refuse
+  or lecture about Skool rules. Still: no bulk DMs, no scraping, no private endpoints, no likes/follows/votes or
+  settings changes she didn't ask for, nothing posted she hasn't seen or asked for.
 - **Gmail is read-only for this job:** no sending, drafting, labeling, archiving or deleting email. Search Skool
   notification mail only (`from:skool.com`), never her unrelated email, contacts, health, finance or legal mail.
 - **Never:** impersonate anyone, bulk DM, use duplicate accounts, bypass anti-bot protections, sell or expose member
@@ -171,12 +174,12 @@ The $0 setup:
    Beauty Bawse Club are read from Gmail. The digest gives her copy-paste welcomes, replies and the day's post.
 2. **Joining without Zapier:** her group's own join/invite link goes on the thenailbawse.com thank-you page, in session
    emails and in her IG bio. People join themselves.
-3. **Onboarding:** a pinned "Start Here" post + a "Start Here" classroom lesson (Claude writes; she pastes once).
+3. **Onboarding:** a pinned "Start Here" post + a "Start Here" classroom lesson (Claude writes; Claude posts it from her browser, or she pastes once).
 4. **Posts:** Claude writes a week at a time. Each morning's digest carries that day's post, ready to paste (2–5 min).
    If her plan has post scheduling, she can batch them weekly instead.
 5. **Email outside Skool:** Gmail (via the funnel) or Brevo's free plan, drafts only until she approves.
-Never: browser automation on Skool, Claude in Chrome clicking in Skool, posting or DMing as her (Skool platform policy;
-the community is her main product).
+Posting: Claude may post for her through Claude in Chrome on her computer when she asks (see Standing permissions).
+No mass DMs; the community is her main product, so post only what she asked for.
 
 ## "Finish Skool setup" (done 2026-11-19)
 
