@@ -431,11 +431,60 @@
       "priority": 2,
       "reply_status": "not_applicable",
       "status": "queued_for_user",
-      "draft_text": "Did this check on mine 👀 About 30 pitches in the last few weeks. The real conversations came from groups with an open speaker application, plus people I already knew. My cold \"let me teach your members\" emails to individual educators and salon suites? About 20 sent, zero real replies, and 5 more bounced. So I'm sending fewer of those and putting that energy into applications and warm intros. Thank you for this one, Tiff 💗",
+      "draft_text": "Did this check on mine 👀 About 30 pitches in the last few weeks. Generic \"let me teach your members\" emails: crickets. Pitches where I named an episode the show already did and offered one real client question to break down: TWO yeses this week. So I'm cutting the generic ones and doing more of the specific ones. Thank you for this one, Tiff 💗",
+      "user_edit": null,
+      "publish_confirmation": null,
+      "history": [
+        {
+          "at": "2026-11-24T11:09:50Z",
+          "from": "queued_for_user",
+          "to": "queued_for_user",
+          "note": "Rewritten Nov 24: two cold-but-specific pitches (podcast, radio) said yes, so 'zero replies' no longer true."
+        }
+      ],
+      "note": "Numbers from operations/opportunities.json (Nov 22). No organizations named."
+    },
+    {
+      "created_at": "2026-11-24T11:09:50Z",
+      "source_type": "user_request",
+      "kind": "post",
+      "author": "Anisia Burroughs (own post)",
+      "reply_status": "not_applicable",
+      "status": "queued_for_user",
       "user_edit": null,
       "publish_confirmation": null,
       "history": [],
-      "note": "Numbers from operations/opportunities.json (Nov 22). No organizations named."
+      "priority": 1,
+      "snippet": "Anisia: booked for two remote speaking engagements (podcast + radio interview), Nov 24",
+      "id": "D-012",
+      "community": "AI Automation Club",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "dedupe_key": "ai automation club|two speaking engagements booked|anisia burroughs|user-request-2026-11-24",
+      "source_ref": "user request Nov 24 + Gmail invitations (podcast, radio)",
+      "conversation": "New post: two remote speaking engagements booked",
+      "draft_text": "TIFF!!! I JUST GOT BOOKED FOR TWO SPEAKING ENGAGEMENTS 😭💗 BOTH REMOTE!\n\nY'all. Two yeses in one week:\n🎙️ A podcast guest conversation on AI for hands-on professionals: who answers the DMs when your hands are full?\n📻 A radio show interview on the beauty business + practical AI\n\nBoth remote, so I can show up from right where I am.\n\nWhat changed: I stopped sending the same pitch everywhere. Both yeses came from pitches where I mentioned an episode they'd already done and offered ONE real client question I'd break down for their audience. My generic \"let me teach your members\" emails? Crickets.\n\nTiff, your \"Check Your Speaking Engagements\" post came right on time. You don't need more pitches. You need more of what's working.\n\nDates are getting locked in now, and I'll share when they go live.\n\nSee what I'm building 👉🏽 https://thenailbawse.com\n(Screenshots below 👇🏽)\n\nFor those of you who've done podcasts or radio: what's one thing you wish you'd prepped before your first interview?",
+      "note": "Link + screenshots allowed here (Tiff asks for links). Show names left out until Anisia OKs naming them; cover sender details in screenshots."
+    },
+    {
+      "created_at": "2026-11-24T11:09:50Z",
+      "source_type": "user_request",
+      "kind": "post",
+      "author": "Anisia Burroughs (own post)",
+      "reply_status": "not_applicable",
+      "status": "queued_for_user",
+      "user_edit": null,
+      "publish_confirmation": null,
+      "history": [],
+      "priority": 1,
+      "snippet": "Anisia: booked for two remote speaking engagements (podcast + radio interview), Nov 24",
+      "id": "D-013",
+      "community": "The Social Club",
+      "source_url": "https://www.skool.com/the-social-club-2696",
+      "dedupe_key": "the social club|two speaking engagements booked|anisia burroughs|user-request-2026-11-24",
+      "source_ref": "user request Nov 24 + Gmail invitations",
+      "conversation": "New post: BIG WINS, two remote speaking engagements",
+      "draft_text": "BIG WIN: I got booked for TWO speaking engagements this week 😭💗 (both remote!)\n\nY'all, I had to come share this with my Social Club family.\n\nTwo yeses this week: a podcast conversation and a radio interview, both about how beauty pros can use AI without losing their judgment or their voice.\n\nA few weeks ago I was sending the same pitch everywhere and hearing nothing. What finally worked was getting specific: I listened to what each show had already talked about, then offered one real client question I'd break down for their audience.\n\nThank you for cheering me on in here while I figured this out. Still pinching myself!\n\nWhat's a win you're celebrating this week? Drop it below so I can celebrate you too 💗",
+      "note": "No links or invites (Social Club rule 2: no self-promotion). Suggested category: BIG WINS IN THE CLUB."
     }
   ],
   "publish_log": [

@@ -1,6 +1,6 @@
 {
   "note": "Speaking, workshop and collaboration contacts. Dedupe by org+email before any new outreach. Nothing is sent without Anisia's approval. This repo is PUBLIC: never store personal email addresses or phone numbers here; business role addresses only.",
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "items": [
     {
       "org": "Elevate RTP 2027",
@@ -238,6 +238,41 @@
       "status": "bounced_address_not_found",
       "last_outbound": "2026-11-23",
       "next": "Find a working contact before any resend"
+    },
+    {
+      "org": "Her Resources Podcast",
+      "contact": "contact@herresourcespodcast.com",
+      "status": "booked_pick_time",
+      "last_inbound": "2026-11-24",
+      "next": "Reply with a time for Thu Apr 8, 2027 (noon–1 or 3–4 PM MDT = 11–12 or 2–3 PT). Remote, 45–60 min."
+    },
+    {
+      "org": "The Radio Show ATL (The Aftermath)",
+      "contact": "show inbox (in Gmail)",
+      "status": "booked_pick_date",
+      "last_inbound": "2026-11-24",
+      "next": "Reply with Dec 28 (5:30 PM PT) or Jan 7 (4:30 PM PT). Remote, 45–60 min."
+    },
+    {
+      "org": "USC Career Center (student workshop)",
+      "contact": "recruit@usc.edu",
+      "status": "warm_intro_to_workshops",
+      "last_inbound": "2026-11-23",
+      "next": "Waiting on the workshops lead (Anisia replied Nov 23)."
+    },
+    {
+      "org": "College of San Mateo (cosmetology)",
+      "contact": "staff address (in Gmail)",
+      "status": "shared_with_faculty",
+      "last_inbound": "2026-11-21",
+      "next": "They'll follow up for spring if interested."
+    },
+    {
+      "org": "Mt. San Jacinto College (community ed)",
+      "contact": "staff address (in Gmail)",
+      "status": "declined_not_a_fit",
+      "last_inbound": "2026-11-23",
+      "next": "Tip from them: try colleges with cosmetology programs, workforce boards, supply companies."
     }
   ]
 }
