@@ -1,7 +1,10 @@
 # Operating dashboard: The Nail Bawse
-_Updated Tue Nov 24, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
+_Updated Wed Nov 25, 2026 by Claude. The daily run (8:41 AM PT) refreshes this file. Full detail: AUDIT-2026-11-19.md_
 
 ## ✅ Completed (verified)
+- Nov 24: **Klaviyo plan canceled and Auto-upgrade turned off** (Klaviyo confirmation emails). No Nov 27 charge expected
+- Nov 24: **The Radio Show ATL booked: Mon Dec 28, 5:30 PM PT** (remote, 45-60 min, airs early Jan)
+- Nov 24: speaking-win post (D-013) live in The Social Club
 - Nov 24: rule saved: Claude may post on Skool for Anisia from her computer (Claude in Chrome) when she asks
 - Nov 24: privacy rule added for every chat (no personal info saved anywhere); repo scan found none left
 - Nov 21: removed 5 personal email addresses from public repo files (opportunities.json, dashboard); older git history still has them
@@ -24,7 +27,7 @@ _Updated Tue Nov 24, 2026 by Claude. The daily run (8:41 AM PT) refreshes this f
 
 ## 👑 Pending your approval / decision (top first)
 1. ~~Funnel setup on Netlify~~ not needed: the page runs on your existing Cloudflare site
-2. **Klaviyo renews THU NOV 27 (Stripe notice Nov 24).** Downgrade to Free in the Klaviyo website before then (the connector can't change billing)
+2. ~~Klaviyo~~ done Nov 24 (canceled). Watch for any charge on Nov 27 just in case
 3. **Class page is live** at thenailbawse.com/webinar. Sign-ups are saved but no confirmation email goes out yet (the page shows the Zoom link + calendar instead). Say "send my sign-ups" anytime to get the list
 4. **Postal address or PO box** for the funnel's announcement emails (US law requires one)
 6. Skool D-001…D-005 reply drafts (in the Skool digest)
@@ -44,8 +47,6 @@ All connected. Manage them at claude.ai/customize/connectors.
 - Zoom: Dec 21 and Dec 28 class dates were deleted today (11:29 AM PT); weekly series otherwise runs Mondays 5 PM PT through January. Confirm that was intended and that the class page doesn't list those dates
 - Weekly class is booked 5:00–5:45 PM on a us05 (free-style) Zoom link: free meetings stop at 40 min
 - Funnel not deployed yet (needs the Gmail app password, Netlify site and domain, all things only you can create)
-- Klaviyo paid plan + Auto-upgrade still on until you change them; next charge is likely around Nov 27
-- Old Klaviyo contacts: export them before downgrading, then send me the CSV and I'll add an import to the funnel
 - Zoom: confirm your plan (free meetings stop at 40 min; the funnel defaults to 40)
 - Nov 24: The Social Club removed her "Since September" recap post (rule 2, no self-promotion). Second removal there
 - 9 bounced pitch addresses need correct contacts before any resend (new: Santiago Canyon, Chaffey WTI, YWCA GLA, Antelope Valley College)

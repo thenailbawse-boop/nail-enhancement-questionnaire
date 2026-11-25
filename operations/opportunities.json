@@ -1,6 +1,6 @@
 {
   "note": "Speaking, workshop and collaboration contacts. Dedupe by org+email before any new outreach. Nothing is sent without Anisia's approval. This repo is PUBLIC: never store personal email addresses or phone numbers here; business role addresses only.",
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "items": [
     {
       "org": "Elevate RTP 2027",
@@ -249,9 +249,11 @@
     {
       "org": "The Radio Show ATL (The Aftermath)",
       "contact": "show inbox (in Gmail)",
-      "status": "booked_pick_date",
+      "status": "booked",
       "last_inbound": "2026-11-24",
-      "next": "Reply with Dec 28 (5:30 PM PT) or Jan 7 (4:30 PM PT). Remote, 45–60 min."
+      "next": "Mon Dec 28, 5:30 PM PT, remote, 45-60 min (release early Jan). They will send show info + calendar invite.",
+      "deadline": "2026-12-28",
+      "owner": "them"
     },
     {
       "org": "USC Career Center (student workshop)",
@@ -318,9 +320,9 @@
       "org": "Tower 28 (paid UGC)",
       "contact": "partnerships team",
       "status": "auto_reply_only",
-      "last_inbound": "2026-11-23",
+      "last_inbound": "2026-11-25",
       "deadline": null,
-      "next": "wait; they reply only if interested",
+      "next": "follow-up sent Nov 24 (auto-reply again); no more follow-ups",
       "owner": "them",
       "submitted": "2026-11-23"
     },
@@ -328,9 +330,9 @@
       "org": "cocokind (paid UGC)",
       "contact": "influencer team",
       "status": "auto_reply_only",
-      "last_inbound": "2026-11-23",
+      "last_inbound": "2026-11-25",
       "deadline": null,
-      "next": "wait; forwarded to their team",
+      "next": "follow-up sent Nov 24 (auto-reply again); no more follow-ups",
       "owner": "them",
       "submitted": "2026-11-23"
     },
@@ -343,6 +345,16 @@
       "next": "wait; high volume of submissions",
       "owner": "them",
       "submitted": "2026-11-22"
+    },
+    {
+      "org": "Black Beauty Block Party Shopping Guide (paid $200 feature)",
+      "contact": "Del (organizer)",
+      "status": "declined_by_anisia",
+      "last_inbound": "2026-11-24",
+      "deadline": null,
+      "next": "none: Anisia passed Nov 25",
+      "owner": "-",
+      "submitted": null
     }
   ]
 }
