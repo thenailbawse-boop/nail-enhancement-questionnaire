@@ -27,19 +27,10 @@ Read before operating, in this order:
    `digests/YYYY-MM-DD.md`, commit, push to the canonical branch, `git fetch` and confirm the commit is on the remote.
 6. **Report**: phone-sized digest (format in CLAUDE.md). Nothing important → one line.
 
-## Daily operations sweep (every daily run, after the Skool digest)
+## Scope: Skool emails ONLY (Anisia, Nov 25)
 
-Read `operations/DASHBOARD.md` and `operations/opportunities.json` first. Then, read-only in Gmail since the last run (24h overlap):
-1. **Replies** from any contact in opportunities.json → update its status/last_inbound; if it needs Anisia, write an
-   approval-ready reply in `operations/drafts/` and list it under Pending approvals.
-2. **Bounces** (mailer-daemon) → mark the contact bounced; never resend without a verified address.
-3. **Webinar funnel:** count "New registration:" owner notices (from the funnel, via Gmail) per session; Zoom notices;
-   any Klaviyo billing email (she's leaving Klaviyo: flag any charge). Ignore QA/TEST submissions but note they arrived. New real registrations or inquiries go to the top of the digest.
-4. **Deadlines** in opportunities.json within 7 days → top of the digest.
-5. If a workshop is within 3 days, run the WEBINAR_WORKFLOW.md readiness checks you can verify and list the rest for Anisia.
-Update DASHBOARD.md (date, Completed, Pending approvals, Unresolved), validate opportunities.json parses, commit with the
-Skool state. In the digest add a short **Operations** section: max 3 items, newest decision first. Nothing is sent,
-submitted, paid or changed in any external tool.
+Read only `from:skool.com` emails. Read nothing else in Gmail, period: no pitch replies, bounces, Klaviyo, Zoom,
+billing or any other mail. No operations sweep, no Operations section in the digest, no edits to `operations/`.
 
 ## When Anisia gives feedback
 

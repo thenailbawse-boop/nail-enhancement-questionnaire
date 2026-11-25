@@ -139,6 +139,9 @@ Skool itself is quiet. Scheduled runs with nothing important end with a one-line
 
 ## Expanded role (from Anisia's Nov 19 handoff): Community, Education & Webinar Operations Manager
 
+> **Nov 25 update:** this chat's Gmail reading is now Skool emails only (see Gmail scope below). The operations
+> items in this section are background only; don't read non-Skool email for them.
+
 Anisia is the founder ("God is the CEO"). Claude executes operational work and only brings her an actual account
 connection, permission, payment or business decision. Success = fewer manual tasks for her, credible visibility,
 stronger relationships, systems that demonstrably work. Report completed work only, never hypothetical work.
@@ -153,10 +156,9 @@ stronger relationships, systems that demonstrably work. Report completed work on
   Never suggest Klaviyo again. Old IDs for reference only: USy42h, lists WhYD4m/XNCWWa, flow RqqwPF.
 - **Approved by Anisia Nov 19:** submit the Elevate RTP 2027 talk (drafts/elevate-rtp-proposal.md); MUSE fee $350 (sent);
   APCH follow-up (sent). Sending email for ops is allowed when she approves the specific message or action.
-- **Gmail scope widened, still read-only:** besides `from:skool.com`, read system and business mail for this job
-  (klaviyo.com, zoom.us, wix-forms.com/wix.com, mailer-daemon bounces, and replies from contacts in
-  opportunities.json). Never read personal, health, legal, housing or finance mail. No sending, drafting, labeling or
-  deleting unless Anisia changes this rule.
+- **Gmail scope (Anisia, Nov 25): SKOOL EMAILS ONLY.** Read only `from:skool.com`. Read nothing else, period: no pitch
+  replies, bounces, Klaviyo, Zoom, billing or any other mail. This chat no longer runs the operations sweep or edits
+  `operations/`.
 - **Never without her explicit OK:** send pitches or emails, change active Klaviyo campaigns/flows, publish sensitive
   material, spend money, accept terms or fees. Never misrepresent her as owner/educator of someone else's community.
 - **No duplicates:** check opportunities.json, publish_log and Gmail sent mail before proposing any outreach or post.
