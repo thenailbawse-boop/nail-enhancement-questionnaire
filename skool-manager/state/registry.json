@@ -4,7 +4,7 @@
   "timezone": "America/Los_Angeles",
   "created_at": "2026-11-19",
   "canonical_state_branch": "claude/skool-setup-3dza76",
-  "last_successful_run_utc": "2026-11-25T16:50:00Z",
+  "last_successful_run_utc": "2026-11-26T16:50:00Z",
   "last_successful_run_note": "Mon Nov 23 daily. Gmail read; no new Skool notifications.",
   "runs": [
     {
@@ -136,6 +136,15 @@
       ],
       "external_actions": "none",
       "result": "D-013 confirmed posted; D-014 reply drafted"
+    },
+    {
+      "at": "2026-11-26T16:50:00Z",
+      "kind": "daily (scheduled 08:41 PT, Skool-only)",
+      "sources_read": [
+        "gmail from:skool.com after 2026-11-24 (1 new: AAC 7-notification digest)"
+      ],
+      "external_actions": "none",
+      "result": "D-015 drafted"
     }
   ],
   "sources": {
@@ -226,7 +235,8 @@
     "1a20ad611afd9920",
     "1a20abafde26acac",
     "1a20fc2d3cf1b9c6",
-    "1a2138b4f649b105"
+    "1a2138b4f649b105",
+    "1a21502be6a346d3"
   ],
   "draft_queue": [
     {
@@ -543,6 +553,26 @@
       "publish_confirmation": null,
       "history": [],
       "note": "Email shows only the start of his comment; glance at the full comment before replying. No links (rule 2)."
+    },
+    {
+      "id": "D-015",
+      "created_at": "2026-11-26T16:50:00Z",
+      "community": "AI Automation Club",
+      "source_type": "gmail_skool_notification",
+      "dedupe_key": "ai automation club|tip: paying for subscriptions you don't want|tiffany pellot|1a21502be6a346d3",
+      "source_ref": "gmail 1a21502be6a346d3 (Nov 25)",
+      "source_url": "https://www.skool.com/ai-automation-scaling-6959",
+      "author": "Tiffany Pellot",
+      "conversation": "Tiff's post: 💎TIP: PAYING FOR SUBSCRIPTIONS YOU DON'T WANT",
+      "snippet": "\"In this clip I show you how I personally fired Base44 and Viktor...\"",
+      "priority": 2,
+      "reply_status": "needs_verification",
+      "status": "queued_for_user",
+      "draft_text": "This came right on time 😅 I just canceled my Klaviyo plan this week, right before it renewed. I was paying for a tool I'd already replaced with free ones. Now I check every subscription against one question: am I actually using this, or am I just scared to let it go? Thank you for this one, Tiff 💗",
+      "user_edit": null,
+      "publish_confirmation": null,
+      "history": [],
+      "note": "Email shows only the post's first line; watch the clip before commenting. Klaviyo fact: Anisia asked to cancel it Nov 24 in this chat."
     }
   ],
   "publish_log": [
