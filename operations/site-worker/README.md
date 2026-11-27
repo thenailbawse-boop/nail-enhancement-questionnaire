@@ -52,3 +52,7 @@ Classes are weekly, but **on a different day each week, chosen by Anisia**. Neve
 ## /today (Nov 24, 2026)
 - worker.js route `/today` → Whop $97 Never Start Over checkout (plan_Sml43bcCUIPzW, the link first made for Tiff) until
   Nov 24 11:59 PM PT, then redirects to /shop. Safe to delete the route after that date.
+
+## Class dates (Nov 27, 2026)
+- SESS_LIST now = Tue Nov 24 5 PM PT + Sun Nov 29 5 PM PT (encore, 1796000400000). Google Calendar event fhqrfva8n9ao1h9q94o6i4dves.
+- Decisions: product name is "Never Start Over" (not "...Again"); OK to post her "why" story (200+ clients, mom on hospice).

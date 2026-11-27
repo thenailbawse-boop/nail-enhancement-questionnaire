@@ -15,7 +15,8 @@ check this file first.
 4. **Paid onboarding = 45-min live Q&A on Zoom, kept separate:**
    - Beauty Bawse Club members → the club onboarding Zoom (pinned inside the Skool club).
    - /shop customers (Never Start Over) → the shop onboarding Zoom (on their private access page).
-5. Every class name is **Build Your AI Agent** (no branded phrase).
+5. Every class name is **Build Your AI Agent** (no branded phrase). The paid product is **Never Start Over** (never "...Again").
+   Her "why" story (200+ clients, mom on hospice, lost her book) is OK to post publicly.
 6. Design: her brand (espresso, cream, blush pink #F4A6C4, Fraunces serif + handwritten accents). Study her reference
    links fully before designing; never copy other brands' text, images or exact designs.
 
